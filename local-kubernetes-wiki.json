@@ -9,22 +9,27 @@
     {
       "type": "paragraph",
       "id": "69ee14d697dde4c4",
-      "text": "We rely on many helpful tools from many opensource communities and a few commercial businesses too: kubernetes and docker, of course, homebrew, Rancher's k3s and k3d in particular, and traefik playing a key role behind the scenes. We also rely on a static wiki to bootstrap our authoring and development environment, currently hosted in a GitHub repo."
+      "text": "We rely on many helpful tools from many opensource communities and a few commercial businesses too: kubernetes and docker, of course, homebrew, Rancher's k3s and k3d in particular. We also rely on a static wiki to bootstrap our authoring and development environment, currently hosted in a GitHub repo."
     },
     {
       "type": "code",
       "id": "d2aea1f51a255075",
-      "text": "git clone https://github.com/dobbs/deploy.wiki.do\ncd deploy.wiki.do\nPATH=${PATH}:${PWD}/bin\ncommand -v k3d \\\n  || install-k3d.sh\nkubectl get svc/wiki-service >/dev/null 2>&1 \\\n  || install-k8s-wiki.sh"
+      "text": "git clone https://github.com/dobbs/deploy.wiki.do\ncd deploy.wiki.do\nPATH=${PATH}:${PWD}/assets/bin\ninstall-k3d.sh\ninstall-k8s-wiki.sh"
     },
     {
       "type": "paragraph",
       "id": "71a8fdff295b6c17",
-      "text": "[http://localtest.me/view/welcome-visitors/deploy.wiki.do/welcome-visitors Welcome Welcome]"
+      "text": "[http://deploy.localhost/view/welcome-visitors/deploy.wiki.do/welcome-visitors Welcome Welcome]"
     },
     {
       "type": "graphviz",
       "id": "c3f801bdaaf591c1",
       "text": "strict graph {\n  rankdir=TB\n  node [shape=box style=\"filled,rounded\"]\n\n  subgraph cluster_macos {\n    label=\"MacOS\"\n    labeljust=l\n\n    \"port :80\"\n\n    subgraph cluster_docker {\n      label=\"k3s container\"\n      labeljust=l\n\n      ingress -- service\n\n      subgraph cluster_deployment {\n        label=\"wiki-deployment\"\n        labeljust=l\n\n        farm -- {\n          \"volume .wiki\"\n          \"volume fedwiki\"\n        }\n      }\n\n      service -- farm\n\n      \"container /macos/.wiki-k8s\" \n      \"container /macos/fedwiki\" \n    }\n\n    \"port :80\" -- ingress\n    \"host ~/.wiki-k8s\"\n    \"host ~/workspace/fedwiki\"\n  }\n\n  {\n    \"volume .wiki\" -- \"container /macos/.wiki-k8s\" -- \"host ~/.wiki-k8s\"\n  }\n\n  {\n    \"volume fedwiki\" -- \"container /macos/fedwiki\" -- \"host ~/workspace/fedwiki\"\n  }\n\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "b428f1a465ff8db1",
+      "text": "See also [[Wiki on Localhost]]"
     }
   ],
   "journal": [
@@ -143,7 +148,7 @@
       "item": {
         "type": "paragraph",
         "id": "71a8fdff295b6c17",
-        "text": "[https://localtest.me/view/welcome-visitors/deploy.wiki.do/welcome-visitors Welcome Welcome]"
+        "text": "[https://deploy.localhost/view/welcome-visitors/deploy.wiki.do/welcome-visitors Welcome Welcome]"
       },
       "date": 1588286495502
     },
@@ -153,7 +158,7 @@
       "item": {
         "type": "paragraph",
         "id": "71a8fdff295b6c17",
-        "text": "[http://localtest.me/view/welcome-visitors/deploy.wiki.do/welcome-visitors Welcome Welcome]"
+        "text": "[http://deploy.localhost/view/welcome-visitors/deploy.wiki.do/welcome-visitors Welcome Welcome]"
       },
       "date": 1588286515873
     },
@@ -166,6 +171,46 @@
         "text": "strict graph {\n  rankdir=TB\n  node [shape=box style=\"filled,rounded\"]\n\n  subgraph cluster_macos {\n    label=\"MacOS\"\n    labeljust=l\n\n    \"port :80\"\n\n    subgraph cluster_docker {\n      label=\"k3s container\"\n      labeljust=l\n\n      ingress -- service\n\n      subgraph cluster_deployment {\n        label=\"wiki-deployment\"\n        labeljust=l\n\n        farm -- {\n          \"volume .wiki\"\n          \"volume fedwiki\"\n        }\n      }\n\n      service -- farm\n\n      \"container /macos/.wiki-k8s\" \n      \"container /macos/fedwiki\" \n    }\n\n    \"port :80\" -- ingress\n    \"host ~/.wiki-k8s\"\n    \"host ~/workspace/fedwiki\"\n  }\n\n  {\n    \"volume .wiki\" -- \"container /macos/.wiki-k8s\" -- \"host ~/.wiki-k8s\"\n  }\n\n  {\n    \"volume fedwiki\" -- \"container /macos/fedwiki\" -- \"host ~/workspace/fedwiki\"\n  }\n\n}"
       },
       "date": 1588295865418
+    },
+    {
+      "type": "edit",
+      "id": "d2aea1f51a255075",
+      "item": {
+        "type": "code",
+        "id": "d2aea1f51a255075",
+        "text": "git clone https://github.com/dobbs/deploy.wiki.do\ncd deploy.wiki.do\nPATH=${PATH}:${PWD}/assets/bin\ninstall-k3d.sh\ninstall-k8s-wiki.sh"
+      },
+      "date": 1610948291372
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b428f1a465ff8db1"
+      },
+      "id": "b428f1a465ff8db1",
+      "type": "add",
+      "after": "c3f801bdaaf591c1",
+      "date": 1610948394043
+    },
+    {
+      "type": "edit",
+      "id": "b428f1a465ff8db1",
+      "item": {
+        "type": "paragraph",
+        "id": "b428f1a465ff8db1",
+        "text": "See also [[Wiki on Localhost]]"
+      },
+      "date": 1610948403578
+    },
+    {
+      "type": "edit",
+      "id": "69ee14d697dde4c4",
+      "item": {
+        "type": "paragraph",
+        "id": "69ee14d697dde4c4",
+        "text": "We rely on many helpful tools from many opensource communities and a few commercial businesses too: kubernetes and docker, of course, homebrew, Rancher's k3s and k3d in particular. We also rely on a static wiki to bootstrap our authoring and development environment, currently hosted in a GitHub repo."
+      },
+      "date": 1610950909402
     }
   ]
 }

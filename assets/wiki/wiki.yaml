@@ -18,7 +18,7 @@ spec:
         fsGroup: 1000
       containers:
       - name: farm
-        image: dobbs/farm:1.0.4
+        image: dobbs/farm:1.0.7
         command: ["wiki"]
         ports:
         - containerPort: 3000
@@ -51,21 +51,16 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: wiki
-  annotations:
-    kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: localtest.me
-    http:
+  - host: "*.localhost"
+    http: &wiki
       paths:
       - path: /
         backend:
           serviceName: wiki-service
           servicePort: http
-  - host: "*.localtest.me"
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: wiki-service
-          servicePort: http
+  - host: localhost
+    http: *wiki
+  # - host: "*.example.com"
+  #   http: *wiki

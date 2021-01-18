@@ -14,7 +14,7 @@ Parameters:
 
 Example:
 
-  $(basename $0) ~/.wiki-k8s/deploy.localtest.me ~/workspace/deploy.wiki.do
+  $(basename $0) ~/.wiki-k8s/deploy.localhost ~/workspace/dobbs/deploy.wiki.do
 
 EOF
 }
@@ -56,11 +56,17 @@ EOF
   exit 1
 fi
 
-mkdir -p ${STATIC_DIR}/assets
+mkdir -p ${STATIC_DIR}/{assets,system}
 
 cd ${WIKI_DIR}
-cp status/favicon.png ${STATIC_DIR} \
-  && echo ${STATIC_DIR}/favicon.png
+cp status/{favicon.png,sitemap.xml} ${STATIC_DIR} \
+  && echo ${STATIC_DIR}/favicon.png \
+  && echo ${STATIC_DIR}/sitemap.xml
+cp status/{sitemap,site-index}.json \
+   status/index-updated ${STATIC_DIR}/system \
+  && echo ${STATIC_DIR}/system/sitemap.json \
+  && echo ${STATIC_DIR}/system/site-index.json \
+  && echo ${STATIC_DIR}/system/index-updated
 for PAGE in $(ls pages); do
   DEST=${STATIC_DIR}/${PAGE}.json
   cp $WIKI_DIR/pages/$PAGE $DEST && echo ${DEST}

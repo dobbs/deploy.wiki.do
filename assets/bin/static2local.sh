@@ -14,7 +14,7 @@ Parameters:
 
 Example:
 
-  $(basename $0) ~/workspace/deploy.wiki.do ~/.wiki-k8s/deploy.localtest.me
+  $(basename $0) ~/workspace/dobbs/deploy.wiki.do ~/.wiki-k8s/deploy.localhost
 
 EOF
 }

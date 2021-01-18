@@ -1,0 +1,194 @@
+{
+  "title": "DigitalOcean Domains",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b60c5ec004a7eff4",
+      "text": "Manage domain name configurations in Digital Ocean."
+    },
+    {
+      "type": "paragraph",
+      "id": "3360789ef158a62d",
+      "text": "[https://cloud.digitalocean.com/networking/domains control panel]"
+    },
+    {
+      "type": "paragraph",
+      "id": "a7a2879f137a3c82",
+      "text": "[https://github.com/dobbs/deploy.wiki.do github.com/dobbs/deploy.wiki.do] is configured so the master branch is treated as a GitHub pages site."
+    },
+    {
+      "type": "paragraph",
+      "id": "92978f8f007f21ba",
+      "text": "We configured it with a custom domain name by creating a CNAME file at the top of the repo with the name, deploy.wiki.do, contained therein."
+    },
+    {
+      "type": "paragraph",
+      "id": "13efff4f3d8a5ccb",
+      "text": "We further configured the following CNAME record in digital ocean."
+    },
+    {
+      "type": "paragraph",
+      "id": "a2fe7d4a7c2246dc",
+      "text": "CNAME deploy.wiki.do dobbs.github.io"
+    },
+    {
+      "type": "paragraph",
+      "id": "be1a584b0a4428af",
+      "text": "We were expecting there to be a collision between this CNAME and the name on the [https://github.com/dobbs/dobbs.github.io github.com/dobbs/dobbs.github.io] repo. It seems GitHub did the right thing here."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "DigitalOcean Domains",
+        "story": []
+      },
+      "date": 1588296712047
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b60c5ec004a7eff4"
+      },
+      "id": "b60c5ec004a7eff4",
+      "type": "add",
+      "date": 1588296719577
+    },
+    {
+      "type": "fork",
+      "date": 1588473077003
+    },
+    {
+      "type": "edit",
+      "id": "b60c5ec004a7eff4",
+      "item": {
+        "type": "paragraph",
+        "id": "b60c5ec004a7eff4",
+        "text": "Manage domain name configurations in Digital Ocean."
+      },
+      "date": 1588473095064
+    },
+    {
+      "type": "add",
+      "id": "3360789ef158a62d",
+      "item": {
+        "type": "paragraph",
+        "id": "3360789ef158a62d",
+        "text": "[https://cloud.digitalocean.com/networking/domains control panel]"
+      },
+      "after": "b60c5ec004a7eff4",
+      "date": 1588473105042
+    },
+    {
+      "type": "add",
+      "id": "c5109d022c9ab0d1",
+      "item": {
+        "type": "paragraph",
+        "id": "c5109d022c9ab0d1",
+        "text": "[https:// registrar]"
+      },
+      "after": "3360789ef158a62d",
+      "date": 1588473373741
+    },
+    {
+      "type": "remove",
+      "id": "c5109d022c9ab0d1",
+      "date": 1588473846854
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a2fe7d4a7c2246dc"
+      },
+      "id": "a2fe7d4a7c2246dc",
+      "type": "add",
+      "after": "3360789ef158a62d",
+      "date": 1588473862239
+    },
+    {
+      "type": "edit",
+      "id": "a2fe7d4a7c2246dc",
+      "item": {
+        "type": "paragraph",
+        "id": "a2fe7d4a7c2246dc",
+        "text": "CNAME deploy.wiki.do dobbs.github.io"
+      },
+      "date": 1588473880687
+    },
+    {
+      "type": "add",
+      "id": "b81a93c72b5c000d",
+      "item": {
+        "type": "paragraph",
+        "id": "b81a93c72b5c000d",
+        "text": "Don't know if this trick works. There may be a conflict between my aspirations for dobbs.github.io site vs the deploy.wiki.do sit.e"
+      },
+      "after": "3360789ef158a62d",
+      "date": 1588473932625
+    },
+    {
+      "type": "edit",
+      "id": "b81a93c72b5c000d",
+      "item": {
+        "type": "paragraph",
+        "id": "b81a93c72b5c000d",
+        "text": "Don't know if this trick works. There may be a conflict between my aspirations for dobbs.github.io site vs the deploy.wiki.do site."
+      },
+      "date": 1588473936535
+    },
+    {
+      "type": "remove",
+      "id": "b81a93c72b5c000d",
+      "date": 1588474370116
+    },
+    {
+      "type": "add",
+      "id": "a7a2879f137a3c82",
+      "item": {
+        "type": "paragraph",
+        "id": "a7a2879f137a3c82",
+        "text": "[https://github.com/dobbs/deploy.wiki.do github.com/dobbs/deploy.wiki.do] is configured so the master branch is treated as a GitHub pages site."
+      },
+      "after": "3360789ef158a62d",
+      "date": 1588474508935
+    },
+    {
+      "type": "add",
+      "id": "92978f8f007f21ba",
+      "item": {
+        "type": "paragraph",
+        "id": "92978f8f007f21ba",
+        "text": "We configured it with a custom domain name by creating a CNAME file at the top of the repo with the name, deploy.wiki.do, contained therein."
+      },
+      "after": "a7a2879f137a3c82",
+      "date": 1588474549139
+    },
+    {
+      "type": "add",
+      "id": "13efff4f3d8a5ccb",
+      "item": {
+        "type": "paragraph",
+        "id": "13efff4f3d8a5ccb",
+        "text": "We further configured the following CNAME record in digital ocean."
+      },
+      "after": "92978f8f007f21ba",
+      "date": 1588474568535
+    },
+    {
+      "type": "add",
+      "id": "be1a584b0a4428af",
+      "item": {
+        "type": "paragraph",
+        "id": "be1a584b0a4428af",
+        "text": "We were expecting there to be a collision between this CNAME and the name on the [https://github.com/dobbs/dobbs.github.io github.com/dobbs/dobbs.github.io] repo. It seems GitHub did the right thing here."
+      },
+      "after": "a2fe7d4a7c2246dc",
+      "date": 1588474649120
+    },
+    {
+      "type": "fork",
+      "date": 1610947934833
+    }
+  ]
+}
