@@ -19,8 +19,6 @@ See http://stack.fed.wiki/json-schema.html
 
     git clone https://github.com/dobbs/deploy.wiki.do
     cd deploy.wiki.do
-    PATH=${PATH}:${PWD}/bin
-    command -v k3d \
-      || install-k3d.sh
-    kubectl get svc/wiki-service >/dev/null 2>&1 \
-      || install-k8s-wiki.sh
+    PATH=${PATH}:${PWD}/assets/bin
+    install-k3d.sh
+    install-k8s-wiki.sh
