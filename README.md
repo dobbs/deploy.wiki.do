@@ -2,6 +2,8 @@
 
 Bootstrap a devops pipeline for wiki.
 
+Try it: http://wiki.dbbs.co/view/welcome-visitors/deploy.wiki.do/welcome-visitors
+
 We begin with static files as a federated foreign server:
 
 See http://ward.asia.wiki.org/federating-foreign-servers.html
