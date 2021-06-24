@@ -57,9 +57,12 @@ spec:
     http: &wiki
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: wiki-service
-          servicePort: http
+          service:
+            name: wiki-service
+            port:
+              name: http
   - host: localhost
     http: *wiki
   # - host: "*.example.com"
