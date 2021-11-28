@@ -35,3 +35,10 @@ We extracted the wiki client code from dobbs/farm container image as follows:
       --exclude ReadMe.md --exclude test \
       --exclude twitter* --exclude runtests* .
     EOF
+
+    mkdir -p security
+    cd security
+    docker run --rm -i dobbs/farm sh <<EOF | tar zx
+    cd ~/lib/node_modules/wiki/node_modules/wiki-security-friends/client
+    tar -zcf - .
+    EOF
