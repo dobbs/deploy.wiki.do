@@ -24,3 +24,14 @@ See http://stack.fed.wiki/json-schema.html
     PATH=${PATH}:${PWD}/assets/bin
     install-k3d.sh
     install-k8s-wiki.sh
+
+# Wiki Client
+
+We extracted the wiki client code from dobbs/farm container image as follows:
+
+    docker run --rm -i dobbs/farm sh <<EOF | tar zx
+    cd ~/lib/node_modules/wiki/node_modules/wiki-client/client
+    tar -zcf - \
+      --exclude ReadMe.md --exclude test \
+      --exclude twitter* --exclude runtests* .
+    EOF
