@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "mathjax.coffee"
+  ],
+  "names": [],
+  "mappings": ";;AAKG,CAAA,YAAA;AAAA;;;;;;AAEH,EAAA,MAAM,CAAC,OAAP,CAAA,OAAA,GACE;AAAA,IAAA,IAAA,EAAM,cAAA,GAAA,EAAA,IAAA,EAAA;AACR,UAAA,OAAA;;AAAI,MAAA,OAAA,GAAU,mBAAA;eACR,MAAM,CAAC,OAAP,CAAe,GAAf,CAAA,KAAA,CAAyB,CAAA,SAAA,EAAY,OAAO,CAA5C,GAAyB,CAAzB,C;AADQ,OAAV;;AAIA,MAAA,IAAI,CAAJ,SAAA,CAAA,8FAAA,EAAA,OAAA;aACA,GAAG,CAAH,MAAA,cAAiB,IAAI,CAAJ,YAAA,CAAkB,IAAI,CAAvC,IAAiB,CAAjB,U;AANF,KAAA;AAQA,IAAA,IAAA,EAAM,cAAA,GAAA,EAAA,IAAA,EAAA;AACR,UAAA,OAAA;;AAAI,MAAA,OAAA,GAAU,mBAAA;eACR,MAAM,CAAC,OAAP,CAAe,GAAf,CAAA,KAAA,CAAyB,CAAA,SAAA,EAAY,OAAO,CAAnB,GAAA,EAAyB,GAAG,CAAH,GAAA,CAAlD,CAAkD,CAAzB,CAAzB,C;AADQ,OAAV;;AAIA,MAAA,IAAI,CAAJ,SAAA,CAAA,8FAAA,EAAA,OAAA;aACA,GAAG,CAAH,QAAA,CAAa,YAAA;eAAG,IAAI,CAAJ,UAAA,CAAA,GAAA,EAAA,IAAA,C;AAAhB,OAAA,C;AANI;AARN,GADF;CAFG,E,IAAA",
+  "sourcesContent": [
+    "###\n * Federated Wiki : Mathjax Plugin\n *\n * Licensed under the MIT license.\n * https://github.com/fedwiki/wiki-plugin-mathjax/blob/master/LICENSE.txt\n###\n\nwindow.plugins.mathjax =\n  emit: (div, item) ->\n    typeset = ->\n      window.MathJax.Hub.Queue [\"Typeset\", MathJax.Hub]\n\n\n    wiki.getScript 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML', typeset\n    div.append \"<p>#{wiki.resolveLinks(item.text)}</p>\"\n\n  bind: (div, item) ->\n    typeset = ->\n      window.MathJax.Hub.Queue [\"Typeset\", MathJax.Hub, div.get(0)]\n\n\n    wiki.getScript 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML', typeset\n    div.dblclick -> wiki.textEditor div, item\n"
+  ],
+  "sourceRoot": ""
+}

@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "reference.coffee"
+  ],
+  "names": [],
+  "mappings": ";;AAKG,CAAA,YAAA;AAAA;;;;;;AAEH,EAAA,MAAM,CAAC,OAAP,CAAA,SAAA,GACA,MAAM,CAAC,OAAP,CAAA,aAAA,GACE;AAAA,IAAA,IAAA,EAAM,cAAA,KAAA,EAAA,IAAA,EAAA;AACR,UAAA,IAAA,EAAA,IAAA;AAAI,MAAA,IAAA,GAAO,IAAI,CAAJ,IAAA,IAAa,kBAApB;AACA,MAAA,IAAA,GAAO,IAAI,CAAC,IAAZ;aACA,IAAI,CAAJ,WAAA,CAAA,IAAA,EAAuB,YAAA;eACrB,KAAK,CAAL,MAAA,kDAAa,IAAb,uCAAa,IAAb,gCAAa,IAAb,iCAAa,IAAb,wBAQM,IAAI,CAAJ,YAAA,aAAuB,IAAI,CAAJ,KAAA,IARhB,IAQP,QARN,8BAWM,IAAI,CAAJ,YAAA,CAAkB,IAAI,CAXf,IAWP,CAXN,c;AADF,OAAA,C;AAHF,KAAA;AAkBA,IAAA,IAAA,EAAM,cAAA,KAAA,EAAA,IAAA,EAAA;aACJ,KAAK,CAAL,QAAA,CAAe,YAAA;eAAG,IAAI,CAAJ,UAAA,CAAA,KAAA,EAAA,IAAA,C;AAAlB,OAAA,C;AADI;AAlBN,GAFF;CAFG,E,IAAA",
+  "sourcesContent": [
+    "###\n * Federated Wiki : Reference Plugin\n *\n * Licensed under the MIT license.\n * https://github.com/fedwiki/wiki-plugin-reference/blob/master/LICENSE.txt\n###\n\nwindow.plugins.reference =\nwindow.plugins.federatedWiki =\n  emit: ($item, item) ->\n    slug = item.slug or 'welcome-visitors'\n    site = item.site\n    wiki.resolveFrom site, ->\n      $item.append \"\"\"\n        <p>\n          <img class='remote'\n            src='//#{site}/favicon.png'\n            title='#{site}'\n            data-site=\"#{site}\"\n            data-slug=\"#{slug}\"\n          >\n          #{wiki.resolveLinks \"[[#{item.title or slug}]]\"}\n        </p>\n        <div>\n          #{wiki.resolveLinks(item.text)}\n        </div>\n      \"\"\"\n  bind: ($item, item) ->\n    $item.dblclick -> wiki.textEditor $item, item\n"
+  ],
+  "sourceRoot": ""
+}

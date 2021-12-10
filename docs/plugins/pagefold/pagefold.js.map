@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "pagefold.coffee"
+  ],
+  "names": [],
+  "mappings": ";;AAKG,CAAA,YAAA;AAAA;;;;;;AAAA,MAAA,IAAA,EAAA,IAAA,CAAA,C;;AAIH,EAAA,IAAA,GAAO,cAAA,KAAA,EAAA,IAAA,EAAA;WACN,KAAK,CAAL,MAAA,yQAGY,IAAI,CAHH,IAAb,gC;AADM,GAAP;;AASA,EAAA,IAAA,GAAO,cAAA,KAAA,EAAA,IAAA,EAAA;WACN,KAAK,CAAL,QAAA,CAAe,YAAA;aAAG,IAAI,CAAJ,UAAA,CAAA,KAAA,EAAA,IAAA,C;AAAlB,KAAA,C;AADM,GAAP;;AAGA,EAAA,MAAM,CAAC,OAAP,CAAA,QAAA,GAA0B;AAAC,IAAA,IAAD,EAAC,IAAD;AAAO,IAAA,IAAP,EAAO;AAAP,GAA1B;CAhBG,E,IAAA",
+  "sourcesContent": [
+    "###\n * Federated Wiki : Pagefold Plugin\n *\n * Licensed under the MIT license.\n * https://github.com/fedwiki/wiki-plugin-pagefold/blob/master/LICENSE.txt\n###\n\n# http://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle\n\nemit = ($item, item) ->\n\t$item.append \"\"\"\n\t\t<div style=\"height: 10px; border-top: 2px solid lightgray; margin-top: 24px; text-align: center; position: relative; clear: both;\">\n\t\t\t<span style=\"position: relative; top: -.8em; background: white; display: inline-block; color: gray; \">\n\t\t\t\t&nbsp; #{item.text} &nbsp;\n\t\t\t</span>\n\t\t</div>\n\t\"\"\"\n\nbind = ($item, item) ->\n\t$item.dblclick -> wiki.textEditor $item, item\n\nwindow.plugins.pagefold = {emit, bind}\n"
+  ],
+  "sourceRoot": ""
+}

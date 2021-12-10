@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "code.coffee"
+  ],
+  "names": [],
+  "mappings": ";;;;;;;;AAKG,CAAA,YAAA;AAAA;;;;;;AAAA,MAAA,MAAA;;AAEH,EAAA,MAAA,GAAS,gBAAA,GAAA,EAAA;WACR,MAAA,CAAA,GAAA,CAAA,CAAA,OAAA,CAAA,IAAA,EAAA,OAAA,EAAA,OAAA,CAAA,IAAA,EAAA,QAAA,EAAA,OAAA,CAAA,IAAA,EAAA,OAAA,EAAA,OAAA,CAAA,IAAA,EAAA,MAAA,EAAA,OAAA,CAAA,IAAA,EAAA,MAAA,C;AADQ,GAAT;;AAQM,EAAA,MAAM,CAAC,OAAP,CAAe,IAAf,GAAe,YAAA;;;AAAA,QAArB,IAAqB;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA,6BAMZ,GANY,EAMZ,IANY,EAMZ;iBACL,IAAA,CAAK,YAAA;mBAAG,GAAG,CAAH,MAAA,oCAAuC,cAAA,CAAe,MAAA,CAAO,IAAI,CAAjE,IAAsD,CAAf,CAAvC,Y;AAAR,WAAA,C;AADK;AANY;AAAA;AAAA,6BAQZ,GARY,EAQZ,IARY,EAQZ;iBACL,IAAA,CAAK,YAAA;mBAAG,GAAG,CAAH,QAAA,CAAa,YAAA;qBAAG,IAAI,CAAJ,UAAA,CAAA,GAAA,EAAA,IAAA,C;AAAhB,aAAA,C;AAAR,WAAA,C;AADK;AARY;;AAAA;AAAA;;AAArB;;AACE,IAAA,IAAA,GAAO,cAAA,QAAA,EAAA;AACL,MAAA,IAAI,CAAJ,SAAA,CAAA,2BAAA,EAAA,QAAA;;AACA,UAAI,CAAC,CAAA,CAAA,yCAAA,CAAA,CAAL,MAAA,EAAA;eACE,CAAA,CAAA,2EAAA,CAAA,CAAA,QAAA,CADF,MACE,C;;AAHG,KAAP;;;GADmB,C,IAAA,C,IAAA,CAAf;CAVH,E,IAAA",
+  "sourcesContent": [
+    "###\n * Federated Wiki : Code Plugin\n *\n * Licensed under the MIT license.\n * https://github.com/fedwiki/wiki-plugin-code/blob/master/LICENSE.txt\n###\n\nescape = (str) ->\n\tString(str)\n\t\t.replace(/&/g, '&amp;')\n\t\t.replace(/\"/g, '&quot;')\n\t\t.replace(/'/g, '&#39;')\n\t\t.replace(/</g, '&lt;')\n\t\t.replace(/>/g, '&gt;')\n\nclass window.plugins.code\n  load = (callback) ->\n    wiki.getScript '/plugins/code/prettify.js', callback\n    if (!$(\"link[href='/plugins/code/prettify.css']\").length)\n      $('<link href=\"/plugins/code/prettify.css\" rel=\"stylesheet\" type=\"text/css\">').appendTo(\"head\")\n\n  @emit: (div, item) ->\n    load -> div.append \"<pre class='prettyprint'>#{prettyPrintOne(escape(item.text))}</pre>\"\n  @bind: (div, item) ->\n    load -> div.dblclick -> wiki.textEditor div, item\n"
+  ],
+  "sourceRoot": ""
+}
