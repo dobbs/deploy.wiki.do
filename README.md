@@ -39,3 +39,22 @@ We extracted the wiki client code from dobbs/farm container image as follows:
     docker run --rm -i dobbs/farm sh <<EOF > system/factories.json
     jq -s . lib/node_modules/wiki/node_modules/wiki-plugin-*/factory.json
     EOF
+
+    docker run --rm -i -u root \
+      -w /home/node/lib/node_modules/wiki/node_modules \
+      dobbs/farm sh <<'EOF' > plugins.tar
+    apk -u add tar 2>&1 > /dev/null
+    TARBALL=${PWD}/plugins.tar
+    MODS=$PWD
+    ls -d wiki-plugin-*/client | sed 's/\/client//' | while read -r PLUGIN; do
+      TYPE=${PLUGIN#wiki-plugin-}
+      cd ${MODS}/${PLUGIN}
+      mv client ${TYPE}
+      mkdir ${TYPE}/pages
+      ls pages | while read -r PAGE; do
+        jq ".plugin=\"${TYPE}\"" pages/${PAGE} > ${TYPE}/pages/${PAGE}.json
+      done
+      tar --append -f ${TARBALL} ${TYPE}
+    done
+    cat ${TARBALL}
+    EOF
