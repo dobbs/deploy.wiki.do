@@ -29,9 +29,9 @@ See http://stack.fed.wiki/json-schema.html
 
 We extracted the wiki client code from dobbs/farm container image as follows:
 
-    docker run --rm -i dobbs/farm sh <<EOF | tar zx
+    docker run --rm -i dobbs/farm sh <<EOF | tar x
     cd ~/lib/node_modules/wiki/node_modules/wiki-client/client
-    tar -zcf - \
+    tar -cf - \
       --exclude ReadMe.md --exclude test \
       --exclude twitter* --exclude runtests* .
     EOF
