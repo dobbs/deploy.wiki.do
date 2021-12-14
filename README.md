@@ -7,13 +7,9 @@ GitHub Pages.
 
 # Runbook
 
-To extract the read-only wiki from docker image dobbs/farm (emits files to docs folder):
+To generate a read-only wiki:
 
-    sh bin/readonly.sh
-
-Or, try the javascript version (emits files to wiki folder):
-
-    npx node bin/readonly.js
+    npm run readonly
 
 To test static wiki locally:
 

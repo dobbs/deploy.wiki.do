@@ -4,6 +4,7 @@
   "description": "readonly wiki publishing tools",
   "main": "",
   "scripts": {
+    "readonly": "node data/assets/bin/readonly.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eric Dobbs",
