@@ -7,6 +7,10 @@ GitHub Pages.
 
 # Runbook
 
+To edit the pages locally:
+
+    wiki --data ./data --security_legacy
+
 To generate a read-only wiki:
 
     npm run readonly
