@@ -8,7 +8,7 @@ const hb = require("handlebars")
 async function fakeTopLevelAwait() {
   let ownedBy = "Eric Dobbs"
   let PKG = path.resolve(".")
-  let BASE = path.resolve(".", "wiki")
+  let BASE = path.resolve(".", "docs")
   let CLIENT = path.resolve(require.resolve("wiki-client/package.json"), "..")
   let SERVER = path.resolve(require.resolve("wiki-server/package.json"), "..")
   let DEPS = path.join(CLIENT, "..")
