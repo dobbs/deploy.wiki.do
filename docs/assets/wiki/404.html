@@ -46,7 +46,7 @@
      const lineup = p => /^\/(?:view|[-\w]+(?:\.[-\w]+)+)\b/.test(p)
      if (!slugHtml(pathname) && lineup(pathname)) {
        // redirect /view/* style pathnames to a hash parameter
-       location = `/?${pathname.substring(1)}`
+       location = `/#${pathname.substring(1)}`
      }
    })(location)
   </script>
