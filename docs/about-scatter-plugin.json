@@ -1,1 +1,2648 @@
-{"title":"About Scatter Plugin","story":[{"data":[{"Material":"Steel, stainless","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"13"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"28.2235338180987"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"7.99703296920241"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.41000084889625"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.1825"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.634"}},{"Material":"Aluminum","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"31"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"21.5286929959434"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"4.83006249645989"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"1.94083049948354"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"8.33"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.4278"}},{"Material":"Rubber, polybutadiene (BR)","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"19"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"25.7498436582266"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.71806285127271"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.50917218589349"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"8.45260862106036"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.07"}},{"Material":"Rubber, natural latex","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"1"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"40.9824710225178"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"10.5031137854845"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"11.9821572370334"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"13.09"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.4072"}},{"Material":"Pulp, wood","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"16"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"26.2402636627006"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"7.98946704384303"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"10.5358966188576"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"1.7425"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.9724"}},{"Material":"Lyocell fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"21"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"24.9328867524731"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"5.58582944309682"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.63118230937631"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"9.01"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.705875"}},{"Material":"Glass fiber","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"24"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"23.1529827580207"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"9.84177977211743"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.17500298590326"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"5.355"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"0.7812"}},{"Material":"Spandex fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"44"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"13.8768916831477"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"3.00876497410553"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"2.55414122142198"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"5.2638854876202"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.0501"}},{"Material":"Polypropylene fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"8"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"32.5510649682399"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.12145550708646"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.9451926309464"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"12.478716830207"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.0057"}},{"Material":"Rayon-viscose fabric, wood","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"40"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"17.3499309228883"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"2.98634950348221"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.6354814194061"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.29"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.4381"}},{"Material":"Thermoplastic polyurethane, Bio-based","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"15"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"26.8652298472361"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.17619006810593"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.44593426491261"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"4.12310551421751"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.12"}},{"Material":"Ramie fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"32"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"21.1350573408415"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"1.17040252785504"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.91315481298642"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.815"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.2365"}},{"Material":"Polyurethane TPU, with solvent","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"27"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.7933966931449"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.86255776881127"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.43359268243445"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"5.37724624189919"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.12"}},{"Material":"Polypropylene","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"3"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"36.0824162471895"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"9.25478123014764"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.18771480408236"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"12.6342202129595"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.0057"}},{"Material":"Mineral filler","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"11"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"29.9933088191579"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"10.9046683155392"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.37037008425391"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"2.71827041936481"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"9"}},{"Material":"Linen fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"28"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.570264151543"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"4.00844197900187"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.04092217254111"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.73"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.7909"}},{"Material":"Ethylene-vinyl acetate (EVA) foam","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"7"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"32.5937705891802"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.41033861875402"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.09619535797263"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.7879366124535"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.2993"}},{"Material":"Down","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"2"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"37.5005009444395"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"10.3436517210785"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.82244922336104"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"14.28"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.0544"}},{"Material":"Cotton fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"17"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"25.927395206756"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"5.45426558420924"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"3.40052962254672"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"13.685"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.3876"}},{"Material":"Steel, carbon","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"10"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"31.3752340503816"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"10.0246359306127"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.78439811976892"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.1825"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.3837"}},{"Material":"Rubber, styrene butadiene (SBR)","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"29"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.4191303140486"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.11026579856776"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.98189714574849"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"5.56296736973238"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"1.764"}},{"Material":"Polycarbonate","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"14"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"26.9487824570689"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.28191592252618"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.50449933932896"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"8.04236719521375"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.12"}},{"Material":"Zinc","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"9"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"32.2405050230985"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.73795286210661"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.30135216099194"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"12.92"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.2812"}},{"Material":"Triexta fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"22"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"24.142611664848"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"4.32787551065859"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.3413034955689"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"9.58973265862055"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"1.8837"}},{"Material":"Polyurethane TPU, without solvent","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"25"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.9613229041898"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"7.16469932910183"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.51073857000565"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.42588500508232"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.86"}},{"Material":"Modal fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"33"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"21.0005935787975"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.49229068276168"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.52830289603586"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.29"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.69"}},{"Material":"Aramid fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"39"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"17.6508827774795"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"2.50335332092589"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"1.39024124147902"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"10.9222882150746"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.835"}},{"Material":"Wool fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"36"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"18.7973330709583"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"1.6884920853883"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"3.14884098557"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"12.07"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"1.89"}},{"Material":"Silk fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"12"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"29.7340509613022"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"1.66587091467017"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.89068004663199"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"14.45"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.7275"}},{"Material":"Polyethylene foam","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"5"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"34.2359881359901"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.71065616556397"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.09619535797263"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.7879366124535"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.6412"}},{"Material":"Leather, corn-fed","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"34"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"20.0091733111399"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"0.977388461264159"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.22458484987577"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"13.09"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"1.7172"}},{"Material":"Hemp fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"26"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.8079771403341"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"1.23119603964094"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"3.82808110069316"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.815"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.9337"}},{"Material":"Corrugated box","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"6"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"33.3902830067815"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"9.62758841902186"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"12.5255945877597"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"8.925"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.3121"}},{"Material":"Carbon fiber","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"43"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"14.8895846857888"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"0.228585418597615"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"0.759799267191234"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.99"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.9112"}},{"Material":"Polyvinyl Alcohol (PVA)","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"4"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"34.4961163022327"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"9.1120411146652"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.09619535797263"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.7978798295949"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.49"}},{"Material":"Polyester fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"23"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"23.3992045122064"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"4.44808112152183"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.20513425856145"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"10.5770891321231"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.1689"}},{"Material":"Nylon-6 fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"42"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"16.3318657665144"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"2.95823006598527"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.00071638377191"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.15631931675724"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.2166"}},{"Material":"Leather, grass-fed","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"20"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"25.0645117481231"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"0.720830664170462"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.29648108395263"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"13.09"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.9572"}},{"Material":"Nylon-6,6 fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"37"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"18.6512728390088"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"2.93090912891376"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"1.56529614608834"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.0644675640067"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.0906"}},{"Material":"Jute fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"41"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"17.3149633963778"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"0.824669420372765"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"2.58999397600499"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.815"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.0853"}},{"Material":"Rayon-viscose fabric, bamboo","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"38"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"18.2864986694871"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"3.41156828813431"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.14683038135281"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.29"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.4381"}},{"Material":"Polylactic acid (PLA) fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"18"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"25.7821748474296"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.60525611106328"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.43132409663545"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.5307946397309"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.2148"}},{"Material":"Epoxy resin","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"30"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"21.5409966071018"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"5.61399958092611"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"3.86250991487495"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.56448711130075"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.5"}},{"Material":"Acrylic fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"35"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"19.7582697955977"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"3.00950975448065"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.24989798927016"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"9.68276205184686"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.8161"}}],"text":"Materials Summary","id":"2e0378897768c85f","type":"data","columns":["Material","Rank","Total Score","Energy / GHG Emissions Intensity Total","Water / Land Intensity Total","Physical Waste Total","Chemistry Total"]},{"type":"paragraph","id":"f7eb2020b4818108","text":"The Scatter plugin finds and renders multi-faceted datasets as a scatter diagram."},{"type":"paragraph","id":"5a79f1998390360b","text":"See [https://github.com/fedwiki/wiki-plugin-scatter GitHub] for plugin source."},{"type":"scatter","id":"9513cc3289fce694"},{"type":"paragraph","id":"0c5c392d9758d5ef","text":"The Scatter plugin chooses the 'Total Score' column as the vertical displacement for the diagram."},{"type":"paragraph","id":"0d718a687c4b1cb1","text":"The Scatter plugin listens for 'thumb' events and choose the selected column as the horizontal displacement for the diagram. Scrub over the dataset to see this effect."},{"type":"paragraph","id":"17774e8cd5edf1d9","text":"Hover over scattered points to see details."},{"type":"paragraph","id":"94ad7a7527523675","text":"Click points to open a page corresponding to the point."}],"journal":[{"type":"create","item":{"title":"About Scatter Plugin","story":[]},"date":1401605197289},{"type":"add","item":{"data":[{"Material":"Steel, stainless","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"13"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"28.2235338180987"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"7.99703296920241"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.41000084889625"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.1825"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.634"}},{"Material":"Aluminum","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"31"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"21.5286929959434"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"4.83006249645989"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"1.94083049948354"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"8.33"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.4278"}},{"Material":"Rubber, polybutadiene (BR)","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"19"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"25.7498436582266"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.71806285127271"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.50917218589349"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"8.45260862106036"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.07"}},{"Material":"Rubber, natural latex","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"1"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"40.9824710225178"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"10.5031137854845"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"11.9821572370334"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"13.09"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.4072"}},{"Material":"Pulp, wood","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"16"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"26.2402636627006"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"7.98946704384303"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"10.5358966188576"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"1.7425"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.9724"}},{"Material":"Lyocell fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"21"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"24.9328867524731"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"5.58582944309682"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.63118230937631"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"9.01"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.705875"}},{"Material":"Glass fiber","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"24"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"23.1529827580207"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"9.84177977211743"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.17500298590326"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"5.355"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"0.7812"}},{"Material":"Spandex fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"44"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"13.8768916831477"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"3.00876497410553"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"2.55414122142198"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"5.2638854876202"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.0501"}},{"Material":"Polypropylene fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"8"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"32.5510649682399"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.12145550708646"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.9451926309464"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"12.478716830207"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.0057"}},{"Material":"Rayon-viscose fabric, wood","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"40"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"17.3499309228883"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"2.98634950348221"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.6354814194061"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.29"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.4381"}},{"Material":"Thermoplastic polyurethane, Bio-based","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"15"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"26.8652298472361"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.17619006810593"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.44593426491261"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"4.12310551421751"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.12"}},{"Material":"Ramie fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"32"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"21.1350573408415"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"1.17040252785504"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.91315481298642"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.815"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.2365"}},{"Material":"Polyurethane TPU, with solvent","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"27"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.7933966931449"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.86255776881127"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.43359268243445"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"5.37724624189919"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.12"}},{"Material":"Polypropylene","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"3"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"36.0824162471895"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"9.25478123014764"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.18771480408236"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"12.6342202129595"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.0057"}},{"Material":"Mineral filler","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"11"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"29.9933088191579"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"10.9046683155392"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.37037008425391"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"2.71827041936481"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"9"}},{"Material":"Linen fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"28"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.570264151543"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"4.00844197900187"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.04092217254111"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.73"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.7909"}},{"Material":"Ethylene-vinyl acetate (EVA) foam","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"7"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"32.5937705891802"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.41033861875402"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.09619535797263"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.7879366124535"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.2993"}},{"Material":"Down","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"2"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"37.5005009444395"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"10.3436517210785"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.82244922336104"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"14.28"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.0544"}},{"Material":"Cotton fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"17"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"25.927395206756"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"5.45426558420924"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"3.40052962254672"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"13.685"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.3876"}},{"Material":"Steel, carbon","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"10"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"31.3752340503816"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"10.0246359306127"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"7.78439811976892"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.1825"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.3837"}},{"Material":"Rubber, styrene butadiene (SBR)","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"29"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.4191303140486"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.11026579856776"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.98189714574849"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"5.56296736973238"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"1.764"}},{"Material":"Polycarbonate","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"14"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"26.9487824570689"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.28191592252618"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.50449933932896"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"8.04236719521375"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.12"}},{"Material":"Zinc","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"9"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"32.2405050230985"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.73795286210661"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.30135216099194"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"12.92"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.2812"}},{"Material":"Triexta fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"22"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"24.142611664848"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"4.32787551065859"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.3413034955689"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"9.58973265862055"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"1.8837"}},{"Material":"Polyurethane TPU, without solvent","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"25"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.9613229041898"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"7.16469932910183"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.51073857000565"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.42588500508232"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.86"}},{"Material":"Modal fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"33"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"21.0005935787975"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.49229068276168"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.52830289603586"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.29"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.69"}},{"Material":"Aramid fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"39"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"17.6508827774795"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"2.50335332092589"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"1.39024124147902"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"10.9222882150746"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.835"}},{"Material":"Wool fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"36"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"18.7973330709583"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"1.6884920853883"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"3.14884098557"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"12.07"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"1.89"}},{"Material":"Silk fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"12"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"29.7340509613022"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"1.66587091467017"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.89068004663199"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"14.45"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"6.7275"}},{"Material":"Polyethylene foam","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"5"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"34.2359881359901"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"8.71065616556397"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.09619535797263"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.7879366124535"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.6412"}},{"Material":"Leather, corn-fed","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"34"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"20.0091733111399"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"0.977388461264159"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.22458484987577"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"13.09"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"1.7172"}},{"Material":"Hemp fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"26"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"22.8079771403341"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"1.23119603964094"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"3.82808110069316"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.815"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.9337"}},{"Material":"Corrugated box","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"6"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"33.3902830067815"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"9.62758841902186"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"12.5255945877597"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"8.925"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.3121"}},{"Material":"Carbon fiber","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"43"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"14.8895846857888"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"0.228585418597615"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"0.759799267191234"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.99"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.9112"}},{"Material":"Polyvinyl Alcohol (PVA)","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"4"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"34.4961163022327"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"9.1120411146652"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.09619535797263"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.7978798295949"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"5.49"}},{"Material":"Polyester fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"23"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"23.3992045122064"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"4.44808112152183"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"5.20513425856145"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"10.5770891321231"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.1689"}},{"Material":"Nylon-6 fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"42"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"16.3318657665144"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"2.95823006598527"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.00071638377191"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.15631931675724"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.2166"}},{"Material":"Leather, grass-fed","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"20"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"25.0645117481231"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"0.720830664170462"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.29648108395263"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"13.09"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.9572"}},{"Material":"Nylon-6,6 fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"37"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"18.6512728390088"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"2.93090912891376"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"1.56529614608834"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.0644675640067"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.0906"}},{"Material":"Jute fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"41"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"17.3149633963778"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"0.824669420372765"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"2.58999397600499"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"11.815"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.0853"}},{"Material":"Rayon-viscose fabric, bamboo","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"38"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"18.2864986694871"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"3.41156828813431"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"6.14683038135281"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"6.29"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.4381"}},{"Material":"Polylactic acid (PLA) fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"18"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"25.7821748474296"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"6.60525611106328"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"8.43132409663545"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.5307946397309"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"3.2148"}},{"Material":"Epoxy resin","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"30"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"21.5409966071018"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"5.61399958092611"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"3.86250991487495"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"7.56448711130075"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"4.5"}},{"Material":"Acrylic fabric","Rank":{"formula":"=RANK([@[Total Score]],[Total Score])","value":"35"},"Total Score":{"formula":"=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")","value":"19.7582697955977"},"Energy / GHG Emissions Intensity Total":{"formula":"=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]","value":"3.00950975448065"},"Water / Land Intensity Total":{"formula":"=[@[Water Intensity]]+[@[Land Intensity]]","value":"4.24989798927016"},"Physical Waste Total":{"formula":"=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]","value":"9.68276205184686"},"Chemistry Total":{"formula":"=ChemistryTotalScore","value":"2.8161"}}],"text":"Materials Summary","id":"2e0378897768c85f","type":"data","columns":["Material","Rank","Total Score","Energy / GHG Emissions Intensity Total","Water / Land Intensity Total","Physical Waste Total","Chemistry Total"]},"id":"2e0378897768c85f","date":1401605311066},{"item":{"type":"factory","id":"f7eb2020b4818108"},"id":"f7eb2020b4818108","type":"add","after":"2e0378897768c85f","date":1401605335857},{"type":"edit","id":"f7eb2020b4818108","item":{"type":"paragraph","id":"f7eb2020b4818108","text":"The Scatter plugin finds and renders multi-faceted datasets as a scatter diagram."},"date":1401605411395},{"item":{"type":"factory","id":"5a79f1998390360b"},"id":"5a79f1998390360b","type":"add","after":"f7eb2020b4818108","date":1401605530789},{"type":"edit","id":"5a79f1998390360b","item":{"type":"paragraph","id":"5a79f1998390360b","text":"See [https://github.com/fedwiki/wiki-plugin-scatter GitHub] for plugin source."},"date":1401605567483},{"type":"add","item":{"type":"scatter","id":"9513cc3289fce694"},"after":"5a79f1998390360b","id":"9513cc3289fce694","date":1401605603952},{"item":{"type":"factory","id":"0d718a687c4b1cb1"},"id":"0d718a687c4b1cb1","type":"add","after":"9513cc3289fce694","date":1401605656717},{"type":"edit","id":"0d718a687c4b1cb1","item":{"type":"paragraph","id":"0d718a687c4b1cb1","text":"The Scatter plugin listens for 'thumb' events"},"date":1401605682428},{"type":"edit","id":"0d718a687c4b1cb1","item":{"type":"paragraph","id":"0d718a687c4b1cb1","text":"The Scatter plugin listens for 'thumb' events and choose the selected column as the horizontal displacement for the diagram."},"date":1401605872654},{"item":{"type":"factory","id":"0c5c392d9758d5ef"},"id":"0c5c392d9758d5ef","type":"add","after":"0d718a687c4b1cb1","date":1401605932507},{"type":"edit","id":"0c5c392d9758d5ef","item":{"type":"paragraph","id":"0c5c392d9758d5ef","text":"The Scatter plugin chooses the 'Total Score' column as the vertical displacement for the diagram."},"date":1401605973869},{"type":"move","order":["2e0378897768c85f","f7eb2020b4818108","5a79f1998390360b","9513cc3289fce694","0c5c392d9758d5ef","0d718a687c4b1cb1"],"id":"0c5c392d9758d5ef","date":1401605977836},{"type":"edit","id":"0d718a687c4b1cb1","item":{"type":"paragraph","id":"0d718a687c4b1cb1","text":"The Scatter plugin listens for 'thumb' events and choose the selected column as the horizontal displacement for the diagram. Scrub over the dataset to see this effect."},"date":1401606003012},{"item":{"type":"paragraph","id":"17774e8cd5edf1d9","text":""},"id":"17774e8cd5edf1d9","type":"add","after":"0d718a687c4b1cb1","date":1401606030843},{"type":"edit","id":"17774e8cd5edf1d9","item":{"type":"paragraph","id":"17774e8cd5edf1d9","text":"Hover over scattered points to see details."},"date":1401606125628},{"item":{"type":"paragraph","id":"94ad7a7527523675","text":""},"id":"94ad7a7527523675","type":"add","after":"17774e8cd5edf1d9","date":1401606125648},{"type":"edit","id":"94ad7a7527523675","item":{"type":"paragraph","id":"94ad7a7527523675","text":"Double click points to open a page corresponding to the point."},"date":1401606156258},{"type":"edit","id":"94ad7a7527523675","item":{"type":"paragraph","id":"94ad7a7527523675","text":"Click scattered points to open a page corresponding to the point."},"date":1401606179963},{"type":"edit","id":"94ad7a7527523675","item":{"type":"paragraph","id":"94ad7a7527523675","text":"Click points to open a page corresponding to the point."},"date":1401606185108}],"plugin":"scatter"}
+{
+  "title": "About Scatter Plugin",
+  "story": [
+    {
+      "data": [
+        {
+          "Material": "Steel, stainless",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "13"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "28.2235338180987"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "7.99703296920241"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "7.41000084889625"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "7.1825"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "5.634"
+          }
+        },
+        {
+          "Material": "Aluminum",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "31"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "21.5286929959434"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "4.83006249645989"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "1.94083049948354"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "8.33"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "6.4278"
+          }
+        },
+        {
+          "Material": "Rubber, polybutadiene (BR)",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "19"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "25.7498436582266"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "6.71806285127271"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "8.50917218589349"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "8.45260862106036"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "2.07"
+          }
+        },
+        {
+          "Material": "Rubber, natural latex",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "1"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "40.9824710225178"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "10.5031137854845"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "11.9821572370334"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "13.09"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "5.4072"
+          }
+        },
+        {
+          "Material": "Pulp, wood",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "16"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "26.2402636627006"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "7.98946704384303"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "10.5358966188576"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "1.7425"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "5.9724"
+          }
+        },
+        {
+          "Material": "Lyocell fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "21"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "24.9328867524731"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "5.58582944309682"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "5.63118230937631"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "9.01"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "4.705875"
+          }
+        },
+        {
+          "Material": "Glass fiber",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "24"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "23.1529827580207"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "9.84177977211743"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "7.17500298590326"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "5.355"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "0.7812"
+          }
+        },
+        {
+          "Material": "Spandex fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "44"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "13.8768916831477"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "3.00876497410553"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "2.55414122142198"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "5.2638854876202"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "3.0501"
+          }
+        },
+        {
+          "Material": "Polypropylene fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "8"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "32.5510649682399"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "6.12145550708646"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "7.9451926309464"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "12.478716830207"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "6.0057"
+          }
+        },
+        {
+          "Material": "Rayon-viscose fabric, wood",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "40"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "17.3499309228883"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "2.98634950348221"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "5.6354814194061"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "6.29"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "2.4381"
+          }
+        },
+        {
+          "Material": "Thermoplastic polyurethane, Bio-based",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "15"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "26.8652298472361"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "8.17619006810593"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "8.44593426491261"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "4.12310551421751"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "6.12"
+          }
+        },
+        {
+          "Material": "Ramie fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "32"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "21.1350573408415"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "1.17040252785504"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "5.91315481298642"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "11.815"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "2.2365"
+          }
+        },
+        {
+          "Material": "Polyurethane TPU, with solvent",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "27"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "22.7933966931449"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "6.86255776881127"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "4.43359268243445"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "5.37724624189919"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "6.12"
+          }
+        },
+        {
+          "Material": "Polypropylene",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "3"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "36.0824162471895"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "9.25478123014764"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "8.18771480408236"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "12.6342202129595"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "6.0057"
+          }
+        },
+        {
+          "Material": "Mineral filler",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "11"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "29.9933088191579"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "10.9046683155392"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "7.37037008425391"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "2.71827041936481"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "9"
+          }
+        },
+        {
+          "Material": "Linen fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "28"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "22.570264151543"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "4.00844197900187"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "4.04092217254111"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "11.73"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "2.7909"
+          }
+        },
+        {
+          "Material": "Ethylene-vinyl acetate (EVA) foam",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "7"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "32.5937705891802"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "8.41033861875402"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "8.09619535797263"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "11.7879366124535"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "4.2993"
+          }
+        },
+        {
+          "Material": "Down",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "2"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "37.5005009444395"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "10.3436517210785"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "7.82244922336104"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "14.28"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "5.0544"
+          }
+        },
+        {
+          "Material": "Cotton fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "17"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "25.927395206756"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "5.45426558420924"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "3.40052962254672"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "13.685"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "3.3876"
+          }
+        },
+        {
+          "Material": "Steel, carbon",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "10"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "31.3752340503816"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "10.0246359306127"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "7.78439811976892"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "7.1825"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "6.3837"
+          }
+        },
+        {
+          "Material": "Rubber, styrene butadiene (SBR)",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "29"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "22.4191303140486"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "8.11026579856776"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "6.98189714574849"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "5.56296736973238"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "1.764"
+          }
+        },
+        {
+          "Material": "Polycarbonate",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "14"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "26.9487824570689"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "6.28191592252618"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "6.50449933932896"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "8.04236719521375"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "6.12"
+          }
+        },
+        {
+          "Material": "Zinc",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "9"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "32.2405050230985"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "8.73795286210661"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "5.30135216099194"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "12.92"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "5.2812"
+          }
+        },
+        {
+          "Material": "Triexta fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "22"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "24.142611664848"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "4.32787551065859"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "8.3413034955689"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "9.58973265862055"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "1.8837"
+          }
+        },
+        {
+          "Material": "Polyurethane TPU, without solvent",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "25"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "22.9613229041898"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "7.16469932910183"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "4.51073857000565"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "6.42588500508232"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "4.86"
+          }
+        },
+        {
+          "Material": "Modal fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "33"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "21.0005935787975"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "6.49229068276168"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "4.52830289603586"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "6.29"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "3.69"
+          }
+        },
+        {
+          "Material": "Aramid fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "39"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "17.6508827774795"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "2.50335332092589"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "1.39024124147902"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "10.9222882150746"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "2.835"
+          }
+        },
+        {
+          "Material": "Wool fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "36"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "18.7973330709583"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "1.6884920853883"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "3.14884098557"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "12.07"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "1.89"
+          }
+        },
+        {
+          "Material": "Silk fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "12"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "29.7340509613022"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "1.66587091467017"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "6.89068004663199"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "14.45"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "6.7275"
+          }
+        },
+        {
+          "Material": "Polyethylene foam",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "5"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "34.2359881359901"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "8.71065616556397"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "8.09619535797263"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "11.7879366124535"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "5.6412"
+          }
+        },
+        {
+          "Material": "Leather, corn-fed",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "34"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "20.0091733111399"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "0.977388461264159"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "4.22458484987577"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "13.09"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "1.7172"
+          }
+        },
+        {
+          "Material": "Hemp fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "26"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "22.8079771403341"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "1.23119603964094"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "3.82808110069316"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "11.815"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "5.9337"
+          }
+        },
+        {
+          "Material": "Corrugated box",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "6"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "33.3902830067815"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "9.62758841902186"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "12.5255945877597"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "8.925"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "2.3121"
+          }
+        },
+        {
+          "Material": "Carbon fiber",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "43"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "14.8895846857888"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "0.228585418597615"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "0.759799267191234"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "7.99"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "5.9112"
+          }
+        },
+        {
+          "Material": "Polyvinyl Alcohol (PVA)",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "4"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "34.4961163022327"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "9.1120411146652"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "8.09619535797263"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "11.7978798295949"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "5.49"
+          }
+        },
+        {
+          "Material": "Polyester fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "23"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "23.3992045122064"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "4.44808112152183"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "5.20513425856145"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "10.5770891321231"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "3.1689"
+          }
+        },
+        {
+          "Material": "Nylon-6 fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "42"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "16.3318657665144"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "2.95823006598527"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "4.00071638377191"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "6.15631931675724"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "3.2166"
+          }
+        },
+        {
+          "Material": "Leather, grass-fed",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "20"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "25.0645117481231"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "0.720830664170462"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "6.29648108395263"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "13.09"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "4.9572"
+          }
+        },
+        {
+          "Material": "Nylon-6,6 fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "37"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "18.6512728390088"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "2.93090912891376"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "1.56529614608834"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "11.0644675640067"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "3.0906"
+          }
+        },
+        {
+          "Material": "Jute fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "41"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "17.3149633963778"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "0.824669420372765"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "2.58999397600499"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "11.815"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "2.0853"
+          }
+        },
+        {
+          "Material": "Rayon-viscose fabric, bamboo",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "38"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "18.2864986694871"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "3.41156828813431"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "6.14683038135281"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "6.29"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "2.4381"
+          }
+        },
+        {
+          "Material": "Polylactic acid (PLA) fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "18"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "25.7821748474296"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "6.60525611106328"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "8.43132409663545"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "7.5307946397309"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "3.2148"
+          }
+        },
+        {
+          "Material": "Epoxy resin",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "30"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "21.5409966071018"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "5.61399958092611"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "3.86250991487495"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "7.56448711130075"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "4.5"
+          }
+        },
+        {
+          "Material": "Acrylic fabric",
+          "Rank": {
+            "formula": "=RANK([@[Total Score]],[Total Score])",
+            "value": "35"
+          },
+          "Total Score": {
+            "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+            "value": "19.7582697955977"
+          },
+          "Energy / GHG Emissions Intensity Total": {
+            "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+            "value": "3.00950975448065"
+          },
+          "Water / Land Intensity Total": {
+            "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+            "value": "4.24989798927016"
+          },
+          "Physical Waste Total": {
+            "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+            "value": "9.68276205184686"
+          },
+          "Chemistry Total": {
+            "formula": "=ChemistryTotalScore",
+            "value": "2.8161"
+          }
+        }
+      ],
+      "text": "Materials Summary",
+      "id": "2e0378897768c85f",
+      "type": "data",
+      "columns": [
+        "Material",
+        "Rank",
+        "Total Score",
+        "Energy / GHG Emissions Intensity Total",
+        "Water / Land Intensity Total",
+        "Physical Waste Total",
+        "Chemistry Total"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "id": "f7eb2020b4818108",
+      "text": "The Scatter plugin finds and renders multi-faceted datasets as a scatter diagram."
+    },
+    {
+      "type": "paragraph",
+      "id": "5a79f1998390360b",
+      "text": "See [https://github.com/fedwiki/wiki-plugin-scatter GitHub] for plugin source."
+    },
+    {
+      "type": "scatter",
+      "id": "9513cc3289fce694"
+    },
+    {
+      "type": "paragraph",
+      "id": "0c5c392d9758d5ef",
+      "text": "The Scatter plugin chooses the 'Total Score' column as the vertical displacement for the diagram."
+    },
+    {
+      "type": "paragraph",
+      "id": "0d718a687c4b1cb1",
+      "text": "The Scatter plugin listens for 'thumb' events and choose the selected column as the horizontal displacement for the diagram. Scrub over the dataset to see this effect."
+    },
+    {
+      "type": "paragraph",
+      "id": "17774e8cd5edf1d9",
+      "text": "Hover over scattered points to see details."
+    },
+    {
+      "type": "paragraph",
+      "id": "94ad7a7527523675",
+      "text": "Click points to open a page corresponding to the point."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About Scatter Plugin",
+        "story": []
+      },
+      "date": 1401605197289
+    },
+    {
+      "type": "add",
+      "item": {
+        "data": [
+          {
+            "Material": "Steel, stainless",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "13"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "28.2235338180987"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "7.99703296920241"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "7.41000084889625"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "7.1825"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "5.634"
+            }
+          },
+          {
+            "Material": "Aluminum",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "31"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "21.5286929959434"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "4.83006249645989"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "1.94083049948354"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "8.33"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "6.4278"
+            }
+          },
+          {
+            "Material": "Rubber, polybutadiene (BR)",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "19"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "25.7498436582266"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "6.71806285127271"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "8.50917218589349"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "8.45260862106036"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "2.07"
+            }
+          },
+          {
+            "Material": "Rubber, natural latex",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "1"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "40.9824710225178"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "10.5031137854845"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "11.9821572370334"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "13.09"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "5.4072"
+            }
+          },
+          {
+            "Material": "Pulp, wood",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "16"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "26.2402636627006"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "7.98946704384303"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "10.5358966188576"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "1.7425"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "5.9724"
+            }
+          },
+          {
+            "Material": "Lyocell fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "21"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "24.9328867524731"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "5.58582944309682"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "5.63118230937631"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "9.01"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "4.705875"
+            }
+          },
+          {
+            "Material": "Glass fiber",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "24"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "23.1529827580207"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "9.84177977211743"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "7.17500298590326"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "5.355"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "0.7812"
+            }
+          },
+          {
+            "Material": "Spandex fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "44"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "13.8768916831477"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "3.00876497410553"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "2.55414122142198"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "5.2638854876202"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "3.0501"
+            }
+          },
+          {
+            "Material": "Polypropylene fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "8"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "32.5510649682399"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "6.12145550708646"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "7.9451926309464"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "12.478716830207"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "6.0057"
+            }
+          },
+          {
+            "Material": "Rayon-viscose fabric, wood",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "40"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "17.3499309228883"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "2.98634950348221"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "5.6354814194061"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "6.29"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "2.4381"
+            }
+          },
+          {
+            "Material": "Thermoplastic polyurethane, Bio-based",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "15"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "26.8652298472361"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "8.17619006810593"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "8.44593426491261"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "4.12310551421751"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "6.12"
+            }
+          },
+          {
+            "Material": "Ramie fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "32"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "21.1350573408415"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "1.17040252785504"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "5.91315481298642"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "11.815"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "2.2365"
+            }
+          },
+          {
+            "Material": "Polyurethane TPU, with solvent",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "27"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "22.7933966931449"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "6.86255776881127"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "4.43359268243445"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "5.37724624189919"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "6.12"
+            }
+          },
+          {
+            "Material": "Polypropylene",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "3"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "36.0824162471895"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "9.25478123014764"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "8.18771480408236"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "12.6342202129595"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "6.0057"
+            }
+          },
+          {
+            "Material": "Mineral filler",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "11"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "29.9933088191579"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "10.9046683155392"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "7.37037008425391"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "2.71827041936481"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "9"
+            }
+          },
+          {
+            "Material": "Linen fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "28"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "22.570264151543"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "4.00844197900187"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "4.04092217254111"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "11.73"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "2.7909"
+            }
+          },
+          {
+            "Material": "Ethylene-vinyl acetate (EVA) foam",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "7"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "32.5937705891802"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "8.41033861875402"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "8.09619535797263"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "11.7879366124535"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "4.2993"
+            }
+          },
+          {
+            "Material": "Down",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "2"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "37.5005009444395"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "10.3436517210785"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "7.82244922336104"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "14.28"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "5.0544"
+            }
+          },
+          {
+            "Material": "Cotton fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "17"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "25.927395206756"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "5.45426558420924"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "3.40052962254672"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "13.685"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "3.3876"
+            }
+          },
+          {
+            "Material": "Steel, carbon",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "10"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "31.3752340503816"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "10.0246359306127"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "7.78439811976892"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "7.1825"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "6.3837"
+            }
+          },
+          {
+            "Material": "Rubber, styrene butadiene (SBR)",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "29"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "22.4191303140486"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "8.11026579856776"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "6.98189714574849"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "5.56296736973238"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "1.764"
+            }
+          },
+          {
+            "Material": "Polycarbonate",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "14"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "26.9487824570689"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "6.28191592252618"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "6.50449933932896"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "8.04236719521375"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "6.12"
+            }
+          },
+          {
+            "Material": "Zinc",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "9"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "32.2405050230985"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "8.73795286210661"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "5.30135216099194"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "12.92"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "5.2812"
+            }
+          },
+          {
+            "Material": "Triexta fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "22"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "24.142611664848"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "4.32787551065859"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "8.3413034955689"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "9.58973265862055"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "1.8837"
+            }
+          },
+          {
+            "Material": "Polyurethane TPU, without solvent",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "25"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "22.9613229041898"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "7.16469932910183"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "4.51073857000565"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "6.42588500508232"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "4.86"
+            }
+          },
+          {
+            "Material": "Modal fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "33"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "21.0005935787975"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "6.49229068276168"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "4.52830289603586"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "6.29"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "3.69"
+            }
+          },
+          {
+            "Material": "Aramid fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "39"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "17.6508827774795"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "2.50335332092589"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "1.39024124147902"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "10.9222882150746"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "2.835"
+            }
+          },
+          {
+            "Material": "Wool fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "36"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "18.7973330709583"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "1.6884920853883"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "3.14884098557"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "12.07"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "1.89"
+            }
+          },
+          {
+            "Material": "Silk fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "12"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "29.7340509613022"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "1.66587091467017"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "6.89068004663199"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "14.45"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "6.7275"
+            }
+          },
+          {
+            "Material": "Polyethylene foam",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "5"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "34.2359881359901"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "8.71065616556397"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "8.09619535797263"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "11.7879366124535"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "5.6412"
+            }
+          },
+          {
+            "Material": "Leather, corn-fed",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "34"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "20.0091733111399"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "0.977388461264159"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "4.22458484987577"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "13.09"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "1.7172"
+            }
+          },
+          {
+            "Material": "Hemp fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "26"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "22.8079771403341"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "1.23119603964094"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "3.82808110069316"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "11.815"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "5.9337"
+            }
+          },
+          {
+            "Material": "Corrugated box",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "6"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "33.3902830067815"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "9.62758841902186"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "12.5255945877597"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "8.925"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "2.3121"
+            }
+          },
+          {
+            "Material": "Carbon fiber",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "43"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "14.8895846857888"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "0.228585418597615"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "0.759799267191234"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "7.99"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "5.9112"
+            }
+          },
+          {
+            "Material": "Polyvinyl Alcohol (PVA)",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "4"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "34.4961163022327"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "9.1120411146652"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "8.09619535797263"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "11.7978798295949"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "5.49"
+            }
+          },
+          {
+            "Material": "Polyester fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "23"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "23.3992045122064"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "4.44808112152183"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "5.20513425856145"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "10.5770891321231"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "3.1689"
+            }
+          },
+          {
+            "Material": "Nylon-6 fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "42"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "16.3318657665144"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "2.95823006598527"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "4.00071638377191"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "6.15631931675724"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "3.2166"
+            }
+          },
+          {
+            "Material": "Leather, grass-fed",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "20"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "25.0645117481231"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "0.720830664170462"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "6.29648108395263"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "13.09"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "4.9572"
+            }
+          },
+          {
+            "Material": "Nylon-6,6 fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "37"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "18.6512728390088"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "2.93090912891376"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "1.56529614608834"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "11.0644675640067"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "3.0906"
+            }
+          },
+          {
+            "Material": "Jute fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "41"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "17.3149633963778"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "0.824669420372765"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "2.58999397600499"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "11.815"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "2.0853"
+            }
+          },
+          {
+            "Material": "Rayon-viscose fabric, bamboo",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "38"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "18.2864986694871"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "3.41156828813431"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "6.14683038135281"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "6.29"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "2.4381"
+            }
+          },
+          {
+            "Material": "Polylactic acid (PLA) fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "18"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "25.7821748474296"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "6.60525611106328"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "8.43132409663545"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "7.5307946397309"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "3.2148"
+            }
+          },
+          {
+            "Material": "Epoxy resin",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "30"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "21.5409966071018"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "5.61399958092611"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "3.86250991487495"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "7.56448711130075"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "4.5"
+            }
+          },
+          {
+            "Material": "Acrylic fabric",
+            "Rank": {
+              "formula": "=RANK([@[Total Score]],[Total Score])",
+              "value": "35"
+            },
+            "Total Score": {
+              "formula": "=IFERROR(SUM([@[Chemistry Total]],[@[Energy / GHG Emissions Intensity Total]],[@[Water / Land Intensity Total]],[@[Physical Waste Total]]),\"\")",
+              "value": "19.7582697955977"
+            },
+            "Energy / GHG Emissions Intensity Total": {
+              "formula": "=[@[Energy Intensity]]+[@[GHG Emissions Intensity]]",
+              "value": "3.00950975448065"
+            },
+            "Water / Land Intensity Total": {
+              "formula": "=[@[Water Intensity]]+[@[Land Intensity]]",
+              "value": "4.24989798927016"
+            },
+            "Physical Waste Total": {
+              "formula": "=[@[Hazardous Waste]]+[@[Municipal Solid Waste]]+[@[Industrial Waste]]+[@[Recyclable / Compostable Waste]]+[@[Mineral Waste]]",
+              "value": "9.68276205184686"
+            },
+            "Chemistry Total": {
+              "formula": "=ChemistryTotalScore",
+              "value": "2.8161"
+            }
+          }
+        ],
+        "text": "Materials Summary",
+        "id": "2e0378897768c85f",
+        "type": "data",
+        "columns": [
+          "Material",
+          "Rank",
+          "Total Score",
+          "Energy / GHG Emissions Intensity Total",
+          "Water / Land Intensity Total",
+          "Physical Waste Total",
+          "Chemistry Total"
+        ]
+      },
+      "id": "2e0378897768c85f",
+      "date": 1401605311066
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f7eb2020b4818108"
+      },
+      "id": "f7eb2020b4818108",
+      "type": "add",
+      "after": "2e0378897768c85f",
+      "date": 1401605335857
+    },
+    {
+      "type": "edit",
+      "id": "f7eb2020b4818108",
+      "item": {
+        "type": "paragraph",
+        "id": "f7eb2020b4818108",
+        "text": "The Scatter plugin finds and renders multi-faceted datasets as a scatter diagram."
+      },
+      "date": 1401605411395
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5a79f1998390360b"
+      },
+      "id": "5a79f1998390360b",
+      "type": "add",
+      "after": "f7eb2020b4818108",
+      "date": 1401605530789
+    },
+    {
+      "type": "edit",
+      "id": "5a79f1998390360b",
+      "item": {
+        "type": "paragraph",
+        "id": "5a79f1998390360b",
+        "text": "See [https://github.com/fedwiki/wiki-plugin-scatter GitHub] for plugin source."
+      },
+      "date": 1401605567483
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "scatter",
+        "id": "9513cc3289fce694"
+      },
+      "after": "5a79f1998390360b",
+      "id": "9513cc3289fce694",
+      "date": 1401605603952
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0d718a687c4b1cb1"
+      },
+      "id": "0d718a687c4b1cb1",
+      "type": "add",
+      "after": "9513cc3289fce694",
+      "date": 1401605656717
+    },
+    {
+      "type": "edit",
+      "id": "0d718a687c4b1cb1",
+      "item": {
+        "type": "paragraph",
+        "id": "0d718a687c4b1cb1",
+        "text": "The Scatter plugin listens for 'thumb' events"
+      },
+      "date": 1401605682428
+    },
+    {
+      "type": "edit",
+      "id": "0d718a687c4b1cb1",
+      "item": {
+        "type": "paragraph",
+        "id": "0d718a687c4b1cb1",
+        "text": "The Scatter plugin listens for 'thumb' events and choose the selected column as the horizontal displacement for the diagram."
+      },
+      "date": 1401605872654
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0c5c392d9758d5ef"
+      },
+      "id": "0c5c392d9758d5ef",
+      "type": "add",
+      "after": "0d718a687c4b1cb1",
+      "date": 1401605932507
+    },
+    {
+      "type": "edit",
+      "id": "0c5c392d9758d5ef",
+      "item": {
+        "type": "paragraph",
+        "id": "0c5c392d9758d5ef",
+        "text": "The Scatter plugin chooses the 'Total Score' column as the vertical displacement for the diagram."
+      },
+      "date": 1401605973869
+    },
+    {
+      "type": "move",
+      "order": [
+        "2e0378897768c85f",
+        "f7eb2020b4818108",
+        "5a79f1998390360b",
+        "9513cc3289fce694",
+        "0c5c392d9758d5ef",
+        "0d718a687c4b1cb1"
+      ],
+      "id": "0c5c392d9758d5ef",
+      "date": 1401605977836
+    },
+    {
+      "type": "edit",
+      "id": "0d718a687c4b1cb1",
+      "item": {
+        "type": "paragraph",
+        "id": "0d718a687c4b1cb1",
+        "text": "The Scatter plugin listens for 'thumb' events and choose the selected column as the horizontal displacement for the diagram. Scrub over the dataset to see this effect."
+      },
+      "date": 1401606003012
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "17774e8cd5edf1d9",
+        "text": ""
+      },
+      "id": "17774e8cd5edf1d9",
+      "type": "add",
+      "after": "0d718a687c4b1cb1",
+      "date": 1401606030843
+    },
+    {
+      "type": "edit",
+      "id": "17774e8cd5edf1d9",
+      "item": {
+        "type": "paragraph",
+        "id": "17774e8cd5edf1d9",
+        "text": "Hover over scattered points to see details."
+      },
+      "date": 1401606125628
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "94ad7a7527523675",
+        "text": ""
+      },
+      "id": "94ad7a7527523675",
+      "type": "add",
+      "after": "17774e8cd5edf1d9",
+      "date": 1401606125648
+    },
+    {
+      "type": "edit",
+      "id": "94ad7a7527523675",
+      "item": {
+        "type": "paragraph",
+        "id": "94ad7a7527523675",
+        "text": "Double click points to open a page corresponding to the point."
+      },
+      "date": 1401606156258
+    },
+    {
+      "type": "edit",
+      "id": "94ad7a7527523675",
+      "item": {
+        "type": "paragraph",
+        "id": "94ad7a7527523675",
+        "text": "Click scattered points to open a page corresponding to the point."
+      },
+      "date": 1401606179963
+    },
+    {
+      "type": "edit",
+      "id": "94ad7a7527523675",
+      "item": {
+        "type": "paragraph",
+        "id": "94ad7a7527523675",
+        "text": "Click points to open a page corresponding to the point."
+      },
+      "date": 1401606185108
+    }
+  ],
+  "plugin": "scatter"
+}

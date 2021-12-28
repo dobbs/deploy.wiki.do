@@ -1,1 +1,84 @@
-{"title":"Federation Search","story":[{"type":"paragraph","id":"2ff061a264c2e916","text":"Search the visible federation for pages matching all words entered. Case doesn't matter but spelling does."},{"type":"search","id":"b1d1f1070ac7c0b9","text":"ALL WORDS INPUT"},{"type":"paragraph","id":"e8698a4cd5220e43","text":"More [[About Search Plugin]]"}],"journal":[{"type":"create","item":{"title":"Federation Search","story":[]},"date":1552855381346},{"type":"add","item":{"type":"paragraph","id":"2ff061a264c2e916","text":"Search the visible federation for pages matching all words entered. Case doesn't matter but spelling does."},"id":"2ff061a264c2e916","date":1552855394240},{"type":"add","item":{"type":"search","id":"b1d1f1070ac7c0b9","text":"ALL WORDS INPUT"},"id":"b1d1f1070ac7c0b9","date":1552855402175},{"type":"move","order":["2ff061a264c2e916","b1d1f1070ac7c0b9"],"id":"2ff061a264c2e916","date":1552855412194},{"type":"fork","date":1555276206793},{"item":{"type":"factory","id":"e8698a4cd5220e43"},"id":"e8698a4cd5220e43","type":"add","after":"b1d1f1070ac7c0b9","date":1555276209082},{"type":"edit","id":"e8698a4cd5220e43","item":{"type":"paragraph","id":"e8698a4cd5220e43","text":"More [[About Search Plugin]]"},"date":1555276226218}],"plugin":"search"}
+{
+  "title": "Federation Search",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "2ff061a264c2e916",
+      "text": "Search the visible federation for pages matching all words entered. Case doesn't matter but spelling does."
+    },
+    {
+      "type": "search",
+      "id": "b1d1f1070ac7c0b9",
+      "text": "ALL WORDS INPUT"
+    },
+    {
+      "type": "paragraph",
+      "id": "e8698a4cd5220e43",
+      "text": "More [[About Search Plugin]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Federation Search",
+        "story": []
+      },
+      "date": 1552855381346
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "2ff061a264c2e916",
+        "text": "Search the visible federation for pages matching all words entered. Case doesn't matter but spelling does."
+      },
+      "id": "2ff061a264c2e916",
+      "date": 1552855394240
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "search",
+        "id": "b1d1f1070ac7c0b9",
+        "text": "ALL WORDS INPUT"
+      },
+      "id": "b1d1f1070ac7c0b9",
+      "date": 1552855402175
+    },
+    {
+      "type": "move",
+      "order": [
+        "2ff061a264c2e916",
+        "b1d1f1070ac7c0b9"
+      ],
+      "id": "2ff061a264c2e916",
+      "date": 1552855412194
+    },
+    {
+      "type": "fork",
+      "date": 1555276206793
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e8698a4cd5220e43"
+      },
+      "id": "e8698a4cd5220e43",
+      "type": "add",
+      "after": "b1d1f1070ac7c0b9",
+      "date": 1555276209082
+    },
+    {
+      "type": "edit",
+      "id": "e8698a4cd5220e43",
+      "item": {
+        "type": "paragraph",
+        "id": "e8698a4cd5220e43",
+        "text": "More [[About Search Plugin]]"
+      },
+      "date": 1555276226218
+    }
+  ],
+  "plugin": "search"
+}

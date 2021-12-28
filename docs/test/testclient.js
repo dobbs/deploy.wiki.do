@@ -5365,6 +5365,8 @@ var active,
     lineup,
     link,
     state,
+    toURL,
+    unchanged,
     indexOf = [].indexOf;
 active = require('./active');
 lineup = require('./lineup');
@@ -5375,6 +5377,79 @@ state.inject = function (link_) {
   return link = link_;
 };
 
+state.fromLocation = function (location) {
+  var hash, parts, pathname, toSiteSlug; // [{site, slug},...]
+
+  hash = new URLSearchParams(location.hash.substring(1));
+  pathname = (hash.get("pathname") || location.pathname).replace(/^\//, '');
+
+  toSiteSlug = function toSiteSlug(acc, item, idx) {
+    if (idx % 2 === 0) {
+      acc.push({
+        site: item
+      });
+    } else {
+      acc[acc.length - 1].slug = item;
+    }
+
+    return acc;
+  };
+
+  parts = pathname.split('/');
+
+  if (parts.length % 2 === 0) {
+    return parts.reduce(toSiteSlug, []);
+  } else if (parts.length === 1 && parts[0].endsWith(".html")) {
+    return [{
+      site: "view",
+      slug: parts[0].replace(/\.html$/, '')
+    }];
+  } else {
+    return [{
+      site: "view",
+      slug: "welcome-visitors"
+    }];
+  }
+};
+
+state.fromDOM = function () {
+  var sites, slugs; // [{site, slug},...]
+
+  slugs = state.pagesInDom();
+  sites = state.locsInDom();
+  return slugs.map(function (slug, idx) {
+    return {
+      site: sites[idx],
+      slug: slug
+    };
+  });
+};
+
+toURL = function toURL(siteSlugs) {
+  var combine, pathname, url;
+
+  combine = function combine(url, item) {
+    return "".concat(url, "/").concat(item.site, "/").concat(item.slug);
+  };
+
+  pathname = siteSlugs.reduce(combine, "");
+  url = new URL(location);
+
+  if (!!url.hash || url.pathname === '/') {
+    url.hash = "pathname=".concat(pathname.replace(/^\//, ''));
+  } else {
+    url.pathname = pathname;
+  }
+
+  return url;
+};
+
+unchanged = function unchanged(url, location) {
+  var loc;
+  loc = new URL(location);
+  return url.pathname === loc.pathname && url.search === loc.search && url.hash === loc.hash;
+};
+
 state.pagesInDom = function () {
   return $.makeArray($(".page").map(function (_, el) {
     return el.id;
@@ -5382,19 +5457,9 @@ state.pagesInDom = function () {
 };
 
 state.urlPages = function () {
-  var i;
-  return function () {
-    var k, len, ref, results;
-    ref = $(location).attr('pathname').split('/');
-    results = [];
-
-    for (k = 0, len = ref.length; k < len; k += 2) {
-      i = ref[k];
-      results.push(i);
-    }
-
-    return results;
-  }().slice(1);
+  return state.fromLocation(location).map(function (it) {
+    return it.slug;
+  });
 };
 
 state.locsInDom = function () {
@@ -5404,39 +5469,20 @@ state.locsInDom = function () {
 };
 
 state.urlLocs = function () {
-  var j, k, len, ref, results;
-  ref = $(location).attr('pathname').split('/').slice(1);
-  results = [];
-
-  for (k = 0, len = ref.length; k < len; k += 2) {
-    j = ref[k];
-    results.push(j);
-  }
-
-  return results;
+  return state.fromLocation(location).map(function (it) {
+    return it.site;
+  });
 };
 
 state.setUrl = function () {
-  var idx, locs, page, pages, url;
+  var siteSlugs, url;
   document.title = lineup.bestTitle();
 
   if (history && history.pushState) {
-    locs = state.locsInDom();
-    pages = state.pagesInDom();
+    siteSlugs = state.fromDOM();
+    url = toURL(siteSlugs);
 
-    url = function () {
-      var k, len, results;
-      results = [];
-
-      for (idx = k = 0, len = pages.length; k < len; idx = ++k) {
-        page = pages[idx];
-        results.push("/".concat((locs != null ? locs[idx] : void 0) || 'view', "/").concat(page));
-      }
-
-      return results;
-    }().join('');
-
-    if (url !== $(location).attr('pathname')) {
+    if (!unchanged(url, location)) {
       return history.pushState(null, null, url);
     }
   }
@@ -5445,12 +5491,12 @@ state.setUrl = function () {
 state.debugStates = function () {
   var each;
   console.log('a .page keys ', function () {
-    var k, len, ref, results;
+    var i, len, ref, results;
     ref = $('.page');
     results = [];
 
-    for (k = 0, len = ref.length; k < len; k++) {
-      each = ref[k];
+    for (i = 0, len = ref.length; i < len; i++) {
+      each = ref[i];
       results.push($(each).data('key'));
     }
 
@@ -5460,19 +5506,19 @@ state.debugStates = function () {
 };
 
 state.show = function (e) {
-  var idx, k, l, len, len1, matching, name, newLocs, newPages, old, oldLocs, oldPages;
+  var i, idx, j, len, len1, matching, name, newLocs, newPages, old, oldLocs, oldPages;
   oldPages = state.pagesInDom();
   newPages = state.urlPages();
   oldLocs = state.locsInDom();
   newLocs = state.urlLocs();
 
-  if (!location.pathname || location.pathname === '/') {
+  if (!location.hash && (!location.pathname || location.pathname === '/')) {
     return;
   }
 
   matching = true;
 
-  for (idx = k = 0, len = oldPages.length; k < len; idx = ++k) {
+  for (idx = i = 0, len = oldPages.length; i < len; idx = ++i) {
     name = oldPages[idx];
 
     if (matching && (matching = name === newPages[idx])) {
@@ -5486,7 +5532,7 @@ state.show = function (e) {
 
   matching = true;
 
-  for (idx = l = 0, len1 = newPages.length; l < len1; idx = ++l) {
+  for (idx = j = 0, len1 = newPages.length; j < len1; idx = ++j) {
     name = newPages[idx];
 
     if (matching && (matching = name === oldPages[idx])) {
@@ -5503,14 +5549,14 @@ state.show = function (e) {
 };
 
 state.first = function () {
-  var firstUrlLocs, firstUrlPages, idx, k, len, oldPages, results, urlPage;
+  var firstUrlLocs, firstUrlPages, i, idx, len, oldPages, results, urlPage;
   state.setUrl();
   firstUrlPages = state.urlPages();
   firstUrlLocs = state.urlLocs();
   oldPages = state.pagesInDom();
   results = [];
 
-  for (idx = k = 0, len = firstUrlPages.length; k < len; idx = ++k) {
+  for (idx = i = 0, len = firstUrlPages.length; i < len; idx = ++i) {
     urlPage = firstUrlPages[idx];
 
     if (indexOf.call(oldPages, urlPage) < 0) {
@@ -5523,6 +5569,27 @@ state.first = function () {
   }
 
   return results;
+};
+
+state.syncDomWithLocation = function () {
+  var dataSite, i, len, main, ref, site, slug;
+  main = "";
+  ref = state.fromLocation(location);
+
+  for (i = 0, len = ref.length; i < len; i++) {
+    var _ref$i = ref[i];
+    site = _ref$i.site;
+    slug = _ref$i.slug;
+    dataSite = "";
+
+    if (site !== "view") {
+      dataSite = "data-site=\"".concat(site, "\" ");
+    }
+
+    main += "<div id=\"".concat(slug, "\" ").concat(dataSite, "class=\"page\"></div>\n");
+  }
+
+  return $('section.main').html(main);
 };
 
 },{"./active":2,"./lineup":13}],32:[function(require,module,exports){

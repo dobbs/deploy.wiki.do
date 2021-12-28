@@ -1,1 +1,105 @@
-{"title":"Recycled Pages","story":[{"type":"paragraph","id":"e15708d0df07732d","text":"List removed or replaced pages now in the site's recycler. Use the (X) to discard these copies."},{"type":"paragraph","id":"f9307cca1bd3481a","text":"See also [[Local Changes]]"},{"type":"recycler","id":"e164e45e61637e1c"},{"type":"paragraph","id":"92717f0b54368507","text":"More [[About Recycler Plugin]]"}],"journal":[{"type":"create","item":{"title":"Recycled Pages","story":[]},"date":1504520394278},{"item":{"type":"factory","id":"e15708d0df07732d"},"id":"e15708d0df07732d","type":"add","date":1504520418343},{"type":"edit","id":"e15708d0df07732d","item":{"type":"paragraph","id":"e15708d0df07732d","text":"Here we list pages in the site's recycler. Use the (X) to discard these copies. See also [[Local Changes]]"},"date":1504520531076},{"type":"add","item":{"type":"recycler","id":"e164e45e61637e1c"},"after":"e15708d0df07732d","id":"e164e45e61637e1c","date":1504520544823},{"type":"edit","id":"e15708d0df07732d","item":{"type":"paragraph","id":"e15708d0df07732d","text":"List removed or replaced pages now in the site's recycler. Use the (X) to discard these copies."},"date":1555198137855},{"type":"add","id":"f9307cca1bd3481a","item":{"type":"paragraph","id":"f9307cca1bd3481a","text":"See also [[Local Changes]]"},"after":"e15708d0df07732d","date":1555198146520},{"item":{"type":"factory","id":"92717f0b54368507"},"id":"92717f0b54368507","type":"add","after":"e164e45e61637e1c","date":1555198148747},{"type":"edit","id":"92717f0b54368507","item":{"type":"paragraph","id":"92717f0b54368507","text":"More [[About Recycler Plugin]]"},"date":1555198193175}],"plugin":"recycler"}
+{
+  "title": "Recycled Pages",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e15708d0df07732d",
+      "text": "List removed or replaced pages now in the site's recycler. Use the (X) to discard these copies."
+    },
+    {
+      "type": "paragraph",
+      "id": "f9307cca1bd3481a",
+      "text": "See also [[Local Changes]]"
+    },
+    {
+      "type": "recycler",
+      "id": "e164e45e61637e1c"
+    },
+    {
+      "type": "paragraph",
+      "id": "92717f0b54368507",
+      "text": "More [[About Recycler Plugin]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Recycled Pages",
+        "story": []
+      },
+      "date": 1504520394278
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e15708d0df07732d"
+      },
+      "id": "e15708d0df07732d",
+      "type": "add",
+      "date": 1504520418343
+    },
+    {
+      "type": "edit",
+      "id": "e15708d0df07732d",
+      "item": {
+        "type": "paragraph",
+        "id": "e15708d0df07732d",
+        "text": "Here we list pages in the site's recycler. Use the (X) to discard these copies. See also [[Local Changes]]"
+      },
+      "date": 1504520531076
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "recycler",
+        "id": "e164e45e61637e1c"
+      },
+      "after": "e15708d0df07732d",
+      "id": "e164e45e61637e1c",
+      "date": 1504520544823
+    },
+    {
+      "type": "edit",
+      "id": "e15708d0df07732d",
+      "item": {
+        "type": "paragraph",
+        "id": "e15708d0df07732d",
+        "text": "List removed or replaced pages now in the site's recycler. Use the (X) to discard these copies."
+      },
+      "date": 1555198137855
+    },
+    {
+      "type": "add",
+      "id": "f9307cca1bd3481a",
+      "item": {
+        "type": "paragraph",
+        "id": "f9307cca1bd3481a",
+        "text": "See also [[Local Changes]]"
+      },
+      "after": "e15708d0df07732d",
+      "date": 1555198146520
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "92717f0b54368507"
+      },
+      "id": "92717f0b54368507",
+      "type": "add",
+      "after": "e164e45e61637e1c",
+      "date": 1555198148747
+    },
+    {
+      "type": "edit",
+      "id": "92717f0b54368507",
+      "item": {
+        "type": "paragraph",
+        "id": "92717f0b54368507",
+        "text": "More [[About Recycler Plugin]]"
+      },
+      "date": 1555198193175
+    }
+  ],
+  "plugin": "recycler"
+}

@@ -1,1 +1,155 @@
-{"title":"garden-report","journal":[{"type":"fork","site":"www.personaltelco.net:1111","refresh":{"frequency":"hourly","minute":2},"slug":"garden-report"},{"type":"fork","site":"localhost:1111"},{"item":{"type":"factory","id":"8b82238fe65d1f5f"},"id":"8b82238fe65d1f5f","type":"add","after":472647403},{"type":"remove","id":"8b82238fe65d1f5f"},{"type":"fork","site":"wikiduino.fed.wiki.org","date":1401600607005}],"logo":{"nw":[127,255,127],"se":[63,63,16]},"story":[{"type":"paragraph","id":472647400,"text":"Experimental data from Nike's Community Garden. This content is being served on the open-source hardware Arduino platform running the [[smallest-federated-wiki]] server application."},{"type":"chart","id":56982,"caption":"Degrees Fahrenheit<br>Updated in Seconds","data":[[1314306006,57.2]]},{"type":"chart","id":52025,"caption":"Degrees Fahrenheit<br>Updated in Seconds","data":[[1314306006,57.88]]},{"type":"chart","id":49047,"caption":"Degrees Fahrenheit<br>Updated in Seconds","data":[[1314306006,68]]},{"type":"chart","id":201100,"caption":"Daylight<br>Percent","data":[[1314306006,10.25]]},{"type":"chart","id":201101,"caption":"Battery<br>Volts","data":[[1314306006,10.99]]},{"type":"chart","id":201102,"caption":"Solar Panel<br>Volts","data":[[1314306006,9.16]]},{"type":"chart","id":472647401,"caption":"Wiki Server<br>Requests","data":[[1314306006,785]]},{"type":"chart","id":472647402,"caption":"Arduino Uptime<br>Hours","data":[[1314306006,222.52]]},{"type":"chart","id":472647403,"caption":"Radio Uptime<br>Hours","data":[[1314306006,21.8]]}],"plugin":"chart"}
+{
+  "title": "garden-report",
+  "journal": [
+    {
+      "type": "fork",
+      "site": "www.personaltelco.net:1111",
+      "refresh": {
+        "frequency": "hourly",
+        "minute": 2
+      },
+      "slug": "garden-report"
+    },
+    {
+      "type": "fork",
+      "site": "localhost:1111"
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8b82238fe65d1f5f"
+      },
+      "id": "8b82238fe65d1f5f",
+      "type": "add",
+      "after": 472647403
+    },
+    {
+      "type": "remove",
+      "id": "8b82238fe65d1f5f"
+    },
+    {
+      "type": "fork",
+      "site": "wikiduino.fed.wiki.org",
+      "date": 1401600607005
+    }
+  ],
+  "logo": {
+    "nw": [
+      127,
+      255,
+      127
+    ],
+    "se": [
+      63,
+      63,
+      16
+    ]
+  },
+  "story": [
+    {
+      "type": "paragraph",
+      "id": 472647400,
+      "text": "Experimental data from Nike's Community Garden. This content is being served on the open-source hardware Arduino platform running the [[smallest-federated-wiki]] server application."
+    },
+    {
+      "type": "chart",
+      "id": 56982,
+      "caption": "Degrees Fahrenheit<br>Updated in Seconds",
+      "data": [
+        [
+          1314306006,
+          57.2
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": 52025,
+      "caption": "Degrees Fahrenheit<br>Updated in Seconds",
+      "data": [
+        [
+          1314306006,
+          57.88
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": 49047,
+      "caption": "Degrees Fahrenheit<br>Updated in Seconds",
+      "data": [
+        [
+          1314306006,
+          68
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": 201100,
+      "caption": "Daylight<br>Percent",
+      "data": [
+        [
+          1314306006,
+          10.25
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": 201101,
+      "caption": "Battery<br>Volts",
+      "data": [
+        [
+          1314306006,
+          10.99
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": 201102,
+      "caption": "Solar Panel<br>Volts",
+      "data": [
+        [
+          1314306006,
+          9.16
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": 472647401,
+      "caption": "Wiki Server<br>Requests",
+      "data": [
+        [
+          1314306006,
+          785
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": 472647402,
+      "caption": "Arduino Uptime<br>Hours",
+      "data": [
+        [
+          1314306006,
+          222.52
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": 472647403,
+      "caption": "Radio Uptime<br>Hours",
+      "data": [
+        [
+          1314306006,
+          21.8
+        ]
+      ]
+    }
+  ],
+  "plugin": "chart"
+}

@@ -1,1 +1,144 @@
-{"title":"Local Changes","story":[{"type":"paragraph","id":"1b5bada0ea726d6c","text":"List changed pages kept in the browser's local storage. Use the (X) to discard these copies."},{"type":"paragraph","id":"b52324db5d926f23","text":"See also [[Recent Changes]]."},{"type":"changes","id":"55b26a986bb8be6f"},{"type":"paragraph","id":"1b71eb1732fc6238","text":"More [[About Changes Plugin]]"}],"journal":[{"type":"create","item":{"title":"Local Changes"},"date":1362955064622},{"item":{"type":"factory","id":"1b5bada0ea726d6c"},"id":"1b5bada0ea726d6c","type":"add","date":1362955066692},{"type":"edit","id":"1b5bada0ea726d6c","item":{"type":"paragraph","id":"1b5bada0ea726d6c","text":"Here we list pages kept in the browser's local storage. See [[Local Editing]]."},"date":1362955254072},{"type":"edit","id":"1b5bada0ea726d6c","item":{"type":"paragraph","id":"1b5bada0ea726d6c","text":"Here we list pages kept in the browser's local storage. Use the (X) to discard these copies. See [[Local Editing]] for details."},"date":1362955307227},{"item":{"type":"changes","id":"55b26a986bb8be6f"},"id":"55b26a986bb8be6f","type":"add","after":"1b5bada0ea726d6c","date":1362955336003},{"type":"edit","id":"1b5bada0ea726d6c","item":{"type":"paragraph","id":"1b5bada0ea726d6c","text":"Here we list pages kept in the browser's local storage. Use the (X) to discard these copies. See [[About Changes Plugin]]."},"date":1362955477881},{"type":"edit","id":"1b5bada0ea726d6c","item":{"type":"paragraph","id":"1b5bada0ea726d6c","text":"Here we list pages kept in the browser's local storage. Use the (X) to discard these copies. See also [[Recent Changes]]."},"date":1362955718736},{"type":"edit","id":"1b5bada0ea726d6c","item":{"type":"paragraph","id":"1b5bada0ea726d6c","text":"List pages kept in the browser's local storage. Use the (X) to discard these copies."},"date":1555197737005},{"item":{"type":"factory","id":"1b71eb1732fc6238"},"id":"1b71eb1732fc6238","type":"add","after":"55b26a986bb8be6f","date":1555197745062},{"type":"add","id":"b52324db5d926f23","item":{"type":"paragraph","id":"b52324db5d926f23","text":"See also [[Recent Changes]]."},"after":"1b5bada0ea726d6c","date":1555197746822},{"type":"edit","id":"1b71eb1732fc6238","item":{"type":"paragraph","id":"1b71eb1732fc6238","text":"More [[About Changes Plugin]]"},"date":1555197757859},{"type":"edit","id":"1b5bada0ea726d6c","item":{"type":"paragraph","id":"1b5bada0ea726d6c","text":"List changed pages kept in the browser's local storage. Use the (X) to discard these copies."},"date":1555197792306}],"plugin":"changes"}
+{
+  "title": "Local Changes",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1b5bada0ea726d6c",
+      "text": "List changed pages kept in the browser's local storage. Use the (X) to discard these copies."
+    },
+    {
+      "type": "paragraph",
+      "id": "b52324db5d926f23",
+      "text": "See also [[Recent Changes]]."
+    },
+    {
+      "type": "changes",
+      "id": "55b26a986bb8be6f"
+    },
+    {
+      "type": "paragraph",
+      "id": "1b71eb1732fc6238",
+      "text": "More [[About Changes Plugin]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Local Changes"
+      },
+      "date": 1362955064622
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1b5bada0ea726d6c"
+      },
+      "id": "1b5bada0ea726d6c",
+      "type": "add",
+      "date": 1362955066692
+    },
+    {
+      "type": "edit",
+      "id": "1b5bada0ea726d6c",
+      "item": {
+        "type": "paragraph",
+        "id": "1b5bada0ea726d6c",
+        "text": "Here we list pages kept in the browser's local storage. See [[Local Editing]]."
+      },
+      "date": 1362955254072
+    },
+    {
+      "type": "edit",
+      "id": "1b5bada0ea726d6c",
+      "item": {
+        "type": "paragraph",
+        "id": "1b5bada0ea726d6c",
+        "text": "Here we list pages kept in the browser's local storage. Use the (X) to discard these copies. See [[Local Editing]] for details."
+      },
+      "date": 1362955307227
+    },
+    {
+      "item": {
+        "type": "changes",
+        "id": "55b26a986bb8be6f"
+      },
+      "id": "55b26a986bb8be6f",
+      "type": "add",
+      "after": "1b5bada0ea726d6c",
+      "date": 1362955336003
+    },
+    {
+      "type": "edit",
+      "id": "1b5bada0ea726d6c",
+      "item": {
+        "type": "paragraph",
+        "id": "1b5bada0ea726d6c",
+        "text": "Here we list pages kept in the browser's local storage. Use the (X) to discard these copies. See [[About Changes Plugin]]."
+      },
+      "date": 1362955477881
+    },
+    {
+      "type": "edit",
+      "id": "1b5bada0ea726d6c",
+      "item": {
+        "type": "paragraph",
+        "id": "1b5bada0ea726d6c",
+        "text": "Here we list pages kept in the browser's local storage. Use the (X) to discard these copies. See also [[Recent Changes]]."
+      },
+      "date": 1362955718736
+    },
+    {
+      "type": "edit",
+      "id": "1b5bada0ea726d6c",
+      "item": {
+        "type": "paragraph",
+        "id": "1b5bada0ea726d6c",
+        "text": "List pages kept in the browser's local storage. Use the (X) to discard these copies."
+      },
+      "date": 1555197737005
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1b71eb1732fc6238"
+      },
+      "id": "1b71eb1732fc6238",
+      "type": "add",
+      "after": "55b26a986bb8be6f",
+      "date": 1555197745062
+    },
+    {
+      "type": "add",
+      "id": "b52324db5d926f23",
+      "item": {
+        "type": "paragraph",
+        "id": "b52324db5d926f23",
+        "text": "See also [[Recent Changes]]."
+      },
+      "after": "1b5bada0ea726d6c",
+      "date": 1555197746822
+    },
+    {
+      "type": "edit",
+      "id": "1b71eb1732fc6238",
+      "item": {
+        "type": "paragraph",
+        "id": "1b71eb1732fc6238",
+        "text": "More [[About Changes Plugin]]"
+      },
+      "date": 1555197757859
+    },
+    {
+      "type": "edit",
+      "id": "1b5bada0ea726d6c",
+      "item": {
+        "type": "paragraph",
+        "id": "1b5bada0ea726d6c",
+        "text": "List changed pages kept in the browser's local storage. Use the (X) to discard these copies."
+      },
+      "date": 1555197792306
+    }
+  ],
+  "plugin": "changes"
+}
