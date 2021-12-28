@@ -104,6 +104,27 @@ async function fakeTopLevelAwait() {
         BASE, filename.slice(path.join(PKG, "data").length))
       copyp(filename, destination)
     }
+    copyp(
+      path.join(PKG, "data", "status", "favicon.png"),
+      path.join(BASE, "favicon.png")
+    ).catch (error => {
+      if (error.code != 'ENOENT') {
+        throw error
+      }
+      console.log("No favicon.png found in data/status. We'll just keep the default.")
+    })
+    copyp(
+      path.join(PKG, "data", "assets", "wiki", "CNAME"),
+      path.join(BASE, "CNAME")
+    )
+    copyp(
+      path.join(PKG, "data", "assets", "wiki", "404.html"),
+      path.join(BASE, "404.html")
+    )
+    copyp(
+      path.join(BASE, "welcome-visitors.html"),
+      path.join(BASE, "index.html")
+    )
   }
 
   function createTemplate(filename) {

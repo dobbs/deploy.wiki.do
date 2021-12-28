@@ -1,0 +1,6 @@
+{
+  "name": "Author",
+  "friend": {
+    "secret": "this is a good secret"
+  }
+}

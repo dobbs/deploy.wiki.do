@@ -9,7 +9,7 @@ GitHub Pages.
 
 To edit the pages locally:
 
-    wiki --data ./data --security_legacy
+    wiki
 
 To generate a read-only wiki:
 
