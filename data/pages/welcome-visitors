@@ -13,9 +13,8 @@
     },
     {
       "type": "paragraph",
-      "id": "63ad2e58eecdd9e5",
-      "prompt": "Link to a page about yourself here. Type your name enclosed in double square brackets. Then press Command/ALT-S to save.\n\nMake all pages here yours alone with the login below.",
-      "text": "[https://github.com/dobbs/deploy.wiki.do https://github.com/dobbs/deploy.wiki.do]"
+      "id": "8162b397a0d005e6",
+      "text": "[[Eric Dobbs]]"
     },
     {
       "type": "paragraph",
@@ -23,13 +22,13 @@
       "text": "Pages where we do and share."
     },
     {
-      "type": "reference",
+      "type": "paragraph",
       "id": "05e2fa92643677ca",
       "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
       "site": "deploy.wiki.do",
       "slug": "wikido",
       "title": "Wikido",
-      "text": "Wikido (Wiki道) is the practice of wiki. It is an intentional play on aikido (合気道), the practice of aiki. Consider cross-language wordplay: English \"do\" and Japanese \"do\" (道) and Chinese Dao (道). This activity invites participation."
+      "text": "[[Wikido]] (Wiki道) is the practice of wiki. It is an intentional play on aikido (合気道), the practice of aiki. Consider cross-language wordplay: English \"do\" and Japanese \"do\" (道) and Chinese Dao (道). This activity invites participation."
     },
     {
       "type": "paragraph",
@@ -135,6 +134,50 @@
         "text": "Wikido (Wiki道) is the practice of wiki. It is an intentional play on aikido (合気道), the practice of aiki. Consider cross-language wordplay: English \"do\" and Japanese \"do\" (道) and Chinese Dao (道). This activity invites participation."
       },
       "date": 1587745853746
+    },
+    {
+      "type": "add",
+      "id": "8162b397a0d005e6",
+      "item": {
+        "type": "paragraph",
+        "id": "8162b397a0d005e6",
+        "text": "[[Eric Dobbs]]"
+      },
+      "after": "63ad2e58eecdd9e5",
+      "date": 1640740649711,
+      "error": {
+        "type": "error",
+        "msg": "Method Not Allowed",
+        "response": "<html>\n<head><title>405 Not Allowed</title></head>\n<body bgcolor=\"white\">\n<center><h1>405 Not Allowed</h1></center>\n</body>\n</html>"
+      }
+    },
+    {
+      "id": "63ad2e58eecdd9e5",
+      "type": "remove",
+      "date": 1640740780846,
+      "error": {
+        "type": "error",
+        "msg": "Method Not Allowed",
+        "response": "<html>\n<head><title>405 Not Allowed</title></head>\n<body bgcolor=\"white\">\n<center><h1>405 Not Allowed</h1></center>\n</body>\n</html>"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1640764005152
+    },
+    {
+      "type": "edit",
+      "id": "05e2fa92643677ca",
+      "item": {
+        "type": "paragraph",
+        "id": "05e2fa92643677ca",
+        "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
+        "site": "deploy.wiki.do",
+        "slug": "wikido",
+        "title": "Wikido",
+        "text": "[[Wikido]] (Wiki道) is the practice of wiki. It is an intentional play on aikido (合気道), the practice of aiki. Consider cross-language wordplay: English \"do\" and Japanese \"do\" (道) and Chinese Dao (道). This activity invites participation."
+      },
+      "date": 1640764061654
     }
   ]
 }

@@ -10,6 +10,6 @@
   "author": "Eric Dobbs",
   "license": "Apache-2.0",
   "devDependencies": {
-    "wiki": "^0.27.0"
+    "wiki": "http://dev.localhost/assets/packages/wiki-0.27.16.tgz"
   }
 }
