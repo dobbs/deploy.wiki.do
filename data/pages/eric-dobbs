@@ -5,6 +5,11 @@
       "type": "paragraph",
       "id": "c0611ebf9dd60dc7",
       "text": "After trying many things I now have a static site generator meeting federation expectations from the docs branch of a repo. [https://github.com/dobbs/deploy.wiki.do github]"
+    },
+    {
+      "type": "roster",
+      "id": "bf12162bb8e8726b",
+      "text": "ROSTER wiki.dbbs.co/eric-dobbs"
     }
   ],
   "journal": [
@@ -111,6 +116,26 @@
     {
       "type": "fork",
       "date": 1640764011489
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bf12162bb8e8726b"
+      },
+      "id": "bf12162bb8e8726b",
+      "type": "add",
+      "after": "c0611ebf9dd60dc7",
+      "date": 1640801978856
+    },
+    {
+      "type": "edit",
+      "id": "bf12162bb8e8726b",
+      "item": {
+        "type": "roster",
+        "id": "bf12162bb8e8726b",
+        "text": "ROSTER wiki.dbbs.co/eric-dobbs"
+      },
+      "date": 1640802000657
     }
   ]
 }

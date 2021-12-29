@@ -12,9 +12,9 @@
       "text": "Pages about us."
     },
     {
-      "type": "paragraph",
-      "id": "8162b397a0d005e6",
-      "text": "[[Eric Dobbs]]"
+      "type": "factory",
+      "id": "63ad2e58eecdd9e5",
+      "prompt": "Link to a page about yourself here. Type your name enclosed in double square brackets. Then press Command/ALT-S to save.\n\nMake all pages here yours alone with the login below."
     },
     {
       "type": "paragraph",
@@ -22,13 +22,9 @@
       "text": "Pages where we do and share."
     },
     {
-      "type": "paragraph",
+      "type": "factory",
       "id": "05e2fa92643677ca",
-      "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save.",
-      "site": "deploy.wiki.do",
-      "slug": "wikido",
-      "title": "Wikido",
-      "text": "[[Wikido]] (Wiki道) is the practice of wiki. It is an intentional play on aikido (合気道), the practice of aiki. Consider cross-language wordplay: English \"do\" and Japanese \"do\" (道) and Chinese Dao (道). This activity invites participation."
+      "prompt": "Create pages about things you do on this wiki. Type a descriptive name of something you will be writing about. Enclose it in square brackets. Then press Command/ALT-S to save."
     },
     {
       "type": "paragraph",
@@ -109,6 +105,13 @@
       "after": "05e2fa92643677ca",
       "id": "ee416d431ebf4fb4",
       "date": 1420938220851
+    }
+  ]
+}How to Wiki]] for more ideas. Follow [[Recent Changes]] here and nearby."
+      },
+      "after": "05e2fa92643677ca",
+      "id": "ee416d431ebf4fb4",
+      "date": 1420938220851
     },
     {
       "type": "edit",
@@ -178,6 +181,10 @@
         "text": "[[Wikido]] (Wiki道) is the practice of wiki. It is an intentional play on aikido (合気道), the practice of aiki. Consider cross-language wordplay: English \"do\" and Japanese \"do\" (道) and Chinese Dao (道). This activity invites participation."
       },
       "date": 1640764061654
+    },
+    {
+      "type": "fork",
+      "date": 1640801924780
     }
   ]
 }
