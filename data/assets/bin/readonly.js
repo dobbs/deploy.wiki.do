@@ -13,6 +13,14 @@ async function fakeTopLevelAwait() {
   let SERVER = path.resolve(require.resolve("wiki-server/package.json"), "..")
   let DEPS = path.join(CLIENT, "..")
   const htmlTemplate = await createTemplate("wiki-client/views/static.html")
+  const writers = new Map()
+  function guard(filename, fn) { // serialize writes to the same file
+    let p = writers.has(filename)
+        ? writers.get(filename)
+        : Promise.resolve()
+    writers.set(filename, p.then(fn))
+    return p
+  }
 
   async function main() {
     copyWikiClientCode()
@@ -38,9 +46,10 @@ async function fakeTopLevelAwait() {
     Promise.all(
       (await findfiles(path.join(DEPS, "wiki-plugin-*/factory.json")))
         .map(async factory => require(factory))
-    ).then(factories =>
-      fs.writeFile(factoriesfile, JSON.stringify(factories, null, 2))
-    )
+    ).then(factories => {
+      guard(factoriesfile, () =>
+        fs.writeFile(factoriesfile, JSON.stringify(factories, null, 2)))
+    })
   }
 
   async function copyPlugins() {
@@ -70,15 +79,17 @@ async function fakeTopLevelAwait() {
     pages.map(async name => {
       let slug = path.basename(name)
       let jsonFile = path.join(BASE, `${slug}.json`)
-      fs.readFile(name, "utf8").then(JSON.parse).then(json => {
+      fs.readFile(name, "utf8").then(JSON.parse).then(async json => {
         jsonfn(json)
-        fs.writeFile(jsonFile, JSON.stringify(json, null, 2))
-          .catch(err => console.error({err}))
+        let string = JSON.stringify(json, null, 2)
+        guard(jsonFile, () =>
+          fs.writeFile(jsonFile, string).catch(error => console.error({error})))
       })
       let htmlFile = path.join(BASE, `${slug}.html`)
       await mkdirp(path.dirname(htmlFile))
-      fs.writeFile(htmlFile, htmlTemplate({ownedBy,pages: [{page: slug}]}))
-        .catch(err => console.error({err}))
+      guard(htmlFile, () =>
+        fs.writeFile(htmlFile, htmlTemplate({ownedBy,pages: [{page: slug}]}))
+          .catch(err => console.error({err})))
     })
   }
 
@@ -135,7 +146,8 @@ async function fakeTopLevelAwait() {
   async function copyp(source, destination) {
     // ensure path to destination exists before copying
     await mkdirp(path.dirname(destination))
-    await fs.copyFile(source, destination)
+    guard(destination, () =>
+      fs.copyFile(source, destination))
   }
   const findfiles = pattern => glob(pattern, {nodir: true})
   const findfolders = pattern => glob(path.join(pattern, "/"))
