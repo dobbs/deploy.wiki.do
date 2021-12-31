@@ -6,12 +6,12 @@ const mkdirp = require("mkdirp")
 const hb = require("handlebars")
 
 async function fakeTopLevelAwait() {
-  let ownedBy = "Eric Dobbs"
   let PKG = path.resolve(".")
   let BASE = path.resolve(".", "docs")
   let CLIENT = path.resolve(require.resolve("wiki-client/package.json"), "..")
   let SERVER = path.resolve(require.resolve("wiki-server/package.json"), "..")
   let DEPS = path.join(CLIENT, "..")
+  let ownedBy = await owner()
   const htmlTemplate = await createTemplate("wiki-client/views/static.html")
   const writers = new Map()
   function guard(filename, fn) { // serialize writes to the same file
@@ -28,6 +28,17 @@ async function fakeTopLevelAwait() {
     copyPlugins()
     copyDefaultData()
     copyWikiData()
+  }
+
+  async function owner() {
+    let ownerfile = path.join(PKG, "data", "status", "owner.json")
+    try {
+      let json = JSON.parse(await fs.readFile(ownerfile, "utf8"))
+      return json.name
+    } catch (error) {
+      console.error({error})
+      return "Anonymous"
+    }
   }
 
   async function copyWikiClientCode() {
