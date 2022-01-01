@@ -13,6 +13,16 @@ async function fakeTopLevelAwait() {
   let DEPS = path.join(CLIENT, "..")
   let ownedBy = await owner()
   const htmlTemplate = await createTemplate("wiki-client/views/static.html")
+
+  async function main() {
+    copyWikiClientCode()
+    createFactories()
+    copyPlugins()
+    copySecurityFriends()
+    copyDefaultData()
+    copyWikiData()
+  }
+
   const writers = new Map()
   function guard(filename, fn) { // serialize writes to the same file
     let p = writers.has(filename)
@@ -20,14 +30,6 @@ async function fakeTopLevelAwait() {
         : Promise.resolve()
     writers.set(filename, p.then(fn))
     return p
-  }
-
-  async function main() {
-    copyWikiClientCode()
-    createFactories()
-    copyPlugins()
-    copyDefaultData()
-    copyWikiData()
   }
 
   async function owner() {
@@ -102,6 +104,13 @@ async function fakeTopLevelAwait() {
         fs.writeFile(htmlFile, htmlTemplate({ownedBy,pages: [{page: slug}]}))
           .catch(err => console.error({err})))
     })
+  }
+
+  async function copySecurityFriends() {
+    return await copyCode(
+      path.join(DEPS, "wiki-security-friends", "client"),
+      path.join(BASE, "security")
+    )
   }
 
   async function copyDefaultData() {
