@@ -1,22 +1,18 @@
 # deploy.wiki.do
 
-We aspire to bootstrap a devops pipeline for wiki.
+We aspire to bootstrap a publishing workflow for wiki. It might also
+grow into a devops workflow for wiki.
 
-What we have right now is a read-only wiki hosted statically using
-GitHub Pages.
+There used to be some code in this repo which has moved into an
+experimental wiki static site generator. All that is now left here is
+the generated site for publishing via GitHub Pages.
 
 # Runbook
 
-To edit the pages locally:
-
-    wiki
-
 To generate a read-only wiki:
 
-    npm run readonly
+    npx wiki-ssg build --from ~/.wiki --dest docs
 
 To test static wiki locally:
 
-    deno install --allow-net --allow-read \
-      https://deno.land/std@0.81.0/http/file_server.ts
-    file_server docs
+    npx http-server docs
