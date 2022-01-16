@@ -1,0 +1,101 @@
+{
+  "title": "LaunchAgent Wiki",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "60eaa979515de454",
+      "text": "We have many ways to run a wiki farm locally. This example runs wiki on our MacOS computer using node.js and federated wiki software. We configure a LaunchAgent to run our wiki on port 80 and to keep it running."
+    },
+    {
+      "type": "paragraph",
+      "id": "148de3d8364f5b87",
+      "text": "${HOME}/Library/LaunchAgents/wiki.localhost.plist"
+    },
+    {
+      "type": "code",
+      "id": "778244eb7f9ea414",
+      "text": "function plist ({wikipath, datapath}) {\n  return `<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n  <key>Label</key>\n  <string>localhost.wiki</string>\n  <key>ProgramArguments</key>\n  <array>\n    <string>${wikipath}/wiki</string>\n    <string>--farm</string>\n    <string>--security_legacy</string>\n    <string>--data</string>\n    <string>${datapath}</string>\n    <string>--port</string>\n    <string>80</string>\n  </array>\n  <key>EnvironmentVariables</key>\n  <dict>\n    <key>PATH</key>\n    <string>${wikipath}:/usr/local/bin:/usr/bin:/bin</string>\n  </dict>\n  <key>WorkingDirectory</key>\n  <string>${datapath}</string>\n  <key>RunAtLoad</key>\n  <true/>\n  <key>StandardOutPath</key>\n  <string>${datapath}/stdout.txt</string>\n  <key>StandardErrorPath</key>\n  <string>${datapath}/stderr.txt</string>\n  <key>inetdCompatibility</key>\n  <dict>\n    <key>Wait</key>\n    <false/>\n  </dict>\n</dict>\n</plist>`\n}"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "LaunchAgent Wiki",
+        "story": []
+      },
+      "date": 1641682368034
+    },
+    {
+      "id": "60eaa979515de454",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "60eaa979515de454",
+        "text": "We have many ways to run a wiki farm locally."
+      },
+      "date": 1641682393436
+    },
+    {
+      "type": "edit",
+      "id": "60eaa979515de454",
+      "item": {
+        "type": "paragraph",
+        "id": "60eaa979515de454",
+        "text": "We have many ways to run a wiki farm locally. This example runs wiki on our MacOS computer using node.js and federated wiki software. We configure a LaunchAgent to run our wiki on port 80 and to keep it running."
+      },
+      "date": 1641682567676
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "778244eb7f9ea414"
+      },
+      "id": "778244eb7f9ea414",
+      "type": "add",
+      "after": "60eaa979515de454",
+      "date": 1641682903582
+    },
+    {
+      "type": "edit",
+      "id": "778244eb7f9ea414",
+      "item": {
+        "type": "code",
+        "id": "778244eb7f9ea414",
+        "text": "let plist = (wikipath, datapath) =>\n  `<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n  <key>Label</key>\n  <string>localhost.wiki</string>\n  <key>ProgramArguments</key>\n  <array>\n    <string>${wikipath}/wiki</string>\n    <string>--farm</string>\n    <string>--security_legacy</string>\n    <string>--data</string>\n    <string>${datapath}</string>\n    <string>--port</string>\n    <string>80</string>\n  </array>\n  <key>EnvironmentVariables</key>\n  <dict>\n    <key>PATH</key>\n    <string>${wikipath}:/usr/local/bin:/usr/bin:/bin</string>\n  </dict>\n  <key>WorkingDirectory</key>\n  <string>${datapath}</string>\n  <key>RunAtLoad</key>\n  <true/>\n  <key>StandardOutPath</key>\n  <string>${datapath}/stdout.txt</string>\n  <key>StandardErrorPath</key>\n  <string>${datapath}/stderr.txt</string>\n  <key>inetdCompatibility</key>\n  <dict>\n    <key>Wait</key>\n    <false/>\n  </dict>\n</dict>\n</plist>`"
+      },
+      "date": 1641683072775
+    },
+    {
+      "type": "edit",
+      "id": "778244eb7f9ea414",
+      "item": {
+        "type": "code",
+        "id": "778244eb7f9ea414",
+        "text": "function plist ({wikipath, datapath}) {\n  return `<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n  <key>Label</key>\n  <string>localhost.wiki</string>\n  <key>ProgramArguments</key>\n  <array>\n    <string>${wikipath}/wiki</string>\n    <string>--farm</string>\n    <string>--security_legacy</string>\n    <string>--data</string>\n    <string>${datapath}</string>\n    <string>--port</string>\n    <string>80</string>\n  </array>\n  <key>EnvironmentVariables</key>\n  <dict>\n    <key>PATH</key>\n    <string>${wikipath}:/usr/local/bin:/usr/bin:/bin</string>\n  </dict>\n  <key>WorkingDirectory</key>\n  <string>${datapath}</string>\n  <key>RunAtLoad</key>\n  <true/>\n  <key>StandardOutPath</key>\n  <string>${datapath}/stdout.txt</string>\n  <key>StandardErrorPath</key>\n  <string>${datapath}/stderr.txt</string>\n  <key>inetdCompatibility</key>\n  <dict>\n    <key>Wait</key>\n    <false/>\n  </dict>\n</dict>\n</plist>`\n}"
+      },
+      "date": 1641705996794
+    },
+    {
+      "type": "add",
+      "id": "148de3d8364f5b87",
+      "item": {
+        "type": "paragraph",
+        "id": "148de3d8364f5b87",
+        "text": "Library/LaunchAgents/wiki.localhost.plist"
+      },
+      "after": "60eaa979515de454",
+      "date": 1641706054048
+    },
+    {
+      "type": "edit",
+      "id": "148de3d8364f5b87",
+      "item": {
+        "type": "paragraph",
+        "id": "148de3d8364f5b87",
+        "text": "${HOME}/Library/LaunchAgents/wiki.localhost.plist"
+      },
+      "date": 1641706098809
+    }
+  ]
+}

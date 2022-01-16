@@ -25,6 +25,11 @@
       "type": "paragraph",
       "id": "25b5b41af4312f23",
       "text": "See also [[Local Kubernetes Wiki]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "8370012d1a6fc165",
+      "text": "See also [[Local LaunchAgent Wiki]]"
     }
   ],
   "journal": [
@@ -165,6 +170,26 @@
         "text": "# run an editable local wiki\ncd wiki\nwiki --data ./.data --security_legacy"
       },
       "date": 1610948682852
+    },
+    {
+      "type": "add",
+      "id": "8370012d1a6fc165",
+      "item": {
+        "type": "paragraph",
+        "id": "8370012d1a6fc165",
+        "text": "See also [[Local LaunchAgent Wiki]]"
+      },
+      "after": "25b5b41af4312f23",
+      "date": 1640659599641,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1640659632965
     }
   ]
 }

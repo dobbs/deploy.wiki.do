@@ -47,7 +47,7 @@ spec:
   selector:
     app: wiki
 ---
-apiVersion: networking.k8s.io/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: wiki
@@ -57,12 +57,9 @@ spec:
     http: &wiki
       paths:
       - path: /
-        pathType: Prefix
         backend:
-          service:
-            name: wiki-service
-            port:
-              name: http
+          serviceName: wiki-service
+          servicePort: http
   - host: localhost
     http: *wiki
   # - host: "*.example.com"
