@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class='no-js'>
   <head>
-    <title>Not Found</title>
+    <title></title>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
     <meta content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=no' name='viewport'>
     <link id='favicon' href='/favicon.png' rel='icon' type='image/png'>
@@ -19,23 +19,15 @@
 
   </head>
   <body>
-
     <section class='main'>
-      <div id="404" class="page active" tabindex="-1">
-        <div class="paper"><div class="handle-parent" style=""><div class="page-handle" style="height: 99.4333px;"></div></div><div class="twins"><p><span></span></p></div><div class="header">
-          <h1 title="deploy.wiki.do">
-            <span>
-              <a href="/view/welcome-visitors" target="deploy.wiki.do">
-                <img src="/favicon.png" class="favicon" height="32px"></a>
-                404 Not Found
-            </span>
-          </h1></div><div class="story" style=""></div>
+      <div class='page' id='welcome-visitors' tabindex="-1"  >
+        <div class='paper'>
+
         </div>
       </div>
     </section>
     <footer>
       <div id='site-owner' class='footer-item'>
-          Site Owned by: <span id='site-owner' style='text-transform:capitalize;'>Eric Dobbs</span></div>
       </div>
 
       <div id='security' class='footer-item'></div>
@@ -51,14 +43,13 @@
     </footer>
 
   <script>
-   (function ({pathname}) {
-     const slugHtml = p => /^\/[-\w]+\.html/.test(p)
-     const lineup = p => /^\/(?:view|[-\w]+(?:\.[-\w]+)+)\b/.test(p)
-     if (!slugHtml(pathname) && lineup(pathname)) {
-       // redirect /view/* style pathnames to a hash parameter
-       location = `/#${pathname.substring(1)}`
-     }
-   })(location)
+  var isAuthenticated = ('' === "true");
+  var isClaimed = ('' === "true");
+  var isOwner = ('' === "true");
+  var ownerName = 'Eric Dobbs';
+  var seedNeighbors = '';
+  var user = ''
   </script>
+  <script type="text/javascript" src="/404.js"></script>
   </body>
 </html>

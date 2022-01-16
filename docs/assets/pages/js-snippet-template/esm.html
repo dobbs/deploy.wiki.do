@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <title>wiki ESM javascript snippet runner</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>➡</text></svg>">
+  <script type=module>
+
+   window.addEventListener("message", collectCodeFromContext, {once: true})
+   window.parent.postMessage({ action:"sendFrameContext" }, "*")
+
+   function collectCodeFromContext ({data}) {
+     if (data.action == "frameContext") {
+       const {slug, item, page} = data
+       let code = page.story.filter(it => it.type == 'code').map(it => it.text)
+       if (code.length) { render(code.join("\n")) }
+     }
+   }
+
+   async function render (text) {
+     console.log({text})
+     try {
+       let module = await import(`data:text/javascript;base64,${btoa(text)}`)
+       if (!module) return
+       let emit = module.emit
+       if (emit) {
+         await emit(document.body)
+       }
+       let bind = module.bind
+       if (bind) {
+         await bind(document.body)
+       }
+     } catch (e) {
+       const {name, message} = e
+       document.body.innerHTML = `<pre>${JSON.stringify({name, message}, null, 2)}</pre>`
+     }
+   }
+
+  </script>
+  <body></body>
+</html>
