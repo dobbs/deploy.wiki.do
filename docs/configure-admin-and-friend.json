@@ -1,0 +1,985 @@
+{
+  "title": "Configure Admin and Friend",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "60eaa979515de454",
+      "text": "We have many ways to run a wiki farm locally. Several of them benefit from a configuration of the friends security plugin. Here we offer a tool to download well-formed config files and a description of the configurations."
+    },
+    {
+      "type": "frame",
+      "id": "7f05b370240882d2",
+      "text": "//wiki.dbbs.co/assets/pages/js-snippet-template/esm.html"
+    },
+    {
+      "type": "paragraph",
+      "id": "9aec816e9dc082af",
+      "text": ".wiki/owner.json"
+    },
+    {
+      "type": "code",
+      "id": "b15362937061225d",
+      "text": "function owner({author, admin}) {\n  return JSON.stringify({\n    name: author.toString(),\n    friend: {\n      secret: admin.toString()\n    }\n  }, null, 2)\n}"
+    },
+    {
+      "type": "paragraph",
+      "id": "19de4734ba8306d4",
+      "text": ".wiki/config.json"
+    },
+    {
+      "type": "code",
+      "id": "1db546de3c161dff",
+      "text": "function config({datapath, admin}) {\n  return JSON.stringify({\n    farm: true,\n    security_type: \"friends\",\n    secure_cookie: false,\n    admin: admin.toString(),\n    cookieSecret: btoa(Math.random()*1e18),\n    wikiDomains: {\n      localhost: {\n        id: `${datapath}/owner.json`\n      }\n    }\n  }, null, 2)\n}"
+    },
+    {
+      "type": "pagefold",
+      "id": "fdb9dd78bf34316c",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "297d5de4bf937fde",
+      "text": "The remainder of this page are code blocks that enable the form at the top of the page."
+    },
+    {
+      "type": "code",
+      "id": "283fe3a926cc7f39",
+      "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\ngap: 10px;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"admin password\">\n<div class=\"buttons\">\n<button type=\"submit\" id=\"view-owner\">preview owner.json</button>\n<button type=\"submit\" id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button type=\"submit\" id=\"view-config\">preview config.json</button>\n<button type=\"submit\" id=\"save-config\">download config.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+    },
+    {
+      "type": "code",
+      "id": "ab2b0e8d4d135bf5",
+      "text": "export async function bind(el) {\n  const P = window.preview\n  \n  document.forms[0].onsubmit = e => {\n    const datapath = document.forms[0].datapath.value\n    const author = document.forms[0].author.value\n    const admin = document.forms[0].admin.value\n    const values = {datapath, author, admin}\n\n    switch(e.submitter.id) {\n      case \"view-owner\":\n        P.innerHTML = owner(values)\n        break\n      case \"view-config\":\n        P.innerHTML = config(values)\n        break\n      case \"save-owner\":\n        frame.download(owner(values), \"owner.json\")\n        break        \n      case \"save-config\":\n        frame.download(config(values), \"config.json\")\n        break        \n    }\n\n    resize()\n    e.preventDefault()\n  }\n}"
+    },
+    {
+      "type": "code",
+      "id": "4b6b709fa08ee4c1",
+      "text": "import * as frame from \"https://wiki.dbbs.co/assets/v1/frame.js\"\n\nfunction resize() {\n  window.parent.postMessage({\n    action: \"resize\",\n    height: document.body.offsetHeight\n  }, \"*\")\n}"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Configure Admin and Friend",
+        "story": []
+      },
+      "date": 1641686352519
+    },
+    {
+      "id": "60eaa979515de454",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "60eaa979515de454",
+        "text": "We have many ways to run a wiki farm locally."
+      },
+      "date": 1641687084920
+    },
+    {
+      "type": "edit",
+      "id": "60eaa979515de454",
+      "item": {
+        "type": "paragraph",
+        "id": "60eaa979515de454",
+        "text": "We have many ways to run a wiki farm locally. Several of them benefit from a configuration of the friends security plugin. Here we offer a description and tools to download well formed config files."
+      },
+      "date": 1641687237499
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3f5cf09d1d47483d"
+      },
+      "id": "3f5cf09d1d47483d",
+      "type": "add",
+      "after": "60eaa979515de454",
+      "date": 1641687422215
+    },
+    {
+      "type": "remove",
+      "id": "3f5cf09d1d47483d",
+      "date": 1641687435503
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7f05b370240882d2"
+      },
+      "id": "7f05b370240882d2",
+      "type": "add",
+      "after": "60eaa979515de454",
+      "date": 1641687525228
+    },
+    {
+      "type": "edit",
+      "id": "7f05b370240882d2",
+      "item": {
+        "type": "frame",
+        "id": "7f05b370240882d2",
+        "text": "//wiki.dbbs.co/assets/pages/js-snippet-template/esm.html"
+      },
+      "date": 1641687536092
+    },
+    {
+      "type": "add",
+      "id": "19de4734ba8306d4",
+      "item": {
+        "type": "paragraph",
+        "id": "19de4734ba8306d4",
+        "text": "config.json"
+      },
+      "after": "60eaa979515de454",
+      "date": 1641687684925
+    },
+    {
+      "type": "add",
+      "id": "1db546de3c161dff",
+      "item": {
+        "type": "factory",
+        "id": "1db546de3c161dff",
+        "text": "//code"
+      },
+      "after": "19de4734ba8306d4",
+      "date": 1641687687615
+    },
+    {
+      "type": "edit",
+      "id": "1db546de3c161dff",
+      "item": {
+        "type": "code",
+        "id": "1db546de3c161dff",
+        "text": "function config(datapath, admin) {\n  return {\n    farm: true,\n    secure_cookie: false,\n    security_type: \"friends\",\n  }\n}"
+      },
+      "date": 1641687823781
+    },
+    {
+      "type": "edit",
+      "id": "1db546de3c161dff",
+      "item": {
+        "type": "code",
+        "id": "1db546de3c161dff",
+        "text": "function config(datapath, admin) {\n  return {\n    farm: true,\n    port: 80,\n    secure_cookie: false,\n    security_type: \"friends\",\n  }\n}"
+      },
+      "date": 1641687897179
+    },
+    {
+      "type": "edit",
+      "id": "1db546de3c161dff",
+      "item": {
+        "type": "code",
+        "id": "1db546de3c161dff",
+        "text": "function config(datapath, admin) {\n  return {\n    farm: true,\n    port: 80,\n    security_type: \"friends\",\n    secure_cookie: false,\n\n  }\n}"
+      },
+      "date": 1641687943542
+    },
+    {
+      "type": "edit",
+      "id": "1db546de3c161dff",
+      "item": {
+        "type": "code",
+        "id": "1db546de3c161dff",
+        "text": "function config(datapath, admin) {\n  return {\n    farm: true,\n    port: 80,\n    security_type: \"friends\",\n    secure_cookie: false,\n    admin: admin.toString(),\n    cookieSecret: btoa(Math.random()*1e18),\n    wikiDomains: {\n      localhost: {\n        id: `${datapath}/owner.json`\n      }\n    }\n  }\n}"
+      },
+      "date": 1641688233421
+    },
+    {
+      "type": "add",
+      "id": "9aec816e9dc082af",
+      "item": {
+        "type": "paragraph",
+        "id": "9aec816e9dc082af",
+        "text": "owner.json"
+      },
+      "after": "60eaa979515de454",
+      "date": 1641688278119
+    },
+    {
+      "type": "add",
+      "id": "b15362937061225d",
+      "item": {
+        "type": "factory",
+        "id": "b15362937061225d",
+        "text": "//code"
+      },
+      "after": "9aec816e9dc082af",
+      "date": 1641688284383
+    },
+    {
+      "type": "edit",
+      "id": "b15362937061225d",
+      "item": {
+        "type": "code",
+        "id": "b15362937061225d",
+        "text": "function owner(name, admin) {\n  return {\n    name,\n    friend: {\n      secret: admin.toString()\n    }\n  }\n}"
+      },
+      "date": 1641688397415
+    },
+    {
+      "type": "edit",
+      "id": "9aec816e9dc082af",
+      "item": {
+        "type": "paragraph",
+        "id": "9aec816e9dc082af",
+        "text": ".wiki/owner.json"
+      },
+      "date": 1641689237681
+    },
+    {
+      "type": "edit",
+      "id": "19de4734ba8306d4",
+      "item": {
+        "type": "paragraph",
+        "id": "19de4734ba8306d4",
+        "text": ".wiki/config.json"
+      },
+      "date": 1641689243009
+    },
+    {
+      "type": "edit",
+      "id": "b15362937061225d",
+      "item": {
+        "type": "code",
+        "id": "b15362937061225d",
+        "text": "function owner(name, admin) {\n  return JSON.stringify({\n    name,\n    friend: {\n      secret: admin.toString()\n    }\n  }, null, 2)\n}"
+      },
+      "date": 1641689271632
+    },
+    {
+      "type": "edit",
+      "id": "1db546de3c161dff",
+      "item": {
+        "type": "code",
+        "id": "1db546de3c161dff",
+        "text": "function config(datapath, admin) {\n  return JSON.stringify({\n    farm: true,\n    port: 80,\n    security_type: \"friends\",\n    secure_cookie: false,\n    admin: admin.toString(),\n    cookieSecret: btoa(Math.random()*1e18),\n    wikiDomains: {\n      localhost: {\n        id: `${datapath}/owner.json`\n      }\n    }\n  }, null, 2)\n}"
+      },
+      "date": 1641689286644
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "283fe3a926cc7f39"
+      },
+      "id": "283fe3a926cc7f39",
+      "type": "add",
+      "after": "7f05b370240882d2",
+      "date": 1641689482502
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async emit function(el) {\n  el.innerHTML = `\n<input type=\"text\" name=\"datapath\"\n  placeholder=\"\">\n`\n}"
+      },
+      "date": 1641690193520
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;}</style>\n<input type=\"text\" name=\"datapath\"\n  placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"admin\"\n  placeholder=\"password\">\n`\n}"
+      },
+      "date": 1641690625275
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;}\ninput:invalid {border-color: red;}\n</style>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n`\n}"
+      },
+      "date": 1641690872167
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;}\ninput:invalid {border: 2px solid red;}\n</style>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n`\n}"
+      },
+      "date": 1641690988769
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;}\ninput:invalid {border: 2px solid red;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n</form>`\n}"
+      },
+      "date": 1641691052138
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;}\ninput:invalid {border: 1px solid red;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n</form>`\n}"
+      },
+      "date": 1641691082867
+    },
+    {
+      "id": "283fe3a926cc7f39",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "9aec816e9dc082af",
+        "b15362937061225d",
+        "19de4734ba8306d4",
+        "1db546de3c161dff",
+        "283fe3a926cc7f39",
+        "7f05b370240882d2"
+      ],
+      "date": 1641691085562
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin: 2px;}\ninput:invalid {border: 1px solid red;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n</form>`\n}"
+      },
+      "date": 1641691133577
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 2px;}\ninput:invalid {border: 1px solid red;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n</form>`\n}"
+      },
+      "date": 1641691142692
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n</form>`\n}"
+      },
+      "date": 1641691149376
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n</form>`\n}"
+      },
+      "date": 1641691268417
+    },
+    {
+      "type": "edit",
+      "id": "b15362937061225d",
+      "item": {
+        "type": "code",
+        "id": "b15362937061225d",
+        "text": "function owner(author, admin) {\n  return JSON.stringify({\n    name: author.toString(),\n    friend: {\n      secret: admin.toString()\n    }\n  }, null, 2)\n}"
+      },
+      "date": 1641691283867
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641691430534
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641691451928
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641691546931
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641691574046
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\ngap: 10px;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641691686791
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\nalign-content: space-around;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641691800297
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\nalign-content: space-between;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641691826743
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\ngap: 10px; align-content: space-around;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641691866773
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\ngap: 10px; justify-content: space-around;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641691937838
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\ngap: 10px;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641692086275
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ab2b0e8d4d135bf5"
+      },
+      "id": "ab2b0e8d4d135bf5",
+      "type": "add",
+      "after": "7f05b370240882d2",
+      "date": 1641692283001
+    },
+    {
+      "id": "ab2b0e8d4d135bf5",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "9aec816e9dc082af",
+        "b15362937061225d",
+        "19de4734ba8306d4",
+        "1db546de3c161dff",
+        "283fe3a926cc7f39",
+        "ab2b0e8d4d135bf5",
+        "7f05b370240882d2"
+      ],
+      "date": 1641692286124
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "export async function bind(el) {\n  const {\n    viewOwner, saveOwner, viewConfig, saveConfig,\n    preview\n  } = window\n  viewOwner.onclick = e => {\n    preview.innerHTML = owner(author, admin)\n  }\n  viewConfig.onclick = e => {\n    preview.innerHTML = config(datapath, admin)\n  }\n}"
+      },
+      "date": 1641692580957
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "export async function bind(el) {\n  const {\n    viewOwner, saveOwner, viewConfig, saveConfig,\n    preview\n  } = window\n  window[\"view-owner\"].onclick = e => {\n    preview.innerHTML = owner(author, admin)\n  }\n  window[\"view-config\"].onclick = e => {\n    preview.innerHTML = config(datapath, admin)\n  }\n}"
+      },
+      "date": 1641692659871
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "import * as frame from \"//wiki.dbbs.co/assets/v1/frame.js\"\nexport async function bind(el) {\n  const {\n    viewOwner, saveOwner, viewConfig, saveConfig,\n    preview\n  } = window\n  window[\"view-owner\"].onclick = e => {\n    preview.innerHTML = owner(author, admin)\n  }\n  window[\"view-config\"].onclick = e => {\n    preview.innerHTML = config(datapath, admin)\n  }\n}"
+      },
+      "date": 1641693185913
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "import * as frame from \"http://wiki.dbbs.co/assets/v1/frame.js\"\nexport async function bind(el) {\n  const {\n    viewOwner, saveOwner, viewConfig, saveConfig,\n    preview\n  } = window\n  window[\"view-owner\"].onclick = e => {\n    preview.innerHTML = owner(author, admin)\n  }\n  window[\"view-config\"].onclick = e => {\n    preview.innerHTML = config(datapath, admin)\n  }\n}"
+      },
+      "date": 1641693196379
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4b6b709fa08ee4c1"
+      },
+      "id": "4b6b709fa08ee4c1",
+      "type": "add",
+      "after": "7f05b370240882d2",
+      "date": 1641693277481
+    },
+    {
+      "id": "4b6b709fa08ee4c1",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "9aec816e9dc082af",
+        "b15362937061225d",
+        "19de4734ba8306d4",
+        "1db546de3c161dff",
+        "283fe3a926cc7f39",
+        "ab2b0e8d4d135bf5",
+        "4b6b709fa08ee4c1",
+        "7f05b370240882d2"
+      ],
+      "date": 1641693281037
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "export async function bind(el) {\n  const {\n    viewOwner, saveOwner, viewConfig, saveConfig,\n    preview\n  } = window\n  window[\"view-owner\"].onclick = e => {\n    preview.innerHTML = owner(author, admin)\n  }\n  window[\"view-config\"].onclick = e => {\n    preview.innerHTML = config(datapath, admin)\n  }\n}"
+      },
+      "date": 1641693289038
+    },
+    {
+      "type": "edit",
+      "id": "4b6b709fa08ee4c1",
+      "item": {
+        "type": "code",
+        "id": "4b6b709fa08ee4c1",
+        "text": "import * as frame from \"http://wiki.dbbs.co/assets/v1/frame.js\"\n\nasync function resize() {\n  \n}"
+      },
+      "date": 1641693319684
+    },
+    {
+      "type": "edit",
+      "id": "4b6b709fa08ee4c1",
+      "item": {
+        "type": "code",
+        "id": "4b6b709fa08ee4c1",
+        "text": "import * as frame from \"http://wiki.dbbs.co/assets/v1/frame.js\"\n\nfunction resize() {\n  window.parent.postMessage({\n    action: \"resize\",\n    height: document.body.outerHeight\n  }, \"*\")\n}"
+      },
+      "date": 1641693409351
+    },
+    {
+      "type": "edit",
+      "id": "4b6b709fa08ee4c1",
+      "item": {
+        "type": "code",
+        "id": "4b6b709fa08ee4c1",
+        "text": "import * as frame from \"http://wiki.dbbs.co/assets/v1/frame.js\"\n\nfunction resize() {\n  window.parent.postMessage({\n    action: \"resize\",\n    height: document.body.offsetHeight\n  }, \"*\")\n}"
+      },
+      "date": 1641693441504
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "export async function bind(el) {\n  window[\"view-owner\"].onclick = e => {\n    const {datapath, author, admin} = document.form[0]\n    window.preview.innerHTML = owner(author, admin)\n    resize()\n  }\n  window[\"view-config\"].onclick = e => {\n    const {datapath, author, admin} = document.form[0]\n    window.preview.innerHTML = config(datapath, admin)\n    resize()\n  }\n}"
+      },
+      "date": 1641693592626
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "export async function bind(el) {\n  window[\"view-owner\"].onclick = e => {\n    const datapath = document.form[0].datapath.value\n\n    window.preview.innerHTML = owner(author, admin)\n    resize()\n  }\n  window[\"view-config\"].onclick = e => {\n    const {datapath, author, admin} = document.form[0]\n    window.preview.innerHTML = config(datapath, admin)\n    resize()\n  }\n}"
+      },
+      "date": 1641701369547
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "export async function bind(el) {\n  window[\"view-owner\"].onclick = e => {\n    const datapath = document.forms[0].datapath.value\n    const author = document.forms[0].author.value\n    const admin = document.forms[0].admin.value\n    window.preview.innerHTML = owner(author, admin)\n    resize()\n  }\n  window[\"view-config\"].onclick = e => {\n    const datapath = document.forms[0].datapath.value\n    const author = document.forms[0].author.value\n    const admin = document.forms[0].admin.value\n    window.preview.innerHTML = config(datapath, admin)\n    resize()\n  }\n}"
+      },
+      "date": 1641701437358
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "export async function bind(el) {\n  window[\"view-owner\"].onclick = e => {\n    const datapath = document.forms[0].datapath.value\n    const author = document.forms[0].author.value\n    const admin = document.forms[0].admin.value\n    window.preview.innerHTML = owner(author, admin)\n    resize()\n    e.preventDefault()\n    e.stopPropagation()\n  }\n  window[\"view-config\"].onclick = e => {\n    const datapath = document.forms[0].datapath.value\n    const author = document.forms[0].author.value\n    const admin = document.forms[0].admin.value\n    window.preview.innerHTML = config(datapath, admin)\n    resize()\n    e.preventDefault()\n    e.stopPropagation()\n  }\n}"
+      },
+      "date": 1641701535622
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler => fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  window.preview.innerHTML = owner(author, admin)\n  resize()\n  e.preventDefault()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  window[\"view-owner\"].onclick = e => {\n  }\n  window[\"view-config\"].onclick = e => {\n    const datapath = document.forms[0].datapath.value\n    const author = document.forms[0].author.value\n    const admin = document.forms[0].admin.value\n    window.preview.innerHTML = config(datapath, admin)\n    resize()\n    e.preventDefault()\n    e.stopPropagation()\n  }\n}"
+      },
+      "date": 1641701903931
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler => fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.preventDefault()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  window[\"view-owner\"].onclick = handler(({\n    datapath, author, admin\n  }) => window.preview.innerHTML =\n    owner(author, admin))\n  window[\"view-config\"].onclick = handler(({\n    datapath, author, admin\n  }) => window.preview.innerHTML\n    = config(datapath, admin))\n}"
+      },
+      "date": 1641702172916
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.preventDefault()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  window[\"view-owner\"].onclick = handler(({\n    datapath, author, admin\n  }) => window.preview.innerHTML =\n    owner(author, admin))\n  window[\"view-config\"].onclick = handler(({\n    datapath, author, admin\n  }) => window.preview.innerHTML\n    = config(datapath, admin))\n}"
+      },
+      "date": 1641702200598
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.preventDefault()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  let P = window.preview\n  \n  {'view-owner': \n    handler(values => P.innerHTML = owner(values),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values),\n       \n  }\n\n  window[\"view-owner\"].onclick = \n  window[\"view-config\"].onclick = handler(({\n    datapath, author, admin\n  }) => window.preview.innerHTML\n    = config(datapath, admin))\n}"
+      },
+      "date": 1641702860341
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.preventDefault()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  let P = window.preview\n  \n  Object.entries({\n    'view-owner': \n    handler(values => P.innerHTML = owner(values),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values),\n       \n  }).forEach((key, fn) => {\n    window[key].onclick = fn\n  })\n}"
+      },
+      "date": 1641703006333
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.preventDefault()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  let P = window.preview\n  \n  Object.entries({\n    'view-owner': \n    handler(values => P.innerHTML = owner(values)),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values)),\n       \n  }).forEach((key, fn) => {\n    window[key].onclick = fn\n  })\n}"
+      },
+      "date": 1641703041380
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.preventDefault()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  let P = window.preview\n  \n  Object.entries({\n    'view-owner': \n    handler(values => P.innerHTML = owner(values)),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values)),\n       \n  }).forEach(([key, fn]) => {\n    window[key].onclick = fn\n  })\n}"
+      },
+      "date": 1641703100813
+    },
+    {
+      "type": "edit",
+      "id": "b15362937061225d",
+      "item": {
+        "type": "code",
+        "id": "b15362937061225d",
+        "text": "function owner({author, admin}) {\n  return JSON.stringify({\n    name: author.toString(),\n    friend: {\n      secret: admin.toString()\n    }\n  }, null, 2)\n}"
+      },
+      "date": 1641703128289
+    },
+    {
+      "type": "edit",
+      "id": "1db546de3c161dff",
+      "item": {
+        "type": "code",
+        "id": "1db546de3c161dff",
+        "text": "function config({datapath, admin}) {\n  return JSON.stringify({\n    farm: true,\n    port: 80,\n    security_type: \"friends\",\n    secure_cookie: false,\n    admin: admin.toString(),\n    cookieSecret: btoa(Math.random()*1e18),\n    wikiDomains: {\n      localhost: {\n        id: `${datapath}/owner.json`\n      }\n    }\n  }, null, 2)\n}"
+      },
+      "date": 1641703162030
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.preventDefault()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  let P = window.preview\n  \n  Object.entries({\n    'view-owner': \n    handler(values => P.innerHTML = owner(values)),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values)),\n\n   'save-owner':\n    handler(values => \n      frame.download(owner(values), \"owner.json\")),\n\n   'save-config':\n    handler(values => \n      frame.download(config(values), \"config.json\"))\n\n  }).forEach(([key, fn]) => {\n    window[key].onclick = fn\n  })\n}"
+      },
+      "date": 1641703352199
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\ngap: 10px;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button id=\"view-owner\">preview owner.json</button>\n<button id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button id=\"view-config\">preview config.json</button>\n<button id=\"save-config\">download config.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641703410084
+    },
+    {
+      "id": "7f05b370240882d2",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "9aec816e9dc082af",
+        "b15362937061225d",
+        "19de4734ba8306d4",
+        "1db546de3c161dff",
+        "283fe3a926cc7f39",
+        "ab2b0e8d4d135bf5",
+        "7f05b370240882d2",
+        "4b6b709fa08ee4c1"
+      ],
+      "date": 1641703544360
+    },
+    {
+      "id": "7f05b370240882d2",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "7f05b370240882d2",
+        "9aec816e9dc082af",
+        "b15362937061225d",
+        "19de4734ba8306d4",
+        "1db546de3c161dff",
+        "283fe3a926cc7f39",
+        "ab2b0e8d4d135bf5",
+        "4b6b709fa08ee4c1"
+      ],
+      "date": 1641703567473
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  let P = window.preview\n  \n  Object.entries({\n    'view-owner': \n    handler(values => P.innerHTML = owner(values)),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values)),\n\n   'save-owner':\n    handler(values => \n      frame.download(owner(values), \"owner.json\")),\n\n   'save-config':\n    handler(values => \n      frame.download(config(values), \"config.json\"))\n\n  }).forEach(([key, fn]) => {\n    window[key].onclick = fn\n  })\n}"
+      },
+      "date": 1641703600960
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  const P = window.preview\n  \n  const dispatch = {\n    'view-owner': \n    handler(values => P.innerHTML = owner(values)),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values)),\n\n   'save-owner':\n    handler(values => \n      frame.download(owner(values), \"owner.json\")),\n\n   'save-config':\n    handler(values => \n      frame.download(config(values), \"config.json\"))\n\n  }\n\n  window.forms[0].onsubmit = e => {\n    P.innerHTML = e.target.id\n    e.preventDefault()\n  }\n}"
+      },
+      "date": 1641703872135
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  const P = window.preview\n  \n  const dispatch = {\n    'view-owner': \n    handler(values => P.innerHTML = owner(values)),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values)),\n\n   'save-owner':\n    handler(values => \n      frame.download(owner(values), \"owner.json\")),\n\n   'save-config':\n    handler(values => \n      frame.download(config(values), \"config.json\"))\n\n  }\n\n  document.forms[0].onsubmit = e => {\n    P.innerHTML = e.target.id\n    e.preventDefault()\n  }\n}"
+      },
+      "date": 1641704044615
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\ngap: 10px;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"password\">\n<div class=\"buttons\">\n<button type=\"submit\" id=\"view-owner\">preview owner.json</button>\n<button type=\"submit\" id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button type=\"submit\" id=\"view-config\">preview config.json</button>\n<button type=\"submit\" id=\"save-config\">download config.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641704273149
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  const P = window.preview\n  \n  const dispatch = {\n    'view-owner': \n    handler(values => P.innerHTML = owner(values)),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values)),\n\n   'save-owner':\n    handler(values => \n      frame.download(owner(values), \"owner.json\")),\n\n   'save-config':\n    handler(values => \n      frame.download(config(values), \"config.json\"))\n\n  }\n\n  document.forms[0].onsubmit = e => {\n    console.log(\"submit\", {e, target: e.target})\n    P.innerHTML = e.target.id\n    e.preventDefault()\n  }\n}"
+      },
+      "date": 1641704459760
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "const handler = fn => e => {\n  const datapath = document.forms[0].datapath.value\n  const author = document.forms[0].author.value\n  const admin = document.forms[0].admin.value\n  fn({datapath, author, admin})\n  resize()\n  e.stopPropagation()\n}\nexport async function bind(el) {\n  const P = window.preview\n  \n  const dispatch = {\n    'view-owner': \n    handler(values => P.innerHTML = owner(values)),\n\n   'view-config':\n    handler(values => P.innerHTML = config(values)),\n\n   'save-owner':\n    handler(values => \n      frame.download(owner(values), \"owner.json\")),\n\n   'save-config':\n    handler(values => \n      frame.download(config(values), \"config.json\"))\n\n  }\n\n  document.forms[0].onsubmit = e => {\n    P.innerHTML = e.submitter.id\n    e.preventDefault()\n  }\n}"
+      },
+      "date": 1641704611300
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "export async function bind(el) {\n  const P = window.preview\n  \n  document.forms[0].onsubmit = e => {\n    const datapath = document.forms[0].datapath.value\n    const author = document.forms[0].author.value\n    const admin = document.forms[0].admin.value\n\n    switch(e.submitter.id) {\n      case \"view-owner\":\n        P.innerHTML = owner({author, admin})\n        break\n      case \"view-config\":\n        P.innerHTML = config({datapath, admin})\n        break\n      case \"save-owner\":\n        frame.download(owner(values), \"owner.json\"))\n        break        \n      case \"save-config\":\n        frame.download(config(values), \"config.json\"))\n        break        \n    }\n\n    resize()\n    e.preventDefault()\n  }\n}"
+      },
+      "date": 1641704878106
+    },
+    {
+      "type": "edit",
+      "id": "ab2b0e8d4d135bf5",
+      "item": {
+        "type": "code",
+        "id": "ab2b0e8d4d135bf5",
+        "text": "export async function bind(el) {\n  const P = window.preview\n  \n  document.forms[0].onsubmit = e => {\n    const datapath = document.forms[0].datapath.value\n    const author = document.forms[0].author.value\n    const admin = document.forms[0].admin.value\n    const values = {datapath, author, admin}\n\n    switch(e.submitter.id) {\n      case \"view-owner\":\n        P.innerHTML = owner(values)\n        break\n      case \"view-config\":\n        P.innerHTML = config(values)\n        break\n      case \"save-owner\":\n        frame.download(owner(values), \"owner.json\")\n        break        \n      case \"save-config\":\n        frame.download(config(values), \"config.json\")\n        break        \n    }\n\n    resize()\n    e.preventDefault()\n  }\n}"
+      },
+      "date": 1641705018329
+    },
+    {
+      "type": "edit",
+      "id": "60eaa979515de454",
+      "item": {
+        "type": "paragraph",
+        "id": "60eaa979515de454",
+        "text": "We have many ways to run a wiki farm locally. Several of them benefit from a configuration of the friends security plugin. Here we offer a tool to download well-formed config files and a description of the configurations."
+      },
+      "date": 1641705094088
+    },
+    {
+      "type": "add",
+      "id": "297d5de4bf937fde",
+      "item": {
+        "type": "paragraph",
+        "id": "297d5de4bf937fde",
+        "text": "notes"
+      },
+      "after": "19de4734ba8306d4",
+      "date": 1641705128103
+    },
+    {
+      "id": "297d5de4bf937fde",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "7f05b370240882d2",
+        "9aec816e9dc082af",
+        "b15362937061225d",
+        "19de4734ba8306d4",
+        "1db546de3c161dff",
+        "297d5de4bf937fde",
+        "283fe3a926cc7f39",
+        "ab2b0e8d4d135bf5",
+        "4b6b709fa08ee4c1"
+      ],
+      "date": 1641705130763
+    },
+    {
+      "type": "add",
+      "id": "fdb9dd78bf34316c",
+      "item": {
+        "type": "factory",
+        "id": "fdb9dd78bf34316c",
+        "text": "..."
+      },
+      "after": "1db546de3c161dff",
+      "date": 1641705233392
+    },
+    {
+      "type": "edit",
+      "id": "fdb9dd78bf34316c",
+      "item": {
+        "type": "pagefold",
+        "id": "fdb9dd78bf34316c",
+        "text": "."
+      },
+      "date": 1641705240700
+    },
+    {
+      "type": "edit",
+      "id": "297d5de4bf937fde",
+      "item": {
+        "type": "paragraph",
+        "id": "297d5de4bf937fde",
+        "text": "The remainder of this page are code blocks that enable the form at the top of the page."
+      },
+      "date": 1641705304095
+    },
+    {
+      "type": "edit",
+      "id": "4b6b709fa08ee4c1",
+      "item": {
+        "type": "code",
+        "id": "4b6b709fa08ee4c1",
+        "text": "import * as frame from \"https://wiki.dbbs.co/assets/v1/frame.js\"\n\nfunction resize() {\n  window.parent.postMessage({\n    action: \"resize\",\n    height: document.body.offsetHeight\n  }, \"*\")\n}"
+      },
+      "date": 1641706202780
+    },
+    {
+      "type": "edit",
+      "id": "1db546de3c161dff",
+      "item": {
+        "type": "code",
+        "id": "1db546de3c161dff",
+        "text": "function config({datapath, admin}) {\n  return JSON.stringify({\n    farm: true,\n    security_type: \"friends\",\n    secure_cookie: false,\n    admin: admin.toString(),\n    cookieSecret: btoa(Math.random()*1e18),\n    wikiDomains: {\n      localhost: {\n        id: `${datapath}/owner.json`\n      }\n    }\n  }, null, 2)\n}"
+      },
+      "date": 1641746539488
+    },
+    {
+      "type": "edit",
+      "id": "283fe3a926cc7f39",
+      "item": {
+        "type": "code",
+        "id": "283fe3a926cc7f39",
+        "text": "export async function emit(el) {\n  el.innerHTML = `\n<style>input {width: 100%; display: block;\nmargin-bottom: 3px;}\ninput:invalid {border: 1px solid red;}\n.buttons {display: flex; flex-direction: row;\ngap: 10px;}\n.buttons button {flex: 1 1 auto;}\n</style>\n<form>\n<input type=\"text\" name=\"datapath\"\n  required placeholder=\"suggest \\${HOME}/.wiki\">\n<input type=\"text\" name=\"author\"\n  required placeholder=\"author's name\">\n<input type=\"text\" name=\"admin\"\n  required placeholder=\"admin password\">\n<div class=\"buttons\">\n<button type=\"submit\" id=\"view-owner\">preview owner.json</button>\n<button type=\"submit\" id=\"save-owner\">download owner.json</button>\n</div>\n<div class=\"buttons\">\n<button type=\"submit\" id=\"view-config\">preview config.json</button>\n<button type=\"submit\" id=\"save-config\">download config.json</button>\n</div>\n</form>\n<pre id=\"preview\">\n</pre>`\n}"
+      },
+      "date": 1641784250848
+    }
+  ]
+}
