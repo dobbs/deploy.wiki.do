@@ -29,7 +29,7 @@
     {
       "type": "paragraph",
       "id": "8370012d1a6fc165",
-      "text": "See also [[Local LaunchAgent Wiki]]"
+      "text": "See also [[LaunchAgent Wiki]]"
     }
   ],
   "journal": [
@@ -190,6 +190,16 @@
     {
       "type": "fork",
       "date": 1640659632965
+    },
+    {
+      "type": "edit",
+      "id": "8370012d1a6fc165",
+      "item": {
+        "type": "paragraph",
+        "id": "8370012d1a6fc165",
+        "text": "See also [[LaunchAgent Wiki]]"
+      },
+      "date": 1686274622353
     }
   ]
 }

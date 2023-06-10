@@ -1,0 +1,696 @@
+{
+  "title": "About Image Plugin",
+  "story": [
+    {
+      "type": "image",
+      "id": "cff9a239d4d8b214",
+      "url": "/plugins/image/c490a26a3e17a846e3b6650516c4fba1.jpg",
+      "text": "Mandrill baboon image often used for test data in image processing experiments.",
+      "size": "thumbnail",
+      "width": 183,
+      "height": 183
+    },
+    {
+      "type": "paragraph",
+      "id": "9dcd5c39a349582a",
+      "text": "The image plugin renders an image with a caption. Double-clicking the image to enlarge it. Double-clicking the caption to edit it like a paragraph."
+    },
+    {
+      "type": "paragraph",
+      "id": "e6008586b67bc8b2",
+      "text": "Enter an empty caption to delete the image."
+    },
+    {
+      "type": "paragraph",
+      "id": "5c6e72ced2abc30b",
+      "text": "Drop an image onto the Factory to create an image plugin. On drop an image plugin editor will open."
+    },
+    {
+      "type": "html",
+      "id": "f50d8d62625ec3c0",
+      "text": "<h3>Sizing and Editing</h3>"
+    },
+    {
+      "type": "paragraph",
+      "id": "008697603b18b082",
+      "text": "Images will be resized to fit within a 1080p (1920x1080) frame. If the image contains location meta data, the location will be saved in the image plugin."
+    },
+    {
+      "type": "markdown",
+      "id": "30b4fc967f0e8c86",
+      "text": "Any meta data the image contains will be lost as part of this resize _**N.B.** This will **NOT** happen if the image is already small enough._\n"
+    },
+    {
+      "type": "markdown",
+      "id": "91bf4f9a19c9acb4",
+      "text": "The image editor, as well as editing the image caption and location, is used to switch between half and full width image."
+    },
+    {
+      "type": "markdown",
+      "id": "617e40dce5351a9f",
+      "text": "Location, latitude/longitude, can be edited individually, or by copying the position separated by either `/` or `,` and pasting it into either field.\n"
+    },
+    {
+      "type": "image",
+      "id": "a7fc94a8cb47c3d5",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/61/Cambridge_University%2C_Trinity_Hall_Master%27s_Garden.jpg",
+      "text": "Trinity Hall Master's Garden, Cambridge University. Image taken from original albumen print from a bound album of 58 Cambridge University photographs. Original 19th century album in the possession of Kimberly Blaker, New Boston Fine and Rare Books [https://upload.wikimedia.org/wikipedia/commons/6/61/Cambridge_University%2C_Trinity_Hall_Master%27s_Garden.jpg wikimedia]",
+      "size": "wide",
+      "width": 419,
+      "height": 314,
+      "url": "/plugins/image/ccbbc47d63f9d878d993d2fb6bbd00ea.jpg",
+      "location": {
+        "latitude": "52.20755",
+        "longitude": "0.11588"
+      }
+    },
+    {
+      "type": "map",
+      "id": "3f0fc1ae8978dd7e",
+      "text": "PAGE\nBOUNDARY 52.2085834, 0.1144552\nBOUNDARY 52.2064964, 0.1175022\nMap using location data from image, image caption is used as marker caption."
+    },
+    {
+      "type": "markdown",
+      "id": "0e841811440afebe",
+      "text": "# Image Storage"
+    },
+    {
+      "type": "paragraph",
+      "id": "304709f418db4d30",
+      "text": "Images are given a unique name and stored as a file, linked from two places using hard links, a farm based image 'commons' directory, and an image plugin asset directory. This means that there will only be a single copy of the image stored with in a wiki farm, with hard links from each wiki that has a copy."
+    },
+    {
+      "type": "image",
+      "id": "f3d7300fc19d00d6",
+      "text": "Flag in corner of image, clicking forks the image to the current wiki.",
+      "size": "thumbnail",
+      "width": 183,
+      "height": 119,
+      "url": "/plugins/image/a1a061049a0f100d668fc24ce423b13a.jpg"
+    },
+    {
+      "type": "paragraph",
+      "id": "733bc6c22c250608",
+      "text": "When a page is forked, the plugin will use the page history to find the image if its not available locally to the page. Hovering over an image that is not available locally will display the flag, of the wiki where it was found, in the lower right corner of the image. Clicking on this flag will copy the image to the local wiki."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About Image Plugin"
+      },
+      "date": 1361756804859
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9dcd5c39a349582a"
+      },
+      "id": "9dcd5c39a349582a",
+      "type": "add",
+      "date": 1361756822510
+    },
+    {
+      "type": "edit",
+      "id": "9dcd5c39a349582a",
+      "item": {
+        "type": "paragraph",
+        "id": "9dcd5c39a349582a",
+        "text": "The image plugin renders an image with a caption in a half-width frame. Double-clicking the image enlarges. Double-clicking the caption allows it to be edited like a paragraph."
+      },
+      "date": 1361757047564
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "e6008586b67bc8b2",
+        "text": ""
+      },
+      "id": "e6008586b67bc8b2",
+      "type": "add",
+      "after": "9dcd5c39a349582a",
+      "date": 1361757062932
+    },
+    {
+      "type": "edit",
+      "id": "e6008586b67bc8b2",
+      "item": {
+        "type": "paragraph",
+        "id": "e6008586b67bc8b2",
+        "text": "Enter an empty caption to delete the image."
+      },
+      "date": 1361757075218
+    },
+    {
+      "type": "edit",
+      "id": "9dcd5c39a349582a",
+      "item": {
+        "type": "paragraph",
+        "id": "9dcd5c39a349582a",
+        "text": "The image plugin renders an image with a caption in a half-width frame. Double-clicking the image to enlarge it. Double-clicking the caption allows it to be edited like a paragraph."
+      },
+      "date": 1361757178469
+    },
+    {
+      "type": "edit",
+      "id": "9dcd5c39a349582a",
+      "item": {
+        "type": "paragraph",
+        "id": "9dcd5c39a349582a",
+        "text": "The image plugin renders an image with a caption in a half-width frame. Double-clicking the image to enlarge it. Double-clicking the caption to edit it like a paragraph."
+      },
+      "date": 1361757206771
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5c6e72ced2abc30b"
+      },
+      "id": "5c6e72ced2abc30b",
+      "type": "add",
+      "after": "e6008586b67bc8b2",
+      "date": 1361757268730
+    },
+    {
+      "type": "edit",
+      "id": "5c6e72ced2abc30b",
+      "item": {
+        "type": "paragraph",
+        "id": "5c6e72ced2abc30b",
+        "text": "Drop an image onto the Factory to create an image."
+      },
+      "date": 1361757292407
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "4125ea0191a76015",
+        "text": ""
+      },
+      "id": "4125ea0191a76015",
+      "type": "add",
+      "after": "5c6e72ced2abc30b",
+      "date": 1361757292912
+    },
+    {
+      "type": "remove",
+      "id": "4125ea0191a76015",
+      "date": 1361757320001
+    },
+    {
+      "type": "edit",
+      "id": "5c6e72ced2abc30b",
+      "item": {
+        "type": "paragraph",
+        "id": "5c6e72ced2abc30b",
+        "text": "Drop an image onto the Factory to create an image plugin."
+      },
+      "date": 1361757325918
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f50d8d62625ec3c0"
+      },
+      "id": "f50d8d62625ec3c0",
+      "type": "add",
+      "after": "5c6e72ced2abc30b",
+      "date": 1361757339296
+    },
+    {
+      "type": "edit",
+      "id": "f50d8d62625ec3c0",
+      "item": {
+        "type": "paragraph",
+        "id": "f50d8d62625ec3c0",
+        "text": "<h3> Sizing and Editing"
+      },
+      "date": 1361757406660
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "008697603b18b082",
+        "text": ""
+      },
+      "id": "008697603b18b082",
+      "type": "add",
+      "after": "f50d8d62625ec3c0",
+      "date": 1361757407165
+    },
+    {
+      "type": "edit",
+      "id": "008697603b18b082",
+      "item": {
+        "type": "paragraph",
+        "id": "008697603b18b082",
+        "text": "We don't yet size or edit images."
+      },
+      "date": 1361757442777
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "8f2aa332bea14987",
+        "text": "We recommend "
+      },
+      "id": "8f2aa332bea14987",
+      "type": "add",
+      "after": "008697603b18b082",
+      "date": 1361757443283
+    },
+    {
+      "type": "edit",
+      "id": "8f2aa332bea14987",
+      "item": {
+        "type": "paragraph",
+        "id": "8f2aa332bea14987",
+        "text": "We recommend sizing images to a width of around 400px before including them in wiki."
+      },
+      "date": 1361757474005
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "f61c660aaa7285cf",
+        "text": ""
+      },
+      "id": "f61c660aaa7285cf",
+      "type": "add",
+      "after": "8f2aa332bea14987",
+      "date": 1361757474514
+    },
+    {
+      "type": "edit",
+      "id": "f61c660aaa7285cf",
+      "item": {
+        "type": "paragraph",
+        "id": "f61c660aaa7285cf",
+        "text": "We recommend saving images as highly compressed jpeg format before including them in wiki."
+      },
+      "date": 1361757556698
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "304709f418db4d30",
+        "text": ""
+      },
+      "id": "304709f418db4d30",
+      "type": "add",
+      "after": "f61c660aaa7285cf",
+      "date": 1361757557202
+    },
+    {
+      "type": "edit",
+      "id": "304709f418db4d30",
+      "item": {
+        "type": "paragraph",
+        "id": "304709f418db4d30",
+        "text": "We encode images in data-url format which can delay the loading and display of images. It is possible to revise the json url field for an image to include an image src link. This works more as expected for web pages but breaks some of the sharing semantics expected of federated wiki."
+      },
+      "date": 1361757699242
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "733bc6c22c250608"
+      },
+      "id": "733bc6c22c250608",
+      "type": "add",
+      "after": "304709f418db4d30",
+      "date": 1361757823488
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "image",
+        "id": "cff9a239d4d8b214",
+        "url": "/plugins/image/c490a26a3e17a846e3b6650516c4fba1.jpg",
+        "caption": "Uploaded image",
+        "text": "Mandrill baboon image often used for test data in image processing experiments."
+      },
+      "id": "cff9a239d4d8b214",
+      "date": 1361758095074
+    },
+    {
+      "type": "edit",
+      "id": "733bc6c22c250608",
+      "item": {
+        "type": "paragraph",
+        "id": "733bc6c22c250608",
+        "text": "We recommend adding images to a scratch page, revising the caption until satisfied, then dragging the image to its desired location."
+      },
+      "date": 1361758188668
+    },
+    {
+      "type": "edit",
+      "id": "f50d8d62625ec3c0",
+      "item": {
+        "type": "html",
+        "id": "f50d8d62625ec3c0",
+        "text": "<h3> Sizing and Editing"
+      },
+      "date": 1418315679266
+    },
+    {
+      "type": "edit",
+      "id": "f50d8d62625ec3c0",
+      "item": {
+        "type": "html",
+        "id": "f50d8d62625ec3c0",
+        "text": "<h3>Sizing and Editing</h3>"
+      },
+      "date": 1418315689240
+    },
+    {
+      "type": "edit",
+      "id": "cff9a239d4d8b214",
+      "item": {
+        "type": "image",
+        "id": "cff9a239d4d8b214",
+        "url": "/plugins/image/c490a26a3e17a846e3b6650516c4fba1.jpg",
+        "text": "Mandrill baboon image often used for test data in image processing experiments.",
+        "size": "thumbnail",
+        "width": 183,
+        "height": 183
+      },
+      "date": 1660658011012
+    },
+    {
+      "type": "edit",
+      "id": "9dcd5c39a349582a",
+      "item": {
+        "type": "paragraph",
+        "id": "9dcd5c39a349582a",
+        "text": "The image plugin renders an image with a caption. Double-clicking the image to enlarge it. Double-clicking the caption to edit it like a paragraph."
+      },
+      "date": 1660658153041
+    },
+    {
+      "type": "edit",
+      "id": "5c6e72ced2abc30b",
+      "item": {
+        "type": "paragraph",
+        "id": "5c6e72ced2abc30b",
+        "text": "Drop an image onto the Factory to create an image plugin. On drop an image plugin editor will open."
+      },
+      "date": 1660658167160
+    },
+    {
+      "type": "edit",
+      "id": "008697603b18b082",
+      "item": {
+        "type": "paragraph",
+        "id": "008697603b18b082",
+        "text": "Images will be resized to fit within a 1080p (1920x1080) frame. If the image contains location meta data, the location will be saved in the image plugin."
+      },
+      "date": 1660658179051
+    },
+    {
+      "type": "add",
+      "id": "30b4fc967f0e8c86",
+      "item": {
+        "type": "factory",
+        "id": "30b4fc967f0e8c86",
+        "text": "Any meta data the image contains will be lost as part of this resize _**N.B.** This will **NOT** happen if the image is already small enough._  "
+      },
+      "after": "008697603b18b082",
+      "date": 1660658228272
+    },
+    {
+      "type": "edit",
+      "id": "30b4fc967f0e8c86",
+      "item": {
+        "type": "markdown",
+        "id": "30b4fc967f0e8c86",
+        "text": "Any meta data the image contains will be lost as part of this resize _**N.B.** This will **NOT** happen if the image is already small enough._"
+      },
+      "date": 1660658241669
+    },
+    {
+      "type": "remove",
+      "id": "8f2aa332bea14987",
+      "date": 1660658331838
+    },
+    {
+      "type": "remove",
+      "id": "f61c660aaa7285cf",
+      "date": 1660658341096
+    },
+    {
+      "type": "edit",
+      "id": "30b4fc967f0e8c86",
+      "item": {
+        "type": "markdown",
+        "id": "30b4fc967f0e8c86",
+        "text": "Any meta data the image contains will be lost as part of this resize _**N.B.** This will **NOT** happen if the image is already small enough._\n"
+      },
+      "date": 1660658447019
+    },
+    {
+      "type": "add",
+      "id": "91bf4f9a19c9acb4",
+      "item": {
+        "type": "markdown",
+        "id": "91bf4f9a19c9acb4",
+        "text": "The image editor, as well as editing the image caption and location, is used to switch between half and full width image."
+      },
+      "after": "30b4fc967f0e8c86",
+      "date": 1660658497518
+    },
+    {
+      "type": "add",
+      "id": "617e40dce5351a9f",
+      "item": {
+        "type": "markdown",
+        "id": "617e40dce5351a9f",
+        "text": "Location, latitude/longitude, can be edited individually, or by copying the position separated by either `/` or `,` and pasting it into either field."
+      },
+      "after": "91bf4f9a19c9acb4",
+      "date": 1660658519783
+    },
+    {
+      "type": "edit",
+      "id": "617e40dce5351a9f",
+      "item": {
+        "type": "markdown",
+        "id": "617e40dce5351a9f",
+        "text": "Location, latitude/longitude, can be edited individually, or by copying the position separated by either `/` or `,` and pasting it into either field.\n"
+      },
+      "date": 1660658572817
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "a7fc94a8cb47c3d5"
+      },
+      "id": "a7fc94a8cb47c3d5",
+      "type": "add",
+      "after": "733bc6c22c250608",
+      "date": 1660658585955
+    },
+    {
+      "id": "a7fc94a8cb47c3d5",
+      "type": "move",
+      "order": [
+        "cff9a239d4d8b214",
+        "9dcd5c39a349582a",
+        "e6008586b67bc8b2",
+        "5c6e72ced2abc30b",
+        "f50d8d62625ec3c0",
+        "008697603b18b082",
+        "30b4fc967f0e8c86",
+        "91bf4f9a19c9acb4",
+        "617e40dce5351a9f",
+        "a7fc94a8cb47c3d5",
+        "304709f418db4d30",
+        "733bc6c22c250608"
+      ],
+      "date": 1660658588588
+    },
+    {
+      "type": "edit",
+      "id": "a7fc94a8cb47c3d5",
+      "item": {
+        "type": "image",
+        "id": "a7fc94a8cb47c3d5",
+        "source": "https://upload.wikimedia.org/wikipedia/commons/6/61/Cambridge_University%2C_Trinity_Hall_Master%27s_Garden.jpg",
+        "text": "Trinity Hall Master's Garden, Cambridge University. Image taken from original albumen print from a bound album of 58 Cambridge University photographs. Original 19th century album in the possession of Kimberly Blaker, New Boston Fine and Rare Books [https://upload.wikimedia.org/wikipedia/commons/6/61/Cambridge_University%2C_Trinity_Hall_Master%27s_Garden.jpg wikimedia]",
+        "size": "wide",
+        "width": 419,
+        "height": 314,
+        "url": "/plugins/image/ccbbc47d63f9d878d993d2fb6bbd00ea.jpg"
+      },
+      "date": 1660658664000
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3f0fc1ae8978dd7e"
+      },
+      "id": "3f0fc1ae8978dd7e",
+      "type": "add",
+      "after": "733bc6c22c250608",
+      "date": 1660658690576
+    },
+    {
+      "id": "3f0fc1ae8978dd7e",
+      "type": "move",
+      "order": [
+        "cff9a239d4d8b214",
+        "9dcd5c39a349582a",
+        "e6008586b67bc8b2",
+        "5c6e72ced2abc30b",
+        "f50d8d62625ec3c0",
+        "008697603b18b082",
+        "30b4fc967f0e8c86",
+        "91bf4f9a19c9acb4",
+        "617e40dce5351a9f",
+        "a7fc94a8cb47c3d5",
+        "3f0fc1ae8978dd7e",
+        "304709f418db4d30",
+        "733bc6c22c250608"
+      ],
+      "date": 1660658692592
+    },
+    {
+      "type": "edit",
+      "id": "3f0fc1ae8978dd7e",
+      "item": {
+        "type": "map",
+        "id": "3f0fc1ae8978dd7e",
+        "text": "PAGE\nBOUNDARY 52.2085834, 0.1144552\nBOUNDARY 52.2064964, 0.1175022\nMap using location data from image, image caption is used as marker caption."
+      },
+      "date": 1660658729936
+    },
+    {
+      "type": "edit",
+      "id": "a7fc94a8cb47c3d5",
+      "item": {
+        "type": "image",
+        "id": "a7fc94a8cb47c3d5",
+        "source": "https://upload.wikimedia.org/wikipedia/commons/6/61/Cambridge_University%2C_Trinity_Hall_Master%27s_Garden.jpg",
+        "text": "Trinity Hall Master's Garden, Cambridge University. Image taken from original albumen print from a bound album of 58 Cambridge University photographs. Original 19th century album in the possession of Kimberly Blaker, New Boston Fine and Rare Books [https://upload.wikimedia.org/wikipedia/commons/6/61/Cambridge_University%2C_Trinity_Hall_Master%27s_Garden.jpg wikimedia]",
+        "size": "wide",
+        "width": 419,
+        "height": 314,
+        "url": "/plugins/image/ccbbc47d63f9d878d993d2fb6bbd00ea.jpg",
+        "location": {
+          "latitude": "52.20755",
+          "longitude": "0.11588"
+        }
+      },
+      "date": 1660658853754
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0e841811440afebe"
+      },
+      "id": "0e841811440afebe",
+      "type": "add",
+      "after": "733bc6c22c250608",
+      "date": 1660658872792
+    },
+    {
+      "id": "0e841811440afebe",
+      "type": "move",
+      "order": [
+        "cff9a239d4d8b214",
+        "9dcd5c39a349582a",
+        "e6008586b67bc8b2",
+        "5c6e72ced2abc30b",
+        "f50d8d62625ec3c0",
+        "008697603b18b082",
+        "30b4fc967f0e8c86",
+        "91bf4f9a19c9acb4",
+        "617e40dce5351a9f",
+        "a7fc94a8cb47c3d5",
+        "3f0fc1ae8978dd7e",
+        "0e841811440afebe",
+        "304709f418db4d30",
+        "733bc6c22c250608"
+      ],
+      "date": 1660658875121
+    },
+    {
+      "type": "edit",
+      "id": "0e841811440afebe",
+      "item": {
+        "type": "markdown",
+        "id": "0e841811440afebe",
+        "text": "# Image Storage"
+      },
+      "date": 1660658888921
+    },
+    {
+      "type": "edit",
+      "id": "304709f418db4d30",
+      "item": {
+        "type": "paragraph",
+        "id": "304709f418db4d30",
+        "text": "Images are given a unique name and stored as a file, linked from two places using hard links, a farm based image 'commons' directory, and an image plugin asset directory. This means that there will only be a single copy of the image stored with in a wiki farm, with hard links from each wiki that has a copy."
+      },
+      "date": 1660658905695
+    },
+    {
+      "type": "edit",
+      "id": "733bc6c22c250608",
+      "item": {
+        "type": "paragraph",
+        "id": "733bc6c22c250608",
+        "text": "When a page is forked, the plugin will use the page history to find the image if its not available locally to the page. Hovering over an image that is not available locally will display the flag, of the wiki where it was found, in the lower right corner of the image. Clicking on this flag will copy the image to the local wiki."
+      },
+      "date": 1660658933506
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f3d7300fc19d00d6"
+      },
+      "id": "f3d7300fc19d00d6",
+      "type": "add",
+      "after": "733bc6c22c250608",
+      "date": 1660658939189
+    },
+    {
+      "type": "edit",
+      "id": "f3d7300fc19d00d6",
+      "item": {
+        "type": "image",
+        "id": "f3d7300fc19d00d6",
+        "text": "Flag in corner of image, clicking forks the image to the current wiki.",
+        "size": "thumbnail",
+        "width": 183,
+        "height": 119,
+        "url": "/plugins/image/a1a061049a0f100d668fc24ce423b13a.jpg"
+      },
+      "date": 1660658966449
+    },
+    {
+      "id": "f3d7300fc19d00d6",
+      "type": "move",
+      "order": [
+        "cff9a239d4d8b214",
+        "9dcd5c39a349582a",
+        "e6008586b67bc8b2",
+        "5c6e72ced2abc30b",
+        "f50d8d62625ec3c0",
+        "008697603b18b082",
+        "30b4fc967f0e8c86",
+        "91bf4f9a19c9acb4",
+        "617e40dce5351a9f",
+        "a7fc94a8cb47c3d5",
+        "3f0fc1ae8978dd7e",
+        "0e841811440afebe",
+        "304709f418db4d30",
+        "f3d7300fc19d00d6",
+        "733bc6c22c250608"
+      ],
+      "date": 1660658969141
+    }
+  ],
+  "plugin": "image"
+}

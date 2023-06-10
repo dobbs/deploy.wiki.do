@@ -8,13 +8,43 @@
     },
     {
       "type": "paragraph",
-      "id": "148de3d8364f5b87",
-      "text": "${HOME}/Library/LaunchAgents/wiki.localhost.plist"
+      "id": "820601a827825ef4",
+      "text": "We host a small deno program in an asset folder which is also shown here for inspection and transparency. It generates a MacOS LaunchAgent configuration file."
+    },
+    {
+      "type": "frame",
+      "id": "aa09bc1038b044ce",
+      "text": "http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 800"
+    },
+    {
+      "type": "paragraph",
+      "id": "29d7a02d53e418c3",
+      "text": "I use that program from the command line to compare with my current configuration."
     },
     {
       "type": "code",
-      "id": "778244eb7f9ea414",
-      "text": "function plist ({wikipath, datapath}) {\n  return `<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n  <key>Label</key>\n  <string>localhost.wiki</string>\n  <key>ProgramArguments</key>\n  <array>\n    <string>${wikipath}/wiki</string>\n    <string>--farm</string>\n    <string>--security_legacy</string>\n    <string>--data</string>\n    <string>${datapath}</string>\n    <string>--port</string>\n    <string>80</string>\n  </array>\n  <key>EnvironmentVariables</key>\n  <dict>\n    <key>PATH</key>\n    <string>${wikipath}:/usr/local/bin:/usr/bin:/bin</string>\n  </dict>\n  <key>WorkingDirectory</key>\n  <string>${datapath}</string>\n  <key>RunAtLoad</key>\n  <true/>\n  <key>StandardOutPath</key>\n  <string>${datapath}/stdout.txt</string>\n  <key>StandardErrorPath</key>\n  <string>${datapath}/stderr.txt</string>\n  <key>inetdCompatibility</key>\n  <dict>\n    <key>Wait</key>\n    <false/>\n  </dict>\n</dict>\n</plist>`\n}"
+      "id": "44b3c69f57a364ff",
+      "text": "#!/usr/bin/env bash\nURL=http://deploy.dbbs.co/assets/pages/launchagent-wiki/launchagent-plist.js\ndiff -u \\\n  <(deno run --reload --allow-env $URL) \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
+    },
+    {
+      "type": "paragraph",
+      "id": "b79a85e005652c08",
+      "text": "This step protects me from my future self in case I make changes locally and forget to update this page with those changes."
+    },
+    {
+      "type": "paragraph",
+      "id": "fd6d5b99b0b3baa7",
+      "text": "I also use that program from the command line to install this launch agent to run wiki locally."
+    },
+    {
+      "type": "code",
+      "id": "2aeeb85c7b350110",
+      "text": "#!/usr/bin/env bash\n# install the LaunchAgent\nURL=http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\ndeno run --reload --allow-env $URL \\\n  > $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# disable the previous configuration\nlaunchctl unload \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# enable the new configuration\nlaunchctl load \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
+    },
+    {
+      "type": "assets",
+      "id": "7a6c4087304c53ba",
+      "text": "pages/launchagent-wiki"
     }
   ],
   "journal": [
@@ -96,6 +126,571 @@
         "text": "${HOME}/Library/LaunchAgents/wiki.localhost.plist"
       },
       "date": 1641706098809
+    },
+    {
+      "type": "edit",
+      "id": "148de3d8364f5b87",
+      "item": {
+        "type": "paragraph",
+        "id": "148de3d8364f5b87",
+        "text": "${HOME}/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1686404046790
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "39e6bada2013c365"
+      },
+      "id": "39e6bada2013c365",
+      "type": "add",
+      "after": "778244eb7f9ea414",
+      "date": 1686405572424
+    },
+    {
+      "type": "edit",
+      "id": "39e6bada2013c365",
+      "item": {
+        "type": "pagefold",
+        "id": "39e6bada2013c365",
+        "text": "."
+      },
+      "date": 1686405575596
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ae6155be31d87628"
+      },
+      "id": "ae6155be31d87628",
+      "type": "add",
+      "after": "39e6bada2013c365",
+      "date": 1686405577449
+    },
+    {
+      "type": "edit",
+      "id": "ae6155be31d87628",
+      "item": {
+        "type": "paragraph",
+        "id": "ae6155be31d87628",
+        "text": "2023-06-10 some notes about comparing this configuration with what I have actually running."
+      },
+      "date": 1686405640083
+    },
+    {
+      "type": "add",
+      "id": "a075a28bf359a72a",
+      "item": {
+        "type": "paragraph",
+        "id": "a075a28bf359a72a",
+        "text": "//code"
+      },
+      "after": "ae6155be31d87628",
+      "date": 1686410328650
+    },
+    {
+      "type": "add",
+      "id": "13ede0097bcfbcdd",
+      "item": {
+        "type": "paragraph",
+        "id": "13ede0097bcfbcdd",
+        "text": "next paragraph"
+      },
+      "after": "a075a28bf359a72a",
+      "date": 1686410335275
+    },
+    {
+      "type": "edit",
+      "id": "a075a28bf359a72a",
+      "item": {
+        "type": "code",
+        "id": "a075a28bf359a72a",
+        "text": "#! /usr/bin/env bash\nWIKIPATH=$(dirname $(which wiki))"
+      },
+      "date": 1686410438377
+    },
+    {
+      "type": "edit",
+      "id": "a075a28bf359a72a",
+      "item": {
+        "type": "code",
+        "id": "a075a28bf359a72a",
+        "text": "#! /usr/bin/env bash\nWIKIPATH=$(dirname $(which wiki))\nDATAPATH=${HOME}/.wiki"
+      },
+      "date": 1686410471233
+    },
+    {
+      "type": "edit",
+      "id": "a075a28bf359a72a",
+      "item": {
+        "type": "code",
+        "id": "a075a28bf359a72a",
+        "text": "#! /usr/bin/env bash\nWIKIPATH=$(dirname $(which wiki))\nDATAPATH=${HOME}/.wiki\njq -n '.wikipath=\"'$WIKIPATH'\" | .datapath=\"'$DATAPATH'\"'"
+      },
+      "date": 1686410639515
+    },
+    {
+      "type": "edit",
+      "id": "a075a28bf359a72a",
+      "item": {
+        "type": "code",
+        "id": "a075a28bf359a72a",
+        "text": "#! /usr/bin/env bash\njq -n \\\n  --arg w $(dirname $(which wiki)) \\\n  --arg d ${HOME}/.wiki \\\n  '.wikipath=$w | .datapath=$d' \\\n| pbcopy"
+      },
+      "date": 1686411222628
+    },
+    {
+      "type": "add",
+      "id": "72fa9b57e1c8775b",
+      "item": {
+        "type": "paragraph",
+        "id": "72fa9b57e1c8775b",
+        "text": "The following shell command collects the relevant paths from my computer and puts them on the clipboard in a form that is convenient for use in the browser console."
+      },
+      "after": "ae6155be31d87628",
+      "date": 1686411427233
+    },
+    {
+      "type": "edit",
+      "id": "13ede0097bcfbcdd",
+      "item": {
+        "type": "paragraph",
+        "id": "13ede0097bcfbcdd",
+        "text": "Save that in working memory in the browser..."
+      },
+      "date": 1686411523998
+    },
+    {
+      "type": "add",
+      "id": "37722465514a5352",
+      "item": {
+        "type": "factory",
+        "id": "37722465514a5352",
+        "text": "//code"
+      },
+      "after": "13ede0097bcfbcdd",
+      "date": 1686411525772
+    },
+    {
+      "type": "add",
+      "id": "af1d7f26fdbdd4a3",
+      "item": {
+        "type": "paragraph",
+        "id": "af1d7f26fdbdd4a3",
+        "text": "..."
+      },
+      "after": "37722465514a5352",
+      "date": 1686411534923
+    },
+    {
+      "type": "edit",
+      "id": "37722465514a5352",
+      "item": {
+        "type": "code",
+        "id": "37722465514a5352",
+        "text": "args=/* PASTE the info from the clipboard */"
+      },
+      "date": 1686411599765
+    },
+    {
+      "type": "add",
+      "id": "7a6c4087304c53ba",
+      "item": {
+        "type": "factory",
+        "id": "7a6c4087304c53ba",
+        "text": "..."
+      },
+      "after": "af1d7f26fdbdd4a3",
+      "date": 1686411778036
+    },
+    {
+      "type": "edit",
+      "id": "7a6c4087304c53ba",
+      "item": {
+        "type": "assets",
+        "id": "7a6c4087304c53ba",
+        "text": "pages/launchagent-wiki"
+      },
+      "date": 1686411801182
+    },
+    {
+      "type": "add",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "paragraph",
+        "id": "aa09bc1038b044ce",
+        "text": "...frame"
+      },
+      "after": "af1d7f26fdbdd4a3",
+      "date": 1686412550196
+    },
+    {
+      "type": "add",
+      "id": "79e62064ef323ba5",
+      "item": {
+        "type": "paragraph",
+        "id": "79e62064ef323ba5",
+        "text": "..."
+      },
+      "after": "aa09bc1038b044ce",
+      "date": 1686412551492
+    },
+    {
+      "type": "edit",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "frame",
+        "id": "aa09bc1038b044ce",
+        "text": "http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT=400"
+      },
+      "date": 1686412577503
+    },
+    {
+      "type": "edit",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "frame",
+        "id": "aa09bc1038b044ce",
+        "text": "http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT=1400"
+      },
+      "date": 1686412584606
+    },
+    {
+      "type": "edit",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "frame",
+        "id": "aa09bc1038b044ce",
+        "text": "http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 1400"
+      },
+      "date": 1686412589464
+    },
+    {
+      "type": "edit",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "frame",
+        "id": "aa09bc1038b044ce",
+        "text": "http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 500"
+      },
+      "date": 1686412606030
+    },
+    {
+      "type": "edit",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "frame",
+        "id": "aa09bc1038b044ce",
+        "text": "http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 900"
+      },
+      "date": 1686412659369
+    },
+    {
+      "type": "edit",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "frame",
+        "id": "aa09bc1038b044ce",
+        "text": "http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 700"
+      },
+      "date": 1686412667439
+    },
+    {
+      "type": "edit",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "frame",
+        "id": "aa09bc1038b044ce",
+        "text": "http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 750"
+      },
+      "date": 1686412676334
+    },
+    {
+      "type": "edit",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "frame",
+        "id": "aa09bc1038b044ce",
+        "text": "http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 800"
+      },
+      "date": 1686412684878
+    },
+    {
+      "id": "aa09bc1038b044ce",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "148de3d8364f5b87",
+        "aa09bc1038b044ce",
+        "778244eb7f9ea414",
+        "39e6bada2013c365",
+        "ae6155be31d87628",
+        "72fa9b57e1c8775b",
+        "a075a28bf359a72a",
+        "13ede0097bcfbcdd",
+        "37722465514a5352",
+        "af1d7f26fdbdd4a3",
+        "79e62064ef323ba5",
+        "7a6c4087304c53ba"
+      ],
+      "date": 1686412974372
+    },
+    {
+      "type": "add",
+      "id": "820601a827825ef4",
+      "item": {
+        "type": "paragraph",
+        "id": "820601a827825ef4",
+        "text": "We host a small deno program in an asset folder which you can inspect here."
+      },
+      "after": "148de3d8364f5b87",
+      "date": 1686413083878
+    },
+    {
+      "id": "148de3d8364f5b87",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "820601a827825ef4",
+        "148de3d8364f5b87",
+        "aa09bc1038b044ce",
+        "778244eb7f9ea414",
+        "39e6bada2013c365",
+        "ae6155be31d87628",
+        "72fa9b57e1c8775b",
+        "a075a28bf359a72a",
+        "13ede0097bcfbcdd",
+        "37722465514a5352",
+        "af1d7f26fdbdd4a3",
+        "79e62064ef323ba5",
+        "7a6c4087304c53ba"
+      ],
+      "date": 1686413101041
+    },
+    {
+      "type": "remove",
+      "id": "778244eb7f9ea414",
+      "date": 1686413107983
+    },
+    {
+      "id": "aa09bc1038b044ce",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "820601a827825ef4",
+        "aa09bc1038b044ce",
+        "148de3d8364f5b87",
+        "39e6bada2013c365",
+        "ae6155be31d87628",
+        "72fa9b57e1c8775b",
+        "a075a28bf359a72a",
+        "13ede0097bcfbcdd",
+        "37722465514a5352",
+        "af1d7f26fdbdd4a3",
+        "79e62064ef323ba5",
+        "7a6c4087304c53ba"
+      ],
+      "date": 1686413118011
+    },
+    {
+      "type": "add",
+      "id": "29d7a02d53e418c3",
+      "item": {
+        "type": "paragraph",
+        "id": "29d7a02d53e418c3",
+        "text": "We can use that program from the command line to compare with our current configuration."
+      },
+      "after": "aa09bc1038b044ce",
+      "date": 1686413314792
+    },
+    {
+      "type": "add",
+      "id": "44b3c69f57a364ff",
+      "item": {
+        "type": "factory",
+        "id": "44b3c69f57a364ff",
+        "text": "...code"
+      },
+      "after": "29d7a02d53e418c3",
+      "date": 1686413320280
+    },
+    {
+      "type": "edit",
+      "id": "44b3c69f57a364ff",
+      "item": {
+        "type": "paragraph",
+        "id": "44b3c69f57a364ff",
+        "text": "diff -u \\"
+      },
+      "date": 1686413340310
+    },
+    {
+      "type": "edit",
+      "id": "44b3c69f57a364ff",
+      "item": {
+        "type": "factory",
+        "id": "44b3c69f57a364ff",
+        "text": "diff -u \\<(deno run --allow-env http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js) $HOME/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1686413343249
+    },
+    {
+      "type": "edit",
+      "id": "44b3c69f57a364ff",
+      "item": {
+        "type": "code",
+        "id": "44b3c69f57a364ff",
+        "text": "#!/usr/bin/env bash\nURL=http://deploy.dbbs.co/assets/pages/launchagent-wiki/launchagent-plist.js\ndiff -u \\\n  <(deno run --allow-env $URL) \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1686413452469
+    },
+    {
+      "type": "remove",
+      "id": "a075a28bf359a72a",
+      "date": 1686413556695
+    },
+    {
+      "type": "remove",
+      "id": "13ede0097bcfbcdd",
+      "date": 1686413559362
+    },
+    {
+      "type": "remove",
+      "id": "37722465514a5352",
+      "date": 1686413561955
+    },
+    {
+      "type": "edit",
+      "id": "820601a827825ef4",
+      "item": {
+        "type": "paragraph",
+        "id": "820601a827825ef4",
+        "text": "We host a small deno program in an asset folder which is also shown here for inspection and transparency. It generates a MacOS LaunchAgent configuration file."
+      },
+      "date": 1686413668638
+    },
+    {
+      "type": "edit",
+      "id": "29d7a02d53e418c3",
+      "item": {
+        "type": "paragraph",
+        "id": "29d7a02d53e418c3",
+        "text": "I use that program from the command line to compare with my current configuration."
+      },
+      "date": 1686414006067
+    },
+    {
+      "type": "add",
+      "id": "b79a85e005652c08",
+      "item": {
+        "type": "paragraph",
+        "id": "b79a85e005652c08",
+        "text": "This step protects me from my future self in case I make changes locally and forget to update this page with those changes."
+      },
+      "after": "29d7a02d53e418c3",
+      "date": 1686414008314
+    },
+    {
+      "id": "44b3c69f57a364ff",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "820601a827825ef4",
+        "aa09bc1038b044ce",
+        "29d7a02d53e418c3",
+        "44b3c69f57a364ff",
+        "b79a85e005652c08",
+        "148de3d8364f5b87",
+        "39e6bada2013c365",
+        "ae6155be31d87628",
+        "72fa9b57e1c8775b",
+        "af1d7f26fdbdd4a3",
+        "79e62064ef323ba5",
+        "7a6c4087304c53ba"
+      ],
+      "date": 1686414011540
+    },
+    {
+      "type": "edit",
+      "id": "44b3c69f57a364ff",
+      "item": {
+        "type": "code",
+        "id": "44b3c69f57a364ff",
+        "text": "#!/usr/bin/env bash\nURL=http://deploy.dbbs.co/assets/pages/launchagent-wiki/launchagent-plist.js\ndiff -u \\\n  <(deno run --reload --allow-env $URL) \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1686414193808
+    },
+    {
+      "type": "add",
+      "id": "fd6d5b99b0b3baa7",
+      "item": {
+        "type": "paragraph",
+        "id": "fd6d5b99b0b3baa7",
+        "text": "I also use that program from the command line to install this launch agent to run wiki locally."
+      },
+      "after": "b79a85e005652c08",
+      "date": 1686414787581
+    },
+    {
+      "type": "add",
+      "id": "2aeeb85c7b350110",
+      "item": {
+        "type": "factory",
+        "id": "2aeeb85c7b350110",
+        "text": "...code"
+      },
+      "after": "fd6d5b99b0b3baa7",
+      "date": 1686414793536
+    },
+    {
+      "type": "edit",
+      "id": "2aeeb85c7b350110",
+      "item": {
+        "type": "code",
+        "id": "2aeeb85c7b350110",
+        "text": "URL=http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\ndeno run --reload --allow-env $URL \\\n  > $HOME/Library/LaunchAgents/localhost.wiki.plist\n"
+      },
+      "date": 1686414837720
+    },
+    {
+      "type": "edit",
+      "id": "2aeeb85c7b350110",
+      "item": {
+        "type": "code",
+        "id": "2aeeb85c7b350110",
+        "text": "#!/usr/bin/env bash\n# install the LaunchAgent\nURL=http://deploy.localhost/assets/pages/launchagent-wiki/launchagent-plist.js\ndeno run --reload --allow-env $URL \\\n  > $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# disable the previous configuration\nlaunchctl unload \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# enable the new configuration\nlaunchctl load \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1686414959635
+    },
+    {
+      "type": "remove",
+      "id": "79e62064ef323ba5",
+      "date": 1686414989784
+    },
+    {
+      "type": "remove",
+      "id": "af1d7f26fdbdd4a3",
+      "date": 1686414990826
+    },
+    {
+      "type": "remove",
+      "id": "72fa9b57e1c8775b",
+      "date": 1686414991928
+    },
+    {
+      "type": "remove",
+      "id": "ae6155be31d87628",
+      "date": 1686414993698
+    },
+    {
+      "type": "remove",
+      "id": "39e6bada2013c365",
+      "date": 1686414998083
+    },
+    {
+      "type": "remove",
+      "id": "148de3d8364f5b87",
+      "date": 1686415001104
     }
   ]
 }

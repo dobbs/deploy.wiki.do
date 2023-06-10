@@ -7,7 +7,9 @@
    * Licensed under the MIT license.
    * https://github.com/fedwiki/wiki-plugin-map/blob/master/LICENSE.txt
    */
-  var bind, emit, escape, feature, htmlDecode, lineup, marker, parse, resolve;
+  var bind, emit, escape, feature, htmlDecode, lineup, marker, page, parse, resolve, usePageMarkers; // page markers?
+
+  usePageMarkers = false;
 
   escape = function escape(line) {
     return line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -87,17 +89,43 @@
     return lineupMarkers;
   };
 
+  page = function page($item) {
+    var candidates, div, i, len, pageMarkers, who;
+
+    if (typeof wiki === "undefined" || wiki === null) {
+      return [{
+        lat: 51.5,
+        lon: 0.0,
+        label: 'North Greenwich'
+      }];
+    }
+
+    pageMarkers = [];
+    candidates = $item.siblings();
+
+    if ((who = candidates.filter(".marker-source")).size()) {
+      for (i = 0, len = who.length; i < len; i++) {
+        div = who[i];
+        pageMarkers = pageMarkers.concat(div.markerData());
+      }
+    }
+
+    return pageMarkers;
+  };
+
   parse = function parse(item, $item) {
-    var boundary, captions, hint, hints, i, len, line, lineupMarkers, m, markers, overlays, ref, result, text, tools, weblink;
+    var boundary, captions, hint, hints, i, len, line, lineupMarkers, m, markers, overlays, pageMarkers, ref, result, text, tools, weblink;
     text = item.text; // parsing the plugin text in context of any frozen items
 
     captions = [];
     markers = [];
     lineupMarkers = null;
+    pageMarkers = null;
     overlays = null;
     boundary = null;
     weblink = null;
     tools = {};
+    usePageMarkers = false;
 
     if (item.frozen) {
       markers = markers.concat(item.frozen);
@@ -129,6 +157,14 @@
         if (!item.frozen) {
           markers = markers.concat(lineupMarkers);
         }
+      } else if (/^PAGE/.test(line)) {
+        tools['freeze'] = true;
+        pageMarkers = page($item);
+        usePageMarkers = true;
+
+        if (!item.frozen) {
+          markers = markers.concat(pageMarkers);
+        }
       } else if (m = /^WEBLINK *(.*)$/.exec(line)) {
         weblink = m[1];
       } else if (m = /^OVERLAY *(.+?) ([+-]?\d+\.\d+), ?([+-]?\d+\.\d+) ([+-]?\d+\.\d+), ?([+-]?\d+\.\d+)$/.exec(line)) {
@@ -152,6 +188,10 @@
       lineupMarkers = Array.from(new Set(lineupMarkers.map(JSON.stringify))).map(JSON.parse);
     }
 
+    if (pageMarkers) {
+      pageMarkers = Array.from(new Set(pageMarkers.map(JSON.stringify))).map(JSON.parse);
+    }
+
     if (boundary == null) {
       boundary = markers;
     }
@@ -164,6 +204,10 @@
 
     if (lineupMarkers) {
       result.lineupMarkers = lineupMarkers;
+    }
+
+    if (pageMarkers) {
+      result.pageMarkers = pageMarkers;
     }
 
     if (Object.keys(tools).length > 0) {
@@ -195,13 +239,14 @@
   };
 
   emit = function emit($item, item) {
-    var boundary, caption, lineupMarkers, markers, overlays, showing, tools, weblink;
+    var boundary, caption, lineupMarkers, markers, overlays, pageMarkers, showing, tools, weblink;
 
     var _parse = parse(item, $item);
 
     caption = _parse.caption;
     markers = _parse.markers;
     lineupMarkers = _parse.lineupMarkers;
+    pageMarkers = _parse.pageMarkers;
     boundary = _parse.boundary;
     weblink = _parse.weblink;
     overlays = _parse.overlays;
@@ -211,24 +256,26 @@
     showing = [];
 
     $item.get(0).markerData = function () {
-      var opened;
+      var marlers, opened;
       opened = showing.filter(function (s) {
         return s.leaflet._popup._isOpen;
       });
 
       if (opened.length) {
-        return opened.map(function (s) {
+        marlers = opened.map(function (s) {
           return s.marker;
         });
       } else {
-        return parse(item).markers;
+        markers = parse(item, $item).markers;
       }
+
+      return markers;
     };
 
     $item.get(0).markerGeo = function () {
       return {
         type: 'FeatureCollection',
-        features: parse(item).markers.map(feature)
+        features: parse(item, $item).markers.map(feature)
       };
     };
 
@@ -309,6 +356,7 @@
 
                 return results;
               }()]);
+              bounds = bounds.pad(0.3);
               map.flyToBounds(bounds);
             } else if (boundary.length === 1) {
               p = boundary[0];
@@ -347,12 +395,16 @@
                   return update();
                 }
               } else {
+                if (usePageMarkers) {
+                  pageMarkers = page($item);
+                }
+
                 toFreeze = [];
 
                 if (item.frozen) {
-                  toFreeze = Array.from(new Set(item.frozen.concat(lineupMarkers).map(JSON.stringify))).map(JSON.parse);
+                  toFreeze = Array.from(new Set(item.frozen.concat(lineupMarkers || pageMarkers).map(JSON.stringify))).map(JSON.parse);
                 } else {
-                  toFreeze = lineupMarkers;
+                  toFreeze = lineupMarkers || pageMarkers;
                 } // only update if there realy is something new to freeze or it has changed...
 
 
@@ -367,8 +419,13 @@
 
             container.addEventListener('mouseenter', function (e) {
               var bounds, l, m, p, tmpBoundary;
+
+              if (usePageMarkers) {
+                pageMarkers = page($item);
+              }
+
               m = new Set(markers.map(JSON.stringify));
-              l = new Set(lineupMarkers.map(JSON.stringify));
+              l = new Set((lineupMarkers || pageMarkers).map(JSON.stringify));
               newMarkers = Array.from(new Set(Array.from(l).filter(function (x) {
                 return !m.has(x);
               }))).map(JSON.parse);
@@ -390,6 +447,7 @@
 
                   return results;
                 }()]);
+                bounds = bounds.pad(0.3);
                 return map.flyToBounds(bounds);
               }
             });
@@ -411,6 +469,7 @@
 
                     return results;
                   }()]);
+                  bounds = bounds.pad(0.3);
                   return map.flyToBounds(bounds);
                 } else if (boundary.length === 1) {
                   p = boundary[0];
@@ -505,6 +564,7 @@
 
           return results;
         }()]);
+        bounds = bounds.pad(0.3);
         map.fitBounds(bounds);
       } else if (boundary.length === 1) {
         p = boundary[0];

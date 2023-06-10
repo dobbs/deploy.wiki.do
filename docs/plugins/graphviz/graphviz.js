@@ -481,8 +481,6 @@ ${item.dot??''}`
             let $page = event.shiftKey ? null : $item.parents('.page')
             if (title) {
               console.log('click', title)
-              // set context for doInternalLink
-              wiki.pageHandler.context = wiki.lineup.atKey($page.data('key')).getContext()
               wiki.doInternalLink(title, $page)
             }
           }
