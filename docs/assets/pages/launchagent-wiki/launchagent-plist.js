@@ -9,7 +9,7 @@ function plist ({wikipath, datapath}) {
   <array>
     <string>${wikipath}/wiki</string>
     <string>--config</string>
-    <string>${datapath}/config.json</string>
+    <string>${datapath}/localhost.config.json</string>
   </array>
   <key>EnvironmentVariables</key>
   <dict>
