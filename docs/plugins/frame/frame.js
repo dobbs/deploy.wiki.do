@@ -21,7 +21,15 @@
       const hostname = matchData[1]
       return {src, hostname}
     } else if (matchData = line.match(/^PLUGIN (.+)$/)) {
-      return {src: `/plugins/${matchData[1]}`}
+      try {
+        src = new URL(`/plugins/${matchData[1]}`, window.document.baseURI).toString()
+        return {src}
+      } catch (error) {
+        if (! error instanceof TypeError) {
+          throw(error)
+        }
+        return {src, error}
+      }
     } else {
       const error = 'Error: frame src must include domain name'
       return {src, error}
@@ -61,17 +69,29 @@
     return {
       pageKey: $page.data("key"),
       itemId: item.id,
+      origin: window.origin,
       site: $page.data("site") || window.location.host,
       slug: $page.attr("id"),
       title: $page.data("data").title
     }
   }
 
+  function sandboxFor(url) {
+    if (url.startsWith('//')) {
+      const {protocol} = new URL(window.origin)
+      url = `${protocol}${url}`
+    }
+    return (window.origin == new URL(url).origin)
+          ? 'allow-scripts allow-downloads allow-forms'
+          : 'allow-scripts allow-downloads allow-forms allow-same-origin'
+  }
+
   function drawFrame($item, item, parsed) {
     const params = new URLSearchParams(identifiers($item, item)).toString()
     const frame = document.createElement('iframe')
+    const sandbox = sandboxFor(parsed.src)
     for (let [attr, value] of [
-      ['sandbox', 'allow-scripts allow-downloads allow-forms'],
+      ['sandbox', sandbox],
       ['width', '100%'],
       ['style', 'border: none;'],
       ['src', `${parsed.src}#${params}`]
@@ -115,12 +135,16 @@
     for (let topic of parsed.sources) {
       addSource(div, topic)
     }
-    return $item.dblclick(() => {
+    return $item.on('dblclick', () => {
       return wiki.textEditor($item, item)
     })
   }
 
   function addLineupListener(lineup, iframe, topic) {
+    // TODO: there's a memory leak here. Need to prevent adding
+    // duplicate listeners to the DOM. Probably implies keeping an
+    // inventory of listeners we've added to the DOM and probably also
+    // need a garbage collector.
     lineup.addEventListener(`${topic}Stream`, ({detail}) =>
       iframe.contentWindow.postMessage({
         ...detail,
@@ -139,8 +163,12 @@
         break
       }
     }
+    // Ugh. A problem described in 4 parts:
+    // 1 of 4. Looks like I was intending to return an object.
     let sourceData = {}
     if (sources.length > 0) {
+      // 2 of 4. But .map() returns an Array. This broke my own "contract"  :-(
+      // 3 of 4. many existing scripts in the wild expect this Array
       sourceData = sources.map(div => {
         let $div = $(div)
         let result = {
@@ -150,6 +178,7 @@
         return result
       })
     } else {
+      // 4 of 4. The error case returns an Object--showing the original intent
       sourceData = {
         error: `cannot find a source for "${topic}" in the lineup`,
         ...identifiers($item, $item.data())
@@ -203,12 +232,26 @@
   }
 
   function frameListener(event) {
+    // is this message for us?
+    // events from iframes don't have an opener
+    // ensure that the iframe is one of ours
+    if (event.source.opener) {
+      if (wiki.debug) {console.log('frameListener - not for us', {event})}
+      return
+    }
+    const $iframe = $(".item.frame iframe")
+          .filter((i,el) => el.contentWindow === event.source);
+    if ($iframe.length <= 0) {
+      if (wiki.debug) {console.log('frameListener - not for us', {event})}
+      return
+    }
+    if (wiki.debug) {console.log('frameListener - ours', {event})}
+
     const {data} = event;
     const {action, keepLineup=false, pageKey=null, page=null, pages={},
            title=null, site=null} = data;
     let options
 
-    const $iframe = $("iframe").filter((i,el) => el.contentWindow === event.source)
     const $item = $iframe.parents(".item")
     let $page = null
     if (pageKey != null) {
@@ -223,8 +266,7 @@
     case "sendFrameContext":
       event.source.postMessage({
         action: "frameContext",
-        site: $page.data("site") || window.location.host,
-        slug: $page.attr("id"),
+        ...identifiers($item, $item.data()),
         item: $item.data("item"),
         page: $page.data("data")
       }, "*")
@@ -253,8 +295,18 @@
       triggerThumb($item, thumb)
       break
     case "publishSourceData":
-      // TODO change name to topic
-      publishSourceData($item, name, sourceData)
+      if (!!name && !topic) {
+        const [url='unknown URL'] = $item.data()?.item?.text?.split(/\n/)
+        console.warn(`a frame at ${url} sent a "publishSourceData" action with a "name".
+That action now expects a "topic" instead of "name" (changed in version 0.10.2).
+We recommend sending the following message: `, {
+  action,
+  topic: name,
+  sourceData: '...' // elided to improve signal-to-noise ratio of our warning
+})
+        topic = name
+      }
+      publishSourceData($item, topic, sourceData)
       break
     case "requestSourceData":
       let sources = requestSourceData($item, topic)
@@ -287,7 +339,10 @@
 
   if (typeof module !== "undefined" && module !== null) {
     wiki = {resolveLinks: (text, escape) => escape(text)}
-    module.exports = {expand, parse, publishSourceData, triggerThumb}
+    module.exports = {
+      expand, parse, sandboxFor,
+      triggerThumb, publishSourceData
+    }
   }
 
 }).call(this)

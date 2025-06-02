@@ -1,0 +1,261 @@
+{
+  "title": "Making and Restoring Backups",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "30a6dc7500b8abd0",
+      "text": "With wiki running in docker containers, the following commands are a means to backup the data."
+    },
+    {
+      "type": "paragraph",
+      "id": "822345d5254f41fa",
+      "text": "backing up one plot in the farm"
+    },
+    {
+      "type": "code",
+      "id": "53de0b3208956dc9",
+      "text": "export DOMAIN=wiki.example.com\nexport TARBALL=\"backup.${DOMAIN}-$(date -I).tgz\"\ndocker-compose run -T farm \\\n  tar zcf - .wiki/${DOMAIN} \\\n  > $TARBALL"
+    },
+    {
+      "type": "paragraph",
+      "id": "7771cf00e8b8acdc",
+      "text": "spot checking the contents of the backup"
+    },
+    {
+      "type": "code",
+      "id": "fd63b41fde656a20",
+      "text": "tar ztf $TARBALL"
+    },
+    {
+      "type": "paragraph",
+      "id": "89a175ebd78a9565",
+      "text": "backing up the entire farm"
+    },
+    {
+      "type": "code",
+      "id": "669b5f23ee31789f",
+      "text": "export TARBALL=\"backup-$(date -I).tgz\"\ndocker-compose run -T farm \\\n  tar zcf - .wiki \\\n  > $TARBALL"
+    },
+    {
+      "type": "paragraph",
+      "id": "948073ecd16f6897",
+      "text": "..."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Making and Restoring Backups",
+        "story": []
+      },
+      "date": 1709303243391
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "30a6dc7500b8abd0"
+      },
+      "id": "30a6dc7500b8abd0",
+      "type": "add",
+      "date": 1709306141665
+    },
+    {
+      "type": "edit",
+      "id": "30a6dc7500b8abd0",
+      "item": {
+        "type": "paragraph",
+        "id": "30a6dc7500b8abd0",
+        "text": "With wiki running in docker containers, the following commands are a means to backup the data."
+      },
+      "date": 1709306213318
+    },
+    {
+      "type": "add",
+      "id": "822345d5254f41fa",
+      "item": {
+        "type": "paragraph",
+        "id": "822345d5254f41fa",
+        "text": "backing up one plot in the farm"
+      },
+      "after": "30a6dc7500b8abd0",
+      "date": 1709306247245
+    },
+    {
+      "type": "add",
+      "id": "53de0b3208956dc9",
+      "item": {
+        "type": "paragraph",
+        "id": "53de0b3208956dc9",
+        "text": "..."
+      },
+      "after": "822345d5254f41fa",
+      "date": 1709306248639
+    },
+    {
+      "type": "add",
+      "id": "7771cf00e8b8acdc",
+      "item": {
+        "type": "paragraph",
+        "id": "7771cf00e8b8acdc",
+        "text": "checking the contents of the backup"
+      },
+      "after": "53de0b3208956dc9",
+      "date": 1709306259288
+    },
+    {
+      "type": "add",
+      "id": "fd63b41fde656a20",
+      "item": {
+        "type": "paragraph",
+        "id": "fd63b41fde656a20",
+        "text": "..."
+      },
+      "after": "7771cf00e8b8acdc",
+      "date": 1709306260651
+    },
+    {
+      "type": "add",
+      "id": "89a175ebd78a9565",
+      "item": {
+        "type": "paragraph",
+        "id": "89a175ebd78a9565",
+        "text": "..."
+      },
+      "after": "fd63b41fde656a20",
+      "date": 1709306263098
+    },
+    {
+      "type": "edit",
+      "id": "53de0b3208956dc9",
+      "item": {
+        "type": "code",
+        "id": "53de0b3208956dc9",
+        "text": "export DOMAIN=wiki.example.com\ndocker-compose run -T \\\n  tar zcf - .wiki/${DOMAIN} \\\n  > backup.${DOMAIN}-$(date ...).tgz"
+      },
+      "date": 1709306373167
+    },
+    {
+      "type": "edit",
+      "id": "53de0b3208956dc9",
+      "item": {
+        "type": "code",
+        "id": "53de0b3208956dc9",
+        "text": "export DOMAIN=wiki.example.com\ndocker-compose run -T \\\n  tar zcf - .wiki/${DOMAIN} \\\n  > backup.${DOMAIN}-$(date -I).tgz"
+      },
+      "date": 1709306444483
+    },
+    {
+      "type": "edit",
+      "id": "53de0b3208956dc9",
+      "item": {
+        "type": "code",
+        "id": "53de0b3208956dc9",
+        "text": "export DOMAIN=wiki.example.com\nexport TARBALL=\"backup.${DOMAIN}-$(date -I).tgz\"\ndocker-compose run -T \\\n  tar zcf - .wiki/${DOMAIN} \\\n  > $TARBALL"
+      },
+      "date": 1709306492915
+    },
+    {
+      "type": "edit",
+      "id": "53de0b3208956dc9",
+      "item": {
+        "type": "code",
+        "id": "53de0b3208956dc9",
+        "text": "export DOMAIN=wiki.example.com\nexport TARBALL=\"backup.${DOMAIN}-$(date -I).tgz\"\ndocker-compose run -T farm \\\n  tar zcf - .wiki/${DOMAIN} \\\n  > $TARBALL"
+      },
+      "date": 1709306631767
+    },
+    {
+      "type": "edit",
+      "id": "fd63b41fde656a20",
+      "item": {
+        "type": "paragraph",
+        "id": "fd63b41fde656a20",
+        "text": "tar ztf "
+      },
+      "date": 1709306748362
+    },
+    {
+      "type": "edit",
+      "id": "fd63b41fde656a20",
+      "item": {
+        "type": "paragraph",
+        "id": "fd63b41fde656a20",
+        "text": "tar ztf $TARBALL"
+      },
+      "date": 1709306772731
+    },
+    {
+      "type": "edit",
+      "id": "fd63b41fde656a20",
+      "item": {
+        "type": "code",
+        "id": "fd63b41fde656a20",
+        "text": "tar ztf $TARBALL\n\n"
+      },
+      "date": 1709306793941
+    },
+    {
+      "type": "edit",
+      "id": "fd63b41fde656a20",
+      "item": {
+        "type": "code",
+        "id": "fd63b41fde656a20",
+        "text": "tar ztf $TARBALL"
+      },
+      "date": 1709306798079
+    },
+    {
+      "type": "edit",
+      "id": "7771cf00e8b8acdc",
+      "item": {
+        "type": "paragraph",
+        "id": "7771cf00e8b8acdc",
+        "text": "spot checking the contents of the backup"
+      },
+      "date": 1709306812794
+    },
+    {
+      "type": "edit",
+      "id": "89a175ebd78a9565",
+      "item": {
+        "type": "paragraph",
+        "id": "89a175ebd78a9565",
+        "text": "backing up the entire farm"
+      },
+      "date": 1709306862771
+    },
+    {
+      "type": "add",
+      "id": "669b5f23ee31789f",
+      "item": {
+        "type": "paragraph",
+        "id": "669b5f23ee31789f",
+        "text": "..."
+      },
+      "after": "89a175ebd78a9565",
+      "date": 1709306863626
+    },
+    {
+      "type": "add",
+      "id": "948073ecd16f6897",
+      "item": {
+        "type": "paragraph",
+        "id": "948073ecd16f6897",
+        "text": "..."
+      },
+      "after": "669b5f23ee31789f",
+      "date": 1709306866576
+    },
+    {
+      "type": "edit",
+      "id": "669b5f23ee31789f",
+      "item": {
+        "type": "code",
+        "id": "669b5f23ee31789f",
+        "text": "export TARBALL=\"backup-$(date -I).tgz\"\ndocker-compose run -T farm \\\n  tar zcf - .wiki \\\n  > $TARBALL"
+      },
+      "date": 1709306922936
+    }
+  ]
+}

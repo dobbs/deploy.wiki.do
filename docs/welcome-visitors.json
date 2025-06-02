@@ -2,7 +2,7 @@
   "title": "Welcome Visitors",
   "story": [
     {
-      "text": "Welcome to this [[Federated Wiki]] site. From this page you can find who we are and what we do. New sites provide this information and then claim the site as their own. You will need your own site to participate.",
+      "text": "Welcome to this [[Federated Wiki]] site. From this page you can find who we are and what we do.",
       "id": "7b56f22a4b9ee974",
       "type": "paragraph"
     },
@@ -32,7 +32,36 @@
     {
       "type": "paragraph",
       "id": "ee416d431ebf4fb4",
-      "text": "You can edit your copy of these pages. Press [+] to add more writing spaces. Read [[How to Wiki]] for more ideas. Follow [[Recent Changes]] here and nearby."
+      "text": "Follow [[Recent Changes]] here and nearby."
+    },
+    {
+      "type": "pagefold",
+      "id": "99733a0805c24c07",
+      "text": "."
+    },
+    {
+      "type": "reference",
+      "id": "5bf1d12b8d163e63",
+      "text": "A tutorial for people who want to read, navigate, and search a federated wiki.",
+      "site": "reading.wiki.oddly-influenced.dev",
+      "slug": "how-to-browse-a-wiki",
+      "title": "How to Browse a Wiki"
+    },
+    {
+      "type": "reference",
+      "id": "9f62bae7872cb56f",
+      "text": "Here we describe how to use the web interface to the federated wiki. Read [[About Federated Wiki]] to learn about the project.",
+      "site": "fed.wiki.org",
+      "slug": "how-to-wiki",
+      "title": "How To Wiki"
+    },
+    {
+      "type": "reference",
+      "id": "fdf1e774e76762c3",
+      "text": "Like riding a bicycle, writing here is easy to do but hard to learn. And like the bicycle, just talking about riding doesn't really convey the experience. Try doing.",
+      "site": "start.fed.wiki",
+      "slug": "start-playing-wiki",
+      "title": "Start Playing Wiki"
     }
   ],
   "journal": [
@@ -179,6 +208,145 @@
     {
       "type": "fork",
       "date": 1640801924780
+    },
+    {
+      "type": "edit",
+      "id": "7b56f22a4b9ee974",
+      "item": {
+        "text": "Welcome to this [[Federated Wiki]] site. From this page you can find who we are and what we do.",
+        "id": "7b56f22a4b9ee974",
+        "type": "paragraph"
+      },
+      "date": 1748728008813
+    },
+    {
+      "type": "edit",
+      "id": "ee416d431ebf4fb4",
+      "item": {
+        "type": "paragraph",
+        "id": "ee416d431ebf4fb4",
+        "text": "Follow [[Recent Changes]] here and nearby."
+      },
+      "date": 1748728024641
+    },
+    {
+      "type": "add",
+      "id": "99733a0805c24c07",
+      "item": {
+        "type": "paragraph",
+        "id": "99733a0805c24c07",
+        "text": "..."
+      },
+      "after": "ee416d431ebf4fb4",
+      "date": 1748728033270
+    },
+    {
+      "type": "add",
+      "id": "5bf1d12b8d163e63",
+      "item": {
+        "type": "paragraph",
+        "id": "5bf1d12b8d163e63",
+        "text": "..."
+      },
+      "after": "99733a0805c24c07",
+      "date": 1748728035419
+    },
+    {
+      "type": "add",
+      "id": "9f62bae7872cb56f",
+      "item": {
+        "type": "paragraph",
+        "id": "9f62bae7872cb56f",
+        "text": "..."
+      },
+      "after": "5bf1d12b8d163e63",
+      "date": 1748728036183
+    },
+    {
+      "type": "add",
+      "id": "fdf1e774e76762c3",
+      "item": {
+        "type": "paragraph",
+        "id": "fdf1e774e76762c3",
+        "text": "..."
+      },
+      "after": "9f62bae7872cb56f",
+      "date": 1748728037061
+    },
+    {
+      "type": "edit",
+      "id": "5bf1d12b8d163e63",
+      "item": {
+        "type": "reference",
+        "id": "5bf1d12b8d163e63",
+        "text": "A tutorial for people who want to read, navigate, and search a federated wiki.",
+        "site": "reading.wiki.oddly-influenced.dev",
+        "slug": "how-to-browse-a-wiki",
+        "title": "How to Browse a Wiki"
+      },
+      "date": 1748728053486
+    },
+    {
+      "type": "edit",
+      "id": "9f62bae7872cb56f",
+      "item": {
+        "type": "reference",
+        "id": "9f62bae7872cb56f",
+        "text": "Here we describe how to use the web interface to the federated wiki. Read [[About Federated Wiki]] to learn about the project. If you are just starting to write in your first wiki then read the [[Field Guide to the Federation]].",
+        "site": "fed.wiki.org",
+        "slug": "how-to-wiki",
+        "title": "How To Wiki"
+      },
+      "date": 1748728074910
+    },
+    {
+      "type": "edit",
+      "id": "9f62bae7872cb56f",
+      "item": {
+        "type": "reference",
+        "id": "9f62bae7872cb56f",
+        "text": "Here we describe how to use the web interface to the federated wiki. Read [[About Federated Wiki]] to learn about the project.",
+        "site": "fed.wiki.org",
+        "slug": "how-to-wiki",
+        "title": "How To Wiki"
+      },
+      "date": 1748728082523
+    },
+    {
+      "type": "edit",
+      "id": "fdf1e774e76762c3",
+      "item": {
+        "type": "reference",
+        "id": "fdf1e774e76762c3",
+        "text": "Wiki is a hypertext. When you click a link you will go to that page. Here we have arranged the pages like rooms in an adventure game. There are things you can do here but you can just zoom through without doing any of them. Then maybe you will play again and do some things. Play it lots of times. You will get good at it.",
+        "site": "start.fed.wiki",
+        "slug": "start-playing-wiki",
+        "title": "Start Playing Wiki"
+      },
+      "date": 1748728100281
+    },
+    {
+      "type": "edit",
+      "id": "fdf1e774e76762c3",
+      "item": {
+        "type": "reference",
+        "id": "fdf1e774e76762c3",
+        "text": "Like riding a bicycle, writing here is easy to do but hard to learn. And like the bicycle, just talking about riding doesn't really convey the experience. Try doing.",
+        "site": "start.fed.wiki",
+        "slug": "start-playing-wiki",
+        "title": "Start Playing Wiki"
+      },
+      "date": 1748728109978
+    },
+    {
+      "type": "edit",
+      "id": "99733a0805c24c07",
+      "item": {
+        "type": "pagefold",
+        "id": "99733a0805c24c07",
+        "text": "."
+      },
+      "date": 1748728116284
     }
   ]
 }

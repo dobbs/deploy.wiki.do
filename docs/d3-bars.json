@@ -6,7 +6,7 @@
       "type": "bars"
     },
     {
-      "text": "This is the <i>bar</i> example from the [http://mbostock.github.com/d3/ d3]  distribution.  If you see an error above, don't panic, keep reading. See also [[D3 Line]] example.",
+      "text": "If you see an error above, don't panic, keep reading. See also [[D3 Line]] example.",
       "id": "85f2901bdbdced60",
       "type": "html"
     },
@@ -186,6 +186,16 @@
         "type": "html"
       },
       "date": 1418377543827
+    },
+    {
+      "type": "edit",
+      "id": "85f2901bdbdced60",
+      "item": {
+        "text": "If you see an error above, don't panic, keep reading. See also [[D3 Line]] example.",
+        "id": "85f2901bdbdced60",
+        "type": "html"
+      },
+      "date": 1677586469205
     }
   ],
   "plugin": "bars"

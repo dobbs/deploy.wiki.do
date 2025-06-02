@@ -587,7 +587,7 @@
     {
       "type": "paragraph",
       "id": "258c90f833723391",
-      "text": "The Force plugin renders nodes and links from a Data item as a graph with dots and arcs automatically positioned by a force relaxation algorithm built into the d3.js visualization package."
+      "text": "The Force plugin renders nodes and links using a velocity Verlet numerical integrator for simulating physical forces on particles built into the d3.js visualization package."
     },
     {
       "type": "force",
@@ -642,11 +642,6 @@
       "type": "paragraph",
       "id": "4604beff2443e635",
       "text": "See [https://github.com/fedwiki/wiki-plugin-force GitHub] for plugin source."
-    },
-    {
-      "type": "html",
-      "id": "8631608eac5dd73e",
-      "text": "The plugin is adapted from the <i>Les Misérables</i> [http://mbostock.github.com/d3/ex/force.html example] from the d3.js documentation."
     }
   ],
   "journal": [
@@ -1412,16 +1407,6 @@
       "item": {
         "type": "paragraph",
         "id": "4604beff2443e635",
-        "text": "The plugin is adapted from the d3.js example on [http://mbostock.github.com/d3/ex/force.html github]."
-      },
-      "date": 1352514186111
-    },
-    {
-      "type": "edit",
-      "id": "4604beff2443e635",
-      "item": {
-        "type": "paragraph",
-        "id": "4604beff2443e635",
         "text": "The plugin is adapted from the d3.js <i>Les Misérables</i> example on [http://mbostock.github.com/d3/ex/force.html github]."
       },
       "date": 1352514257158
@@ -1537,16 +1522,6 @@
       "item": {
         "type": "paragraph",
         "id": "8631608eac5dd73e",
-        "text": "The plugin is adapted from the <i>Les Misérables</i> example on [http://mbostock.github.com/d3/ex/force.html d3.js] documentation."
-      },
-      "date": 1352514717361
-    },
-    {
-      "type": "edit",
-      "id": "8631608eac5dd73e",
-      "item": {
-        "type": "paragraph",
-        "id": "8631608eac5dd73e",
         "text": "The plugin is adapted from the <i>Les Misérables</i> [http://mbostock.github.com/d3/ex/force.html example] from the d3.js documentation."
       },
       "date": 1352514768590
@@ -1599,16 +1574,6 @@
       "item": {
         "type": "paragraph",
         "id": "3e3baa164f53284a",
-        "text": "The Data item is expected to be formatted as an object with two parts, \"nodes\" and \"links\", both arrays."
-      },
-      "date": 1352514982055
-    },
-    {
-      "type": "edit",
-      "id": "3e3baa164f53284a",
-      "item": {
-        "type": "paragraph",
-        "id": "3e3baa164f53284a",
         "text": "The data item is expected to be formatted as an object with two parts, \"nodes\" and \"links\", both arrays."
       },
       "date": 1352514999495
@@ -1629,16 +1594,6 @@
       "item": {
         "type": "html",
         "id": "107ab31edc0ce7e1",
-        "text": "<h3> Data"
-      },
-      "date": 1418314882461
-    },
-    {
-      "type": "edit",
-      "id": "107ab31edc0ce7e1",
-      "item": {
-        "type": "html",
-        "id": "107ab31edc0ce7e1",
         "text": "<h3>Data</h3>"
       },
       "date": 1418314890064
@@ -1652,6 +1607,21 @@
         "text": "The plugin is adapted from the <i>Les Misérables</i> [http://mbostock.github.com/d3/ex/force.html example] from the d3.js documentation."
       },
       "date": 1418314895807
+    },
+    {
+      "type": "edit",
+      "id": "258c90f833723391",
+      "item": {
+        "type": "paragraph",
+        "id": "258c90f833723391",
+        "text": "The Force plugin renders nodes and links using a velocity Verlet numerical integrator for simulating physical forces on particles built into the d3.js visualization package."
+      },
+      "date": 1677587118358
+    },
+    {
+      "type": "remove",
+      "id": "8631608eac5dd73e",
+      "date": 1677587151624
     }
   ],
   "plugin": "force"

@@ -1,64 +1,30 @@
-"use strict";
+/*
+ * Federated Wiki : Code Plugin
+ *
+ * Licensed under the MIT license.
+ * https://github.com/fedwiki/wiki-plugin-code/blob/master/LICENSE.txt
+ */
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+async function emit($item, item) {
+  if (!$("link[href='https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css']").length) {
+    $('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">').appendTo("head")
+  }
+  if (!$("link[href='/plugins/code/code.css']").length) {
+    $('<link rel="stylesheet" href="/plugins/code/code.css">').appendTo("head")
+  }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+  window.HighlightJS = (await import('https://cdn.jsdelivr.net/npm/highlight.js@11/+esm')).HighlightJS
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  $item.html(`<pre class='hljs'><code class='hljs'>${HighlightJS.highlightAuto(item.text).value}</code></pre>`)
+}
 
-(function () {
-  /*
-   * Federated Wiki : Code Plugin
-   *
-   * Licensed under the MIT license.
-   * https://github.com/fedwiki/wiki-plugin-code/blob/master/LICENSE.txt
-   */
-  var escape;
+function bind($item, item) {
+  $item.on('dblclick', () => wiki.textEditor($item, item))
+}
 
-  escape = function escape(str) {
-    return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  };
-
-  window.plugins.code = function () {
-    var load;
-
-    var code = /*#__PURE__*/function () {
-      function code() {
-        _classCallCheck(this, code);
-      }
-
-      _createClass(code, null, [{
-        key: "emit",
-        value: function emit(div, item) {
-          return load(function () {
-            return div.append("<pre class='prettyprint'>".concat(prettyPrintOne(escape(item.text)), "</pre>"));
-          });
-        }
-      }, {
-        key: "bind",
-        value: function bind(div, item) {
-          return load(function () {
-            return div.dblclick(function () {
-              return wiki.textEditor(div, item);
-            });
-          });
-        }
-      }]);
-
-      return code;
-    }();
-
-    ;
-
-    load = function load(callback) {
-      wiki.getScript('/plugins/code/prettify.js', callback);
-
-      if (!$("link[href='/plugins/code/prettify.css']").length) {
-        return $('<link href="/plugins/code/prettify.css" rel="stylesheet" type="text/css">').appendTo("head");
-      }
-    };
-
-    return code;
-  }.call(this);
-}).call(void 0);
-//# sourceMappingURL=code.js.map
+if (typeof window !== "undefined" && window !== null) {
+  window.plugins.code = {
+    emit: emit,
+    bind: bind
+  }
+}

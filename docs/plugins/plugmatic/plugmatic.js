@@ -1,461 +1,434 @@
-"use strict";
+/*
+ * decaffeinate suggestions:
 
-(function () {
-  var any, bind, emit, escape, expand, parse, traffic;
+ * DS102: Remove unnecessary code created because of implicit returns
+ * DS103: Rewrite code to no longer use __guard__, or convert again using --optional-chaining
+ * DS201: Simplify complex destructure assignments
+ * DS205: Consider reworking code to avoid use of IIFEs
+ * DS207: Consider shorter variations of null checks
+ * Full docs: https://github.com/decaffeinate/decaffeinate/blob/main/docs/suggestions.md
+ */
 
-  any = function any(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  };
+const traffic = function (installed, published) {
+  const color = {
+    gray: '#ccc',
+    red: '#f55',
+    yellow: '#fb0',
+    green: '#0e0',
+  }
 
-  traffic = function traffic(installed, published) {
-    var color;
-    color = {
-      gray: '#ccc',
-      red: '#f55',
-      yellow: '#fb0',
-      green: '#0e0'
-    };
-
-    if (installed != null && published != null) {
-      if (installed === published) {
-        return color.green;
-      } else {
-        return color.yellow;
-      }
+  if (installed != null && published != null) {
+    if (installed === published) {
+      return color.green
     } else {
-      if (published != null) {
-        return color.red;
-      } else {
-        return color.gray;
-      }
+      return color.yellow
     }
-  };
-
-  escape = function escape(text) {
-    return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  };
-
-  expand = function expand(string) {
-    var external, stash, stashed, unstash;
-    stashed = [];
-
-    stash = function stash(text) {
-      var here;
-      here = stashed.length;
-      stashed.push(text);
-      return "\u3016".concat(here, "\u3017");
-    };
-
-    unstash = function unstash(match, digits) {
-      return stashed[+digits];
-    };
-
-    external = function external(match, href, protocol) {
-      return stash("\"<a class=\"external\" target=\"_blank\" href=\"".concat(href, "\" title=\"").concat(href, "\" rel=\"nofollow\">").concat(escape(href), "</a>\""));
-    };
-
-    string = string.replace(/〖(\d+)〗/g, "〖 $1 〗").replace(/"((http|https|ftp):.*?)"/gi, external);
-    return escape(string).replace(/〖(\d+)〗/g, unstash);
-  };
-
-  parse = function parse(text) {
-    var i, len, line, lines, m, result;
-    result = {
-      columns: [],
-      plugins: []
-    };
-    lines = (text || '').split(/\n+/);
-
-    for (i = 0, len = lines.length; i < len; i++) {
-      line = lines[i];
-
-      if (line.match(/\bSTATUS\b/)) {
-        result.columns.push('status');
-      }
-
-      if (line.match(/\bNAME\b/)) {
-        result.columns.push('name');
-      }
-
-      if (line.match(/\bMENU\b/)) {
-        result.columns.push('menu');
-      }
-
-      if (line.match(/\bPAGES\b/)) {
-        result.columns.push('pages');
-      }
-
-      if (line.match(/\bSERVICE\b/)) {
-        result.columns.push('service');
-      }
-
-      if (line.match(/\bBUNDLED\b/)) {
-        result.columns.push('bundled');
-      }
-
-      if (line.match(/\bINSTALLED\b/)) {
-        result.columns.push('installed');
-      }
-
-      if (line.match(/\bPUBLISHED\b/)) {
-        result.columns.push('published');
-      }
-
-      if (m = line.match(/^wiki-plugin-(\w+)$/)) {
-        result.plugins.push(m[1]);
-      }
+  } else {
+    if (published != null) {
+      return color.red
+    } else {
+      return color.gray
     }
+  }
+}
 
-    if (result.columns.length === 0) {
-      result.columns = result.plugins.length === 0 ? ['name', 'pages', 'menu', 'bundled', 'installed'] : ['status', 'name', 'pages', 'bundled', 'installed', 'published'];
+const escape = text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+
+const expand = function (string) {
+  const stashed = []
+  const stash = function (text) {
+    const here = stashed.length
+    stashed.push(text)
+    return `〖${here}〗`
+  }
+  const unstash = (match, digits) => stashed[+digits]
+  const internal = function (match, name) {
+    const slug = wiki.asSlug(name)
+    const styling = name === name.trim() ? 'internal' : 'internal spaced'
+    if (slug.length) {
+      return stash(
+        `<a class="${styling}" href="/${slug}.html" data-page-name="${slug}" title="view">${escape(name)}</a>`,
+      )
+    } else {
+      return match
     }
+  }
+  const external = (match, href, protocol) =>
+    stash(`"<a class="external" target="_blank" href="${href}" title="${href}" rel="nofollow">${escape(href)}</a>"`)
+  string = string.replace(/〖(\d+)〗/g, '〖 $1 〗').replace(/\[\[([^\]]+)\]\]/gi, internal).replace(/"((http|https|ftp):.*?)"/gi, external)
+  return escape(string).replace(/〖(\d+)〗/g, unstash)
+}
 
-    return result;
-  };
+const parse = function (text) {
+  const result = { columns: [], plugins: [] }
+  const lines = (text || '').split(/\n+/)
+  for (var line of lines) {
+    var m
+    if (line.match(/\bSTATUS\b/)) {
+      result.columns.push('status')
+    }
+    if (line.match(/\bNAME\b/)) {
+      result.columns.push('name')
+    }
+    if (line.match(/\bMENU\b/)) {
+      result.columns.push('menu')
+    }
+    if (line.match(/\bPAGES\b/)) {
+      result.columns.push('pages')
+    }
+    if (line.match(/\bSERVICE\b/)) {
+      result.columns.push('service')
+    }
+    if (line.match(/\bBUNDLED\b/)) {
+      result.columns.push('bundled')
+    }
+    if (line.match(/\bINSTALLED\b/)) {
+      result.columns.push('installed')
+    }
+    if (line.match(/\bPUBLISHED\b/)) {
+      result.columns.push('published')
+    }
+    if ((m = line.match(/^wiki-plugin-(\w+)$/))) {
+      result.plugins.push(m[1])
+    }
+  }
+  if (result.columns.length === 0) {
+    result.columns =
+      result.plugins.length === 0
+        ? ['name', 'pages', 'menu', 'bundled', 'installed']
+        : ['status', 'name', 'pages', 'bundled', 'installed', 'published']
+  }
+  return result
+}
 
-  emit = function emit($item, item) {
-    var markup, render, trouble;
-    markup = parse(item.text);
-    $item.append("<p style=\"background-color:#eee;padding:15px;\">\n  loading plugin details\n</p>");
+const emit = function ($item, item) {
+  const markup = parse(item.text)
+  let dialog = null
+  $item.append(`\
+<p style="background-color:#eee;padding:15px;">
+  loading plugin details
+</p>\
+`)
 
-    render = function render(data) {
-      var bright, column, detail, format, installer, more, normal, pub, report, showdetail;
-      column = 'installed';
+  const render = function (data) {
+    let column = 'installed'
+    const pub = name => data.publish.find(obj => obj.plugin === name)
 
-      pub = function pub(name) {
-        return data.publish.find(function (obj) {
-          return obj.plugin === name;
-        });
-      };
+    const format = function (markup, plugin, dependencies) {
+      const name = plugin.plugin
+      const months = plugin.birth ? ((Date.now() - plugin.birth) / 1000 / 3600 / 24 / 31.5).toFixed(0) : ''
+      const status = function () {
+        const installed = plugin.package != null ? plugin.package.version : undefined
+        const published = __guard__(pub(name).npm, x => x.version)
+        return traffic(installed, published)
+      }
 
-      format = function format(markup, plugin, dependencies) {
-        var i, len, months, name, ref, result, status;
-        name = plugin.plugin;
-        months = plugin.birth ? ((Date.now() - plugin.birth) / 1000 / 3600 / 24 / 31.5).toFixed(0) : '';
-
-        status = function status() {
-          var installed, published, ref, ref1;
-          installed = (ref = plugin["package"]) != null ? ref.version : void 0;
-          published = (ref1 = pub(name).npm) != null ? ref1.version : void 0;
-          return traffic(installed, published);
-        };
-
-        result = ["<tr class=row data-name=".concat(plugin.plugin, ">")];
-        ref = markup.columns;
-
-        for (i = 0, len = ref.length; i < len; i++) {
-          column = ref[i];
-          result.push(function () {
-            var ref1, ref2, ref3, ref4;
-
+      const result = [`<tr class=row data-name=${plugin.plugin}>`]
+      for (column of markup.columns) {
+        result.push(
+          (() => {
             switch (column) {
               case 'status':
-                return "<td title=status style='text-align:center; color: ".concat(status(), "'>\u25C9");
-
+                return `<td title=status style='text-align:center; color: ${status()}'>◉`
               case 'name':
-                return "<td title=name> ".concat(name);
-
+                return `<td title=name> ${name}`
               case 'menu':
-                return "<td title=menu> ".concat(((ref1 = plugin.factory) != null ? ref1.category : void 0) || '');
-
+                return `<td title=menu> ${(plugin.factory != null ? plugin.factory.category : undefined) || ''}`
               case 'pages':
-                return "<td title=pages style='text-align:center;'>".concat(((ref2 = plugin.pages) != null ? ref2.length : void 0) || '');
-
+                return `<td title=pages style='text-align:center;'>${(plugin.pages != null ? plugin.pages.length : undefined) || ''}`
               case 'service':
-                return "<td title=service style='text-align:center;'>".concat(months);
-
+                return `<td title=service style='text-align:center;'>${months}`
               case 'bundled':
-                return "<td title=bundled> ".concat(dependencies['wiki-plugin-' + name] || '');
-
+                return `<td title=bundled> ${dependencies['wiki-plugin-' + name] || ''}`
               case 'installed':
-                return "<td title=installed> ".concat(((ref3 = plugin["package"]) != null ? ref3.version : void 0) || '');
-
+                return `<td title=installed> ${(plugin.package != null ? plugin.package.version : undefined) || ''}`
               case 'published':
-                return "<td title=published> ".concat(((ref4 = pub(name).npm) != null ? ref4.version : void 0) || '');
+                return `<td title=published> ${__guard__(pub(name).npm, x => x.version) || ''}`
             }
-          }());
+          })(),
+        )
+      }
+      return result.join('\n')
+    }
+
+    const report = function (markup, plugins, dependencies) {
+      let plugin
+      const retrieve = function (name) {
+        for (plugin of plugins) {
+          if (plugin.plugin === name) {
+            return plugin
+          }
         }
-
-        return result.join("\n");
-      };
-
-      report = function report(markup, plugins, dependencies) {
-        var head, index, inventory, plugin, result, retrieve;
-
-        retrieve = function retrieve(name) {
-          var i, len, plugin;
-
-          for (i = 0, len = plugins.length; i < len; i++) {
-            plugin = plugins[i];
-
-            if (plugin.plugin === name) {
-              return plugin;
-            }
-          }
-
-          return {
-            plugin: name
-          };
-        };
-
-        inventory = markup.plugins.length > 0 ? markup.plugins.map(retrieve) : plugins;
-
-        head = function () {
-          var i, len, ref, results;
-          ref = markup.columns;
-          results = [];
-
-          for (i = 0, len = ref.length; i < len; i++) {
-            column = ref[i];
-            results.push("<td style='font-size:75%; color:gray;'>".concat(column));
-          }
-
-          return results;
-        }().join("\n");
-
-        result = function () {
-          var i, len, results;
-          results = [];
-
-          for (index = i = 0, len = inventory.length; i < len; index = ++i) {
-            plugin = inventory[index];
-            results.push(format(markup, plugin, dependencies));
-          }
-
-          return results;
-        }().join("\n");
-
-        return "<center> <p><img src='/favicon.png' width=16> <span style='color:gray;'>".concat(window.location.host, "</span></p> <table style=\"width:100%;\"><tr> ").concat(head, " ").concat(result, "</table> <button class=restart>restart</button> </center>");
-      };
-
-      installer = function installer(row, npm) {
-        var $row, array, choice, choices, installed, version;
-
-        if (npm == null) {
-          return "<p>can't find wiki-plugin-".concat(row.plugin, " in <a href=//npmjs.com target=_blank>npmjs.com</a></p>");
+        return { plugin: name }
+      }
+      const inventory = markup.plugins.length > 0 ? markup.plugins.map(retrieve) : plugins
+      const head = (() => {
+        const result1 = []
+        for (column of markup.columns) {
+          result1.push(`<td style='font-size:75%; color:gray;'>${column}`)
         }
+        return result1
+      })().join('\n')
+      const result = (() => {
+        const result2 = []
+        for (let index = 0; index < inventory.length; index++) {
+          plugin = inventory[index]
+          result2.push(format(markup, plugin, dependencies))
+        }
+        return result2
+      })().join('\n')
+      return `<center> \
+<p><img src="/favicon.png" width=16> <span style="color:gray;">${window.location.host}</span></p> \
+<table style="width:100%;"><tr> ${head} ${result}</table> \
+<button class=restart>restart</button> \
+</center>`
+    }
 
-        $row = $item.find("table [data-name=".concat(row.plugin, "]"));
+    const installer = function (row, npm) {
+      let version
+      if (npm == null) {
+        return `<p>can't find wiki-plugin-${row.plugin} in <a href=//npmjs.com target=_blank>npmjs.com</a></p>`
+      }
+      const $row = $item.find(`table [data-name=${row.plugin}]`)
+      const installed = function (update) {
+        const index = data.install.indexOf(row)
+        data.install[index] = row = update.row
+        $row.find('[title=status]').css('color', traffic(update.installed, npm.version))
+        $row.find('[title=menu]').text((row.factory != null ? row.factory.category : undefined) || '')
+        $row.find('[title=pages]').text((row.pages != null ? row.pages.length : undefined) || '')
+        $row.find('[title=service]').text('0')
+        $row.find('[title=installed]').text((row.package != null ? row.package.version : undefined) || '')
+        return $item.find('button.restart').removeAttr('disabled').show()
+      }
 
-        installed = function installed(update) {
-          var index, ref, ref1, ref2;
-          index = data.install.indexOf(row);
-          data.install[index] = row = update.row;
-          $row.find("[title=status]").css('color', traffic(update.installed, npm.version));
-          $row.find("[title=menu]").text(((ref = row.factory) != null ? ref.category : void 0) || '');
-          $row.find("[title=pages]").text(((ref1 = row.pages) != null ? ref1.length : void 0) || '');
-          $row.find('[title=service]').text('0');
-          $row.find("[title=installed]").text(((ref2 = row["package"]) != null ? ref2.version : void 0) || '');
-          return $item.find('button.restart').removeAttr('disabled').show();
-        };
+      window.plugins.plugmatic.install = function (version) {
+        $.ajax({
+          type: 'POST',
+          url: '/plugin/plugmatic/install',
+          data: JSON.stringify({ version, plugin: row.plugin }),
+          contentType: 'application/json; charset=utf-8',
+          dataType: 'json',
+          success: installed,
+          error: trouble,
+        })
+        // http://stackoverflow.com/questions/2933826/how-to-close-jquery-dialog-within-the-dialog
+        $row.find('[title=status]').css('color', 'white')
+        return dialog.close()
+      }
 
-        window.plugins.plugmatic.install = function (version) {
-          $.ajax({
-            type: 'POST',
-            url: '/plugin/plugmatic/install',
-            data: JSON.stringify({
-              version: version,
-              plugin: row.plugin
-            }),
-            contentType: "application/json; charset=utf-8",
-            dataType: 'json',
-            success: installed,
-            error: trouble
-          }); // http://stackoverflow.com/questions/2933826/how-to-close-jquery-dialog-within-the-dialog
+      const array = function (obj) {
+        if (typeof obj === 'string') {
+          return [obj]
+        } else {
+          return obj
+        }
+      }
+      const choice = function (version) {
+        const button = () => `<button onclick=window.plugins.plugmatic.install('${version}')> install </button>`
+        return `<tr> <td> ${version} <td> ${version === (row.package != null ? row.package.version : undefined) ? 'installed' : button()}`
+      }
+      const choices = (() => {
+        const result = []
+        for (version of array(npm.versions).reverse()) {
+          result.push(choice(version))
+        }
+        return result
+      })()
+      return `<h3>${npm.description}</h3> <p>Choose a version to install.</p> <table>${choices.join('\n')}`
+    }
 
-          $row.find("[title=status]").css('color', 'white');
-          return $('.ui-dialog-content:visible').dialog('close');
-        };
+    const detail = function (name, done) {
+      const row = data.install.find(obj => obj.plugin === name)
+      const text = function (obj) {
+        if (!obj) {
+          return ''
+        }
+        return expand(obj).replace(/\n/g, '<br>')
+      }
+      const struct = function (obj) {
+        if (!obj) {
+          return ''
+        }
+        return `<pre>${expand(JSON.stringify(obj, null, '  '))}</pre>`
+      }
+      const pages = obj => `<p><b><a href=#>${obj.title}</a></b><br>${expand(obj.synopsis)}</p>`
+      const birth = function (obj) {
+        if (obj) {
+          return new Date(obj).toString()
+        } else {
+          return 'built-in'
+        }
+      }
+      const npmjs = more => $.getJSON(`/plugin/plugmatic/view/${name}`, more)
+      switch (column) {
+        case 'status':
+          return npmjs(npm => done(installer(row, npm)))
+        case 'name':
+          return done(text(row.authors))
+        case 'menu':
+          return done(struct(row.factory))
+        case 'pages':
+          return done(row.pages.map(pages).join(''))
+        case 'service':
+          return done(birth(row.birth))
+        case 'bundled':
+          return done(struct(data.bundle.data.dependencies))
+        case 'installed':
+          return done(struct(row.package))
+        case 'published':
+          return done(struct(pub(name).npm || ''))
+        default:
+          return done('unexpected column')
+      }
+    }
 
-        array = function array(obj) {
-          if (typeof obj === 'string') {
-            return [obj];
+    const showdetail = function (e) {
+      const $parent = $(e.target).parent()
+      const name = $parent.data('name')
+      return detail(name, function (html) {
+        console.log(column, name, $item, item)
+        if (column === 'status') {
+          // show dialog
+          $item.find('dialog').remove()
+          $item.append(`\
+<dialog>
+  ${html}
+</dialog>\
+`)
+          dialog = $item.find('dialog')[0]
+          console.log('dialog', dialog)
+          return dialog.showModal()
+        } else {
+          // wiki.dialog "#{name} plugin #{column}", html || ''
+          const pageKey = $item.parents('.page').data('key')
+          const context = wiki.lineup.atKey(pageKey).getContext()
+          const plugmaticDialog = window.open('/plugins/plugmatic/dialog/#', 'plugmatic', 'popup,height=600,width=800')
+          if (plugmaticDialog.location.pathname !== '/plugins/plugmatic/dialog/') {
+            return plugmaticDialog.addEventListener('load', event =>
+              plugmaticDialog.postMessage(
+                { column, title: `${name} plugin ${column}`, body: html || '', pageKey, context },
+                window.origin,
+              ),
+            )
           } else {
-            return obj;
+            return plugmaticDialog.postMessage(
+              { column, title: `${name} plugin ${column}`, body: html || '', pageKey, context },
+              window.origin,
+            )
           }
-        };
-
-        choice = function choice(version) {
-          var button, ref;
-
-          button = function button() {
-            return "<button onclick=window.plugins.plugmatic.install('".concat(version, "')> install </button>");
-          };
-
-          return "<tr> <td> ".concat(version, " <td> ").concat(version === ((ref = row["package"]) != null ? ref.version : void 0) ? 'installed' : button());
-        };
-
-        choices = function () {
-          var i, len, ref, results;
-          ref = array(npm.versions).reverse();
-          results = [];
-
-          for (i = 0, len = ref.length; i < len; i++) {
-            version = ref[i];
-            results.push(choice(version));
-          }
-
-          return results;
-        }();
-
-        return "<h3>".concat(npm.description, "</h3> <p>Choose a version to install.</p> <table>").concat(choices.join("\n"));
-      };
-
-      detail = function detail(name, done) {
-        var birth, npmjs, pages, row, struct, text;
-        row = data.install.find(function (obj) {
-          return obj.plugin === name;
-        });
-
-        text = function text(obj) {
-          if (!obj) {
-            return '';
-          }
-
-          return expand(obj).replace(/\n/g, '<br>');
-        };
-
-        struct = function struct(obj) {
-          if (!obj) {
-            return '';
-          }
-
-          return "<pre>".concat(expand(JSON.stringify(obj, null, '  ')), "</pre>");
-        };
-
-        pages = function pages(obj) {
-          return "<p><b><a href=#>".concat(obj.title, "</a></b><br>").concat(obj.synopsis, "</p>");
-        };
-
-        birth = function birth(obj) {
-          if (obj) {
-            return new Date(obj).toString();
-          } else {
-            return 'built-in';
-          }
-        };
-
-        npmjs = function npmjs(more) {
-          return $.getJSON("/plugin/plugmatic/view/".concat(name), more);
-        };
-
-        switch (column) {
-          case 'status':
-            return npmjs(function (npm) {
-              return done(installer(row, npm));
-            });
-
-          case 'name':
-            return done(text(row.authors));
-
-          case 'menu':
-            return done(struct(row.factory));
-
-          case 'pages':
-            return done(row.pages.map(pages).join(''));
-
-          case 'service':
-            return done(birth(row.birth));
-
-          case 'bundled':
-            return done(struct(data.bundle.data.dependencies));
-
-          case 'installed':
-            return done(struct(row["package"]));
-
-          case 'published':
-            return done(struct(pub(name).npm || ''));
-
-          default:
-            return done('unexpected column');
         }
-      };
+      })
+    }
 
-      showdetail = function showdetail(e) {
-        var $parent, name;
-        $parent = $(e.target).parent();
-        name = $parent.data('name');
-        return detail(name, function (html) {
-          return wiki.dialog("".concat(name, " plugin ").concat(column), html || '');
-        });
-      };
+    const more = function (e) {
+      if (e.shiftKey) {
+        return showdetail(e)
+      }
+    }
 
-      more = function more(e) {
-        if (e.shiftKey) {
-          return showdetail(e);
-        }
-      };
+    const bright = function (e) {
+      more(e)
+      return $(e.currentTarget).css('background-color', '#f8f8f8')
+    }
+    const normal = e => $(e.currentTarget).css('background-color', '#eee')
 
-      bright = function bright(e) {
-        more(e);
-        return $(e.currentTarget).css('background-color', '#f8f8f8');
-      };
-
-      normal = function normal(e) {
-        return $(e.currentTarget).css('background-color', '#eee');
-      };
-
-      $item.find('p').html(report(markup, data.install, data.bundle.data.dependencies));
-      $item.find('.row').hover(bright, normal);
-      $item.find('p td').click(function (e) {
-        column = $(e.target).attr('title');
-        return showdetail(e);
-      });
-      return $item.find('button.restart').hide().click(function (e) {
-        $item.find('button.restart').attr("disabled", "disabled");
+    $item.find('p').html(report(markup, data.install, data.bundle.data.dependencies))
+    $item.find('.row').on({
+      mouseenter: bright,
+      mouseleave: normal,
+    })
+    $item.find('p td').on('click', function (e) {
+      column = $(e.target).attr('title')
+      return showdetail(e)
+    })
+    return $item
+      .find('button.restart')
+      .hide()
+      .on('click', function (e) {
+        $item.find('button.restart').attr('disabled', 'disabled')
         return $.ajax({
           type: 'POST',
           url: '/plugin/plugmatic/restart',
-          success: function success() {},
+          success() {},
           // poll for restart complete, then ...
           // $item.find('button.restart').hide()
-          error: trouble
-        });
-      });
-    };
-
-    trouble = function trouble(xhr) {
-      var ref;
-      return $item.find('p').html(((ref = xhr.responseJSON) != null ? ref.error : void 0) || 'server error');
-    };
-
-    if (markup.plugins.length) {
-      return $.ajax({
-        type: 'POST',
-        url: '/plugin/plugmatic/plugins',
-        data: JSON.stringify(markup),
-        contentType: "application/json; charset=utf-8",
-        dataType: 'json',
-        success: render,
-        error: trouble
-      });
-    } else {
-      return $.ajax({
-        url: '/plugin/plugmatic/plugins',
-        dataType: 'json',
-        success: render,
-        error: trouble
-      });
-    }
-  };
-
-  bind = function bind($item, item) {
-    return $item.dblclick(function () {
-      return wiki.textEditor($item, item);
-    });
-  };
-
-  if (typeof window !== "undefined" && window !== null) {
-    window.plugins.plugmatic = {
-      emit: emit,
-      bind: bind
-    };
+          error: trouble,
+        })
+      })
   }
 
-  if (typeof module !== "undefined" && module !== null) {
-    module.exports = {
-      parse: parse
-    };
+  var trouble = xhr =>
+    $item.find('p').html((xhr.responseJSON != null ? xhr.responseJSON.error : undefined) || 'server error')
+
+  if (markup.plugins.length) {
+    return $.ajax({
+      type: 'POST',
+      url: '/plugin/plugmatic/plugins',
+      data: JSON.stringify(markup),
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      success: render,
+      error: trouble,
+    })
+  } else {
+    return $.ajax({
+      url: '/plugin/plugmatic/plugins',
+      dataType: 'json',
+      success: render,
+      error: trouble,
+    })
   }
-}).call(void 0);
-//# sourceMappingURL=plugmatic.js.map
+}
+
+const bind = ($item, item) => $item.on('dblclick', () => wiki.textEditor($item, item))
+
+const plugmaticListener = function (event) {
+  if (!event.source.opener || event.source.location.pathname !== '/plugins/plugmatic/dialog/') {
+    return
+  }
+  console.log('plugmatic listerner', event)
+
+  const { data } = event
+
+  const { action } = data
+
+  switch (action) {
+    case 'doInternalLink':
+      var val = data.keepLineup,
+        keepLineup = val != null ? val : false,
+        val1 = data.pageKey,
+        pageKey = val1 != null ? val1 : null,
+        val2 = data.title,
+        title = val2 != null ? val2 : null,
+        val3 = data.context,
+        context = val3 != null ? val3 : null
+      var $page = null
+      if (pageKey !== null) {
+        $page = keepLineup ? null : $('.page').filter((i, el) => $(el).data('key') === pageKey)
+      }
+      wiki.pageHandler.context = context
+      wiki.doInternalLink(title, $page)
+      break
+    default:
+      return console.error({ where: 'plugmaticListener', message: 'unknown action', data })
+  }
+}
+
+if (typeof window !== 'undefined' && window !== null) {
+  if (typeof window.plugmaticListener === 'undefined' || window.plugmaticListener === null) {
+    console.log('*** Plugmatic - Adding Message Listener')
+    window.plugmaticListener = plugmaticListener
+    window.addEventListener('message', plugmaticListener)
+  }
+}
+
+if (typeof window !== 'undefined' && window !== null) {
+  window.plugins.plugmatic = { emit, bind }
+}
+if (typeof module !== 'undefined' && module !== null) {
+  module.exports = { parse }
+}
+
+function __guard__(value, transform) {
+  return typeof value !== 'undefined' && value !== null ? transform(value) : undefined
+}

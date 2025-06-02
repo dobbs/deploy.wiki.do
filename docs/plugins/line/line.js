@@ -1,203 +1,200 @@
-"use strict";
+/*
+ * Federated Wiki : Line Plugin
+ *
+ * Licensed under the MIT license.
+ * https://github.com/fedwiki/wiki-plugin-line/blob/master/LICENSE.txt
+ */
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm'
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+const extent = (data, f) => {
+  const lo = Math.min(...data.map(f))
+  const hi = Math.max(...data.map(f))
+  const step = Math.pow(10, Math.floor(Math.log(hi - lo) / Math.log(10)))
+  return [step * Math.floor(lo / step), step * Math.ceil(hi / step)]
+}
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+async function emit($item, item) {
+  // Copyright 2021 Observable, Inc.
+  // Released under the ISC license.
+  // https://observablehq.com/@d3/line-chart
+  //
+  // with modifications for Federated Wiki line plugin
+  function LineChart(
+    data,
+    {
+      x = ([x]) => x, // given d in data, returns the (temporal) x-value
+      y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
+      defined, // for gaps in data
+      curve = d3.curveLinear, // method of interpolation between points
+      marginTop = 20, // top margin, in pixels
+      marginRight = 30, // right margin, in pixels
+      marginBottom = 30, // bottom margin, in pixels
+      marginLeft = 40, // left margin, in pixels
+      width = 640, // outer width, in pixels
+      height = 400, // outer height, in pixels
+      xType = d3.scaleUtc, // the x-scale type
+      xDomain, // [xmin, xmax]
+      xRange = [marginLeft, width - marginRight], // [left, right]
+      yType = d3.scaleLinear, // the y-scale type
+      yDomain, // [ymin, ymax]
+      yRange = [height - marginBottom, marginTop], // [bottom, top]
+      yFormat, // a format specifier string for the y-axis
+      yLabel, // a label for the y-axis
+      color = 'currentColor', // stroke color of line
+      strokeLinecap = 'round', // stroke line cap of the line
+      strokeLinejoin = 'round', // stroke line join of the line
+      strokeWidth = 1.5, // stroke width of line, in pixels
+      strokeOpacity = 1, // stroke opacity of line
+    } = {},
+  ) {
+    // Compute values.
+    const X = d3.map(data, x)
+    const Y = d3.map(data, y)
+    const I = d3.range(X.length)
+    if (defined === undefined) defined = (d, i) => !isNaN(X[i]) && !isNaN(Y[i])
+    const D = d3.map(data, defined)
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+    // Compute default domains.
+    if (xDomain === undefined) xDomain = d3.extent(X)
+    if (yDomain === undefined) yDomain = [0, d3.max(Y)]
 
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+    // Construct scales and axes.
+    const xScale = xType(xDomain, xRange)
+    const yScale = yType(yDomain, yRange)
+    const xAxis = d3
+      .axisBottom(xScale)
+      .ticks(width / 80)
+      .tickSizeOuter(0)
+    const yAxis = d3.axisLeft(yScale).ticks(height / 40, yFormat)
 
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+    // Construct a line generator.
+    const line = d3
+      .line()
+      .defined(i => D[i])
+      .curve(curve)
+      .x(i => xScale(X[i]))
+      .y(i => yScale(Y[i]))
 
-(function () {
-  /*
-   * Federated Wiki : Line Plugin
-   *
-   * Licensed under the MIT license.
-   * https://github.com/fedwiki/wiki-plugin-line/blob/master/LICENSE.txt
-   */
-  var extent;
+    const svg = d3
+      .create('svg')
+      .attr('width', width)
+      .attr('height', height)
+      .attr('viewBox', [0, 0, width, height])
+      .attr('style', 'max-width: 100%; height: auto; height: intrinsic;')
 
-  extent = function extent(data, f) {
-    var hi, lo, step;
-    var _ref = [d3.min(data, f), d3.max(data, f)];
-    lo = _ref[0];
-    hi = _ref[1];
-    step = Math.pow(10, Math.floor(Math.log(hi - lo) / Math.log(10)));
-    return [step * Math.floor(lo / step), step * Math.ceil(hi / step)];
-  };
+    // modified to add x axis grid lines
+    svg
+      .append('g')
+      .attr('transform', `translate(0,${height - marginBottom})`)
+      .call(xAxis)
+      .call(g => g.select('.domain').remove())
+      .call(g =>
+        g
+          .selectAll('.tick line')
+          .clone()
+          .attr('y1', 0)
+          .attr('y2', -height + marginTop)
+          .attr('stroke-opacity', 0.1),
+      )
 
-  window.plugins.line = {
-    bind: function bind(div, item) {},
-    emit: function emit(div, item) {
-      return wiki.getScript('/js/d3/d3.min.js', function () {
-        var candidates, choice, data, h, lastThumb, line, p, series, start, vis, w, who, x, xrules, y, yrules;
-        w = 350;
-        h = 275;
-        p = 40;
-        div.append("<style>\n  svg { font: 10px sans-serif; }\n  .rule line { stroke: #eee; shape-rendering: crispEdges; }\n  .rule line.axis { stroke: #000; }\n  .line { fill: none; stroke: steelblue; stroke-width: 1.5px; }\n  .line text { stroke-width: 1px; }\n  circle.line { fill: #fff; }\n</style>");
-        candidates = $(".item:lt(".concat($('.item').index(div), ")"));
+    svg
+      .append('g')
+      .attr('transform', `translate(${marginLeft},0)`)
+      .call(yAxis)
+      .call(g => g.select('.domain').remove())
+      .call(g =>
+        g
+          .selectAll('.tick line')
+          .clone()
+          .attr('x2', width - marginLeft - marginRight)
+          .attr('stroke-opacity', 0.1),
+      )
+      .call(g =>
+        g
+          .append('text')
+          .attr('x', -marginLeft)
+          .attr('y', 10)
+          .attr('fill', 'currentColor')
+          .attr('text-anchor', 'start')
+          .text(yLabel),
+      )
 
-        if ((who = candidates.filter(".sequence-source")).length) {
-          choice = who[who.length - 1];
+    svg
+      .append('path')
+      .attr('fill', 'none')
+      .attr('stroke', color)
+      .attr('stroke-width', strokeWidth)
+      .attr('stroke-linecap', strokeLinecap)
+      .attr('stroke-linejoin', strokeLinejoin)
+      .attr('stroke-opacity', strokeOpacity)
+      .attr('d', line(I))
 
-          data = function () {
-            var i, len, ref, results;
-            ref = choice.getSequenceData();
-            results = [];
+    // modified to add dots and thumb
+    svg
+      .selectAll('circle.line')
+      .data(data)
+      .join('circle')
+      .attr('class', 'line')
+      .attr('fill', 'white')
+      .attr('stroke', color)
+      .attr('r', 3.5)
+      .attr('cx', d => xScale(d.t))
+      .attr('cy', d => yScale(d.y))
+      .on('mouseover', (event, d) => {
+        $item.trigger('thumb', (lastThumb = d.x))
+        d3.select(event.target).attr('r', 8)
+      })
+      .on('mouseout', event => {
+        d3.select(event.target).attr('r', 3.5)
+      })
 
-            for (x = i = 0, len = ref.length; i < len; x = ++i) {
-              y = ref[x];
-              results.push({
-                x: x,
-                y: +y
-              });
-            }
+    return svg.node()
+  }
 
-            return results;
-          }();
+  const series = wiki.getData()
+  const start = series[0][0]
+  const data =
+    start > 1000000000000
+      ? series.map(([x, y]) => ({ t: new Date(x), x, y }))
+      : start > 1000000000
+        ? series.map(([x, y]) => ({ t: new Date(x * 1000), x, y }))
+        : series.map(p => ({ t: new Date(p.Date), y: p.Price * 1 }))
 
-          x = d3.scale.linear().domain(extent(data, function (p) {
-            return p.x;
-          })).range([0, w]);
-          y = d3.scale.linear().domain(extent(data, function (p) {
-            return p.y;
-          })).range([h, 0]);
-        } else {
-          series = wiki.getData();
-          data = (start = series[0][0]) > 1000000000000 ? function () {
-            // js time
-            var i, len, results;
-            results = [];
+  let lastThumb = null
 
-            for (i = 0, len = series.length; i < len; i++) {
-              var _series$i = _slicedToArray(series[i], 2);
-
-              x = _series$i[0];
-              y = _series$i[1];
-              results.push({
-                t: new Date(x),
-                x: x,
-                y: y
-              });
-            }
-
-            return results;
-          }() : start > 1000000000 ? function () {
-            // unix time
-            var i, len, results;
-            results = [];
-
-            for (i = 0, len = series.length; i < len; i++) {
-              var _series$i2 = _slicedToArray(series[i], 2);
-
-              x = _series$i2[0];
-              y = _series$i2[1];
-              results.push({
-                t: new Date(x * 1000),
-                x: x,
-                y: y
-              });
-            }
-
-            return results;
-          }() : function () {
-            var i, len, results;
-            results = [];
-
-            for (i = 0, len = series.length; i < len; i++) {
-              p = series[i];
-              results.push({
-                t: new Date(p.Date),
-                y: p.Price * 1
-              });
-            }
-
-            return results;
-          }();
-          x = d3.time.scale().domain(extent(data, function (p) {
-            return p.t;
-          })).range([0, w]);
-          y = d3.scale.linear().domain(extent(data, function (p) {
-            return p.y;
-          })).range([h, 0]);
-        }
-
-        lastThumb = null;
-        $('.main').bind('thumb', function (e, thumb) {
-          if (thumb === lastThumb) {
-            return;
-          }
-
-          lastThumb = thumb;
-          return d3.selectAll("circle.line").attr('r', function (d) {
-            if (d.x === thumb) {
-              return 8;
-            } else {
-              return 3.5;
-            }
-          });
-        });
-        vis = d3.select(div.get(0)).data([data]).append("svg:svg").attr("width", w + p * 2).attr("height", h + p * 2).append("svg:g").attr("transform", "translate(".concat(p, ",").concat(p, ")"));
-        xrules = vis.selectAll("g.xrule").data(x.ticks(5)).enter().append("svg:g").attr("class", "rule");
-        xrules.append("svg:line").attr("x1", x).attr("x2", x).attr("y1", 0).attr("y2", h - 1);
-        xrules.append("svg:text").attr("x", x).attr("y", h + 3).attr("dy", ".71em").attr("text-anchor", "middle").text(x.tickFormat(10));
-        yrules = vis.selectAll("g.yrule").data(y.ticks(10)).enter().append("svg:g").attr("class", "rule");
-        yrules.append("svg:line").attr("class", function (d) {
-          if (d) {
-            return null;
-          } else {
-            return "axis";
-          }
-        }).attr("y1", y).attr("y2", y).attr("x1", 0).attr("x2", w + 1);
-        yrules.append("svg:text").attr("y", y).attr("x", -3).attr("dy", ".35em").attr("text-anchor", "end").text(y.tickFormat(10));
-        line = d3.svg.line().x(function (d) {
-          return x(d.t || d.x);
-        }).y(function (d) {
-          return y(d.y);
-        });
-        vis.append("svg:path").attr("class", "line").attr("d", line);
-        vis.selectAll("circle.line").data(data).enter().append("svg:circle").attr("class", "line").attr("cx", function (d) {
-          return x(d.t || d.x);
-        }).attr("cy", function (d) {
-          return y(d.y);
-        }).attr("r", 3.5).on('mouseover', function (d) {
-          div.trigger('thumb', lastThumb = d.x);
-          return d3.select(this).attr('r', 8);
-        }).on('mouseout', function () {
-          return d3.select(this).attr('r', 3.5);
-        });
-
-        if (choice) {
-          return $(choice).on('sequence', function (e, sequence) {
-            var xx, yy;
-
-            data = function () {
-              var i, len, results;
-              results = [];
-
-              for (xx = i = 0, len = sequence.length; i < len; xx = ++i) {
-                yy = sequence[xx];
-                results.push({
-                  x: xx,
-                  y: +yy
-                });
-              }
-
-              return results;
-            }();
-
-            vis.selectAll('circle.line').data(data).transition().attr("cy", function (d) {
-              return y(d.y);
-            });
-            return vis.selectAll('path').data([data]).transition().attr("d", line);
-          });
-        }
-      });
+  $('.main').on('thumb', (e, thumb) => {
+    if (thumb === lastThumb) {
+      return
     }
-  };
-}).call(void 0);
-//# sourceMappingURL=line.js.map
+    lastThumb = thumb
+    return d3.selectAll('circle.line').attr('r', d => {
+      if (d.x === thumb) {
+        return 8
+      } else {
+        return 3.5
+      }
+    })
+  })
+
+  $item.append(
+    LineChart(data, {
+      x: d => d.t,
+      y: d => d.y,
+      xDomain: extent(data, p => p.x),
+      yDomain: extent(data, p => p.y),
+      width: 430,
+      height: 355,
+      color: 'steelblue',
+    }),
+  )
+}
+
+function bind($item, item) {}
+
+if (typeof window !== 'undefined' && window !== null) {
+  window.plugins.line = {
+    emit: emit,
+    bind: bind,
+  }
+}

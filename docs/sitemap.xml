@@ -1,35 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://deploy.localhost/digitalocean-domains.html</loc>
+    <loc>https://deploy.wiki.do/digitalocean-domains.html</loc>
     <lastmod>2020-05-03</lastmod>
   </url>
   <url>
-    <loc>http://deploy.localhost/eric-dobbs.html</loc>
-    <lastmod>2021-12-29</lastmod>
+    <loc>https://deploy.wiki.do/eric-dobbs.html</loc>
+    <lastmod>2025-06-02</lastmod>
   </url>
   <url>
-    <loc>http://deploy.localhost/launchagent-wiki.html</loc>
-    <lastmod>2023-06-10</lastmod>
+    <loc>https://deploy.wiki.do/launchagent-wiki.html</loc>
+    <lastmod>2025-06-02</lastmod>
   </url>
   <url>
-    <loc>http://deploy.localhost/local-kubernetes-wiki.html</loc>
-    <lastmod>2021-01-18</lastmod>
+    <loc>https://deploy.wiki.do/local-kubernetes-wiki.html</loc>
+    <lastmod>2025-06-02</lastmod>
   </url>
   <url>
-    <loc>http://deploy.localhost/one-wiki-hosting-guide.html</loc>
+    <loc>https://deploy.wiki.do/making-and-restoring-backups.html</loc>
+    <lastmod>2024-03-01</lastmod>
+  </url>
+  <url>
+    <loc>https://deploy.wiki.do/one-wiki-hosting-guide.html</loc>
     <lastmod>2020-05-17</lastmod>
   </url>
   <url>
-    <loc>http://deploy.localhost/welcome-visitors.html</loc>
-    <lastmod>2021-12-29</lastmod>
+    <loc>https://deploy.wiki.do/welcome-visitors.html</loc>
+    <lastmod>2025-05-31</lastmod>
   </url>
   <url>
-    <loc>http://deploy.localhost/wiki-on-localhost.html</loc>
-    <lastmod>2023-06-09</lastmod>
+    <loc>https://deploy.wiki.do/wiki-on-localhost.html</loc>
+    <lastmod>2025-06-02</lastmod>
   </url>
   <url>
-    <loc>http://deploy.localhost/wikido.html</loc>
-    <lastmod>2020-04-24</lastmod>
+    <loc>https://deploy.wiki.do/wikido.html</loc>
+    <lastmod>2025-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://deploy.wiki.do/publishing-workflow.html</loc>
+    <lastmod>2025-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://deploy.wiki.do/improve-publishing-workflow.html</loc>
+    <lastmod>2025-06-02</lastmod>
   </url>
 </urlset>

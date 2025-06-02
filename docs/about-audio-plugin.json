@@ -14,7 +14,7 @@
     {
       "type": "audio",
       "id": "4ea0412bf78c1001",
-      "text": "http://video.ch9.ms/ch9/c8b3/0ab0c492-3f44-4b1c-b699-d40c658dc8b3/BillHill2004HomoSapiensOS.mp3\nThe most important operating system developers write software for is not Windows or OSX or Linux or Android. It's Homo sapiens 1.0. We make software for people first. Very wise words from a very wise soul, Bill Hill. [http://channel9.msdn.com/Blogs/TheChannel9Team/Bill-Hill-Windows-is-not-the-most-important-OS channel9 blog]"
+      "text": "https://web.archive.org/web/20200805023530/https://sec.ch9.ms/ch9/c8b3/0ab0c492-3f44-4b1c-b699-d40c658dc8b3/BillHill2004HomoSapiensOS.mp3\nThe most important operating system developers write software for is not Windows or OSX or Linux or Android. It's Homo sapiens 1.0. We make software for people first. Very wise words from a very wise soul, Bill Hill. [http://channel9.msdn.com/Blogs/TheChannel9Team/Bill-Hill-Windows-is-not-the-most-important-OS channel9 blog]"
     },
     {
       "type": "paragraph",
@@ -747,6 +747,16 @@
         "text": "We currently don't support drag and dropping a mp3 to a factory. We expect a link to an audio file, hosted elsewhere on the internet, to be the first line - with the rest being used to create a caption."
       },
       "date": 1424345704255
+    },
+    {
+      "type": "edit",
+      "id": "4ea0412bf78c1001",
+      "item": {
+        "type": "audio",
+        "id": "4ea0412bf78c1001",
+        "text": "https://web.archive.org/web/20200805023530/https://sec.ch9.ms/ch9/c8b3/0ab0c492-3f44-4b1c-b699-d40c658dc8b3/BillHill2004HomoSapiensOS.mp3\nThe most important operating system developers write software for is not Windows or OSX or Linux or Android. It's Homo sapiens 1.0. We make software for people first. Very wise words from a very wise soul, Bill Hill. [http://channel9.msdn.com/Blogs/TheChannel9Team/Bill-Hill-Windows-is-not-the-most-important-OS channel9 blog]"
+      },
+      "date": 1671793068400
     }
   ],
   "plugin": "audio"

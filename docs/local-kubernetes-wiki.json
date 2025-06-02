@@ -7,14 +7,27 @@
       "text": "How to install wiki in a local kubernetes cluster running in docker on an Apple computer."
     },
     {
+      "type": "reference",
+      "id": "4e8e342b350efb22",
+      "text": "This page is a 🍂 Decomposing [[How To]].",
+      "site": "meta.wiki.do",
+      "slug": "meta",
+      "title": "Meta"
+    },
+    {
+      "type": "paragraph",
+      "id": "ad1f91a9cb1e908c",
+      "text": "I now prefer [[LaunchAgent Wiki]]."
+    },
+    {
       "type": "paragraph",
       "id": "69ee14d697dde4c4",
-      "text": "We rely on many helpful tools from many opensource communities and a few commercial businesses too: kubernetes and docker, of course, homebrew, Rancher's k3s and k3d in particular. We also rely on a static wiki to bootstrap our authoring and development environment, currently hosted in a GitHub repo."
+      "text": "We rely on many helpful tools from many opensource communities and a few commercial businesses too: kubernetes and docker, of course, homebrew, Rancher's k3s and k3d in particular. We also rely on a static wiki to bootstrap our authoring and development environment, currently hosted in a GitHub repo. [https://github.com/dobbs/deploy.wiki.do github]"
     },
     {
       "type": "code",
       "id": "d2aea1f51a255075",
-      "text": "git clone https://github.com/dobbs/deploy.wiki.do\ncd deploy.wiki.do\nPATH=${PATH}:${PWD}/assets/bin\ninstall-k3d.sh\ninstall-k8s-wiki.sh"
+      "text": "git clone https://github.com/dobbs/deploy.wiki.do\ncd deploy.wiki.do\nPATH=${PATH}:${PWD}/docs/assets/bin\ninstall-k3d.sh\ninstall-k8s-wiki.sh"
     },
     {
       "type": "paragraph",
@@ -211,6 +224,78 @@
         "text": "We rely on many helpful tools from many opensource communities and a few commercial businesses too: kubernetes and docker, of course, homebrew, Rancher's k3s and k3d in particular. We also rely on a static wiki to bootstrap our authoring and development environment, currently hosted in a GitHub repo."
       },
       "date": 1610950909402
+    },
+    {
+      "type": "edit",
+      "id": "69ee14d697dde4c4",
+      "item": {
+        "type": "paragraph",
+        "id": "69ee14d697dde4c4",
+        "text": "We rely on many helpful tools from many opensource communities and a few commercial businesses too: kubernetes and docker, of course, homebrew, Rancher's k3s and k3d in particular. We also rely on a static wiki to bootstrap our authoring and development environment, currently hosted in a GitHub repo. [git clone https://github.com/dobbs/deploy.wiki.do github]"
+      },
+      "date": 1748698345238
+    },
+    {
+      "type": "edit",
+      "id": "69ee14d697dde4c4",
+      "item": {
+        "type": "paragraph",
+        "id": "69ee14d697dde4c4",
+        "text": "We rely on many helpful tools from many opensource communities and a few commercial businesses too: kubernetes and docker, of course, homebrew, Rancher's k3s and k3d in particular. We also rely on a static wiki to bootstrap our authoring and development environment, currently hosted in a GitHub repo. [https://github.com/dobbs/deploy.wiki.do github]"
+      },
+      "date": 1748698356213
+    },
+    {
+      "id": "4e8e342b350efb22",
+      "type": "add",
+      "item": {
+        "type": "reference",
+        "id": "4e8e342b350efb22",
+        "text": "This page is a [[How To]].",
+        "site": "meta.wiki.do",
+        "slug": "meta",
+        "title": "Meta"
+      },
+      "after": "65fd92996e99b81a",
+      "attribution": {
+        "page": "How to Annotate Wiki Pages",
+        "site": "meta.wiki.do"
+      },
+      "date": 1748700388576
+    },
+    {
+      "type": "edit",
+      "id": "4e8e342b350efb22",
+      "item": {
+        "type": "reference",
+        "id": "4e8e342b350efb22",
+        "text": "This page is a 🍂 Decomposing [[How To]].",
+        "site": "meta.wiki.do",
+        "slug": "meta",
+        "title": "Meta"
+      },
+      "date": 1748700405797
+    },
+    {
+      "type": "edit",
+      "id": "d2aea1f51a255075",
+      "item": {
+        "type": "code",
+        "id": "d2aea1f51a255075",
+        "text": "git clone https://github.com/dobbs/deploy.wiki.do\ncd deploy.wiki.do\nPATH=${PATH}:${PWD}/docs/assets/bin\ninstall-k3d.sh\ninstall-k8s-wiki.sh"
+      },
+      "date": 1748700994373
+    },
+    {
+      "type": "add",
+      "id": "ad1f91a9cb1e908c",
+      "item": {
+        "type": "paragraph",
+        "id": "ad1f91a9cb1e908c",
+        "text": "I now prefer [[LaunchAgent Wiki]]."
+      },
+      "after": "4e8e342b350efb22",
+      "date": 1748882190542
     }
   ]
 }

@@ -1,123 +1,51 @@
-"use strict";
-
-(function () {
-  /*
-   * Federated Wiki : Video Plugin
-   *
-   * Licensed under the MIT license.
-   * https://github.com/fedwiki/wiki-plugin-video/blob/master/LICENSE.txt
-   */
-  var UrlAdapter, bind, embed, emit, parse;
-
-  parse = function parse() {
-    var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    var args, err, i, len, line, ref, result, url;
-    result = {};
-    ref = text.split(/\r\n?|\n/);
-
-    for (i = 0, len = ref.length; i < len; i++) {
-      line = ref[i];
-
-      if (args = line.match(/^\s*([A-Z0-9]{3,})\s+([\w\.\-\/+0-9]+)\s*$/)) {
-        result.player = args[1];
-        result.options = '';
-        result.key = args[2];
-      } else if (args = line.match(/^\s*([A-Z0-9]{3,})\s+([A-Z\,]+)\s+([\w\.\-\/+0-9]+)\s*$/)) {
-        result.player = args[1];
-        result.options = args[2];
-        result.key = args[3];
-      } else if (args = line.match(/^\s*(HTML5)\s+([A-Za-z0-9]+)\s+(.+)\s*$/)) {
-        try {
-          url = new UrlAdapter(args[3]);
-        } catch (error) {
-          err = error;
-          console.log("failed to parse URL: ".concat(err));
-        }
-
-        result.player = args[1];
-        result.options = args[2];
-        result.key = url.href;
-      } else {
-        result.caption || (result.caption = ' ');
-        result.caption += line + ' ';
-      }
-    }
-
-    return result;
-  };
-
-  embed = function embed(_ref) {
-    var player = _ref.player,
-        options = _ref.options,
-        key = _ref.key;
-
-    switch (player) {
-      case 'YOUTUBE':
-        if (options.toUpperCase() === "PLAYLIST") {
-          return "<iframe\n  width=\"420\" height=\"236\"\n  src=\"https://www.youtube-nocookie.com/embed/videoseries?list=".concat(key, "\"\n  frameborder=\"0\"\n  allowfullscreen>\n</iframe>");
-        } else {
-          return "<iframe\n  width=\"420\" height=\"236\"\n  src=\"https://www.youtube-nocookie.com/embed/".concat(key, "?rel=0\"\n  frameborder=\"0\"\n  allowfullscreen>\n</iframe>");
-        }
-
-        break;
-
-      case 'VIMEO':
-        return "<iframe\n  src=\"https://player.vimeo.com/video/".concat(key, "?title=0&amp;byline=0&amp;portrait=0\"\n  width=\"420\" height=\"236\"\n  frameborder=\"0\"\n  allowfullscreen>\n</iframe>");
-
-      case 'ARCHIVE':
-        return "<iframe\n  src=\"https://archive.org/embed/".concat(key, "\"\n  width=\"420\" height=\"315\"\n  frameborder=\"0\" webkitallowfullscreen=\"true\" mozallowfullscreen=\"true\"\n  allowfullscreen>\n</iframe>");
-
-      case 'TED':
-        return "<iframe\n  src=\"https://embed-ssl.ted.com/talks/".concat(key, ".html\"\n  width=\"420\" height=\"300\"\n  frameborder=\"0\" scrolling=\"no\" webkitAllowFullScreen mozallowfullscreen\n  allowFullScreen>\n</iframe>");
-
-      case 'TEDX':
-        return "<iframe\n  src=\"http://tedxtalks.ted.com/video/".concat(key, "/player?layout=&amp;read_more=1\"\n  width=\"420\" height=\"300\"\n  frameborder=\"0\" scrolling=\"no\">\n</iframe>");
-
-      case 'CHANNEL9':
-        return "<iframe\n  src=\"https://channel9.msdn.com/".concat(key, "/player\"\n  width=\"420\" height=\"236\"\n  allowFullScreen frameBorder=\"0\">\n</iframe>");
-
-      case 'HTML5':
-        return "<video controls width=\"100%\">\n  <source src=\"".concat(key, "\"\n          type=\"video/").concat(options, "\">\n</video>");
-
-      default:
-        return "(unknown player)";
-    }
-  };
-
-  emit = function emit($item, item) {
-    var result;
-    result = parse(item.text);
-    return $item.append("".concat(embed(result), "\n<br>\n<i>").concat(wiki.resolveLinks(result.caption || "(no caption)"), "</i>"));
-  };
-
-  bind = function bind($item, item) {
-    return $item.dblclick(function () {
-      return wiki.textEditor($item, item);
-    });
-  };
-
-  if (typeof window !== "undefined" && window !== null) {
-    UrlAdapter = URL;
-  }
-
-  if (typeof module !== "undefined" && module !== null) {
-    UrlAdapter = require('url').URL;
-  }
-
-  if (typeof window !== "undefined" && window !== null) {
-    window.plugins.video = {
-      emit: emit,
-      bind: bind,
-      UrlAdapter: UrlAdapter
-    };
-  }
-
-  if (typeof module !== "undefined" && module !== null) {
-    module.exports = {
-      parse: parse,
-      embed: embed,
-      UrlAdapter: UrlAdapter
-    };
-  }
-}).call(void 0);
+/* wiki-plugin-video - 0.4.0 - Sat, 03 May 2025 11:08:54 GMT */
+(()=>{var a=(l="")=>{let r={},e=null,t;for(let s of l.split(/\r\n?|\n/))if(e=s.match(/^\s*START\s+([\w:.]+)\s*$/))r.start=e[1];else if(e=s.match(/^\s*END\s+([\w:.]+)\s*$/))r.end=e[1];else if(e=s.match(/^\s*([A-Z0-9]{3,})\s+([\w.\-/+0-9]+)\s*$/))r.player=e[1],r.options="",r.key=e[2];else if(e=s.match(/^\s*([A-Z0-9]{3,})\s+([A-Z,]+)\s+([\w.\-/+0-9]+)\s*$/))r.player=e[1],r.options=e[2],r.key=e[3];else if(e=s.match(/^\s*(HTML5)\s+([A-Za-z0-9]+)\s+(.+)\s*$/)){try{t=new URL(e[3])}catch(i){console.log(`failed to parse URL: ${i}`)}r.player=e[1],r.options=e[2],r.key=t.href}else r.caption||=" ",r.caption+=s+" ";return r},c=({player:l,options:r,key:e,start:t,end:s})=>{let i=[];switch(l){case"YOUTUBE":return r.toUpperCase()==="PLAYLIST"?`
+          <iframe
+            width="420" height="236"
+            src="https://www.youtube-nocookie.com/embed/videoseries?list=${e}&rel=0"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        `:(i=[],t&&i.push(`start=${t.split(":").reduce((o,n)=>o*60+Number(n))}`),s&&i.push(`end=${s.split(":").reduce((o,n)=>o*60+Number(n))}`),i.push("rel=0"),`
+          <iframe
+            width="420" height="236"
+            src="https://www.youtube-nocookie.com/embed/${e}?${i.join("&")}"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        `);case"VIMEO":return i=[],i.push("byline=0"),i.push("dnt=1"),i.push("portrait=0"),i.push("title=0"),t&&i.push(`#t=${t}`),`
+        <iframe
+          src="https://player.vimeo.com/video/${e}?${i.join("&")}"
+          width="420" height="236"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      `;case"ARCHIVE":return`
+        <iframe
+          src="https://archive.org/embed/${e}"
+          width="420" height="315"
+          frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true"
+          allowfullscreen>
+        </iframe>
+      `;case"TED":return`
+        <iframe
+          src="https://embed-ssl.ted.com/talks/${e}.html"
+          width="420" height="300"
+          frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen
+          allowFullScreen>
+        </iframe>
+      `;case"HTML5":if(!e.includes("#t=")&&t||s){let o="#t=";t&&(o+=t),s&&(o+=`,${s}`),e=e+o}return`
+        <video controls preload="metadata" width="100%">
+          <source src="${e}"
+                  type="video/${r}">
+        </video>
+      `;case"TEDX":return`
+        <i>TEDx talks are now available in the TEDx YouTube channel. See ${wiki.resolveLinks("[[Updating TEDx items]]")} for help.</i><br>
+      `;case"CHANNEL9":return`
+        <i>The Channel 9 site closed, see ${wiki.resolveLinks("[[Updating CHANNEL9 items]]")} for help.</i><br>
+      `;default:return"(unknown player)"}},u=(l,r)=>{let e=a(r.text);l.append(`
+    ${c(e)}
+    <br>
+    <i>${wiki.resolveLinks(e.caption||"(no caption)")}</i>
+  `)},f=(l,r)=>{l.on("dblclick",()=>wiki.textEditor(l,r))};typeof window<"u"&&(window.plugins.video={emit:u,bind:f});var d=typeof window>"u"?{parse:a,embed:c}:void 0;})();
 //# sourceMappingURL=video.js.map

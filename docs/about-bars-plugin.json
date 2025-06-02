@@ -202,11 +202,6 @@
     },
     {
       "type": "paragraph",
-      "id": "63b0c13132e1eff0",
-      "text": "This is the bar chart example from the d3.js distribution.  [http://mbostock.github.com/d3/ website] "
-    },
-    {
-      "type": "paragraph",
       "id": "3d13c0fd5cccf15a",
       "text": "See [[D3 Bars]] for a bar chart without attached data."
     },
@@ -719,6 +714,11 @@
       ],
       "id": "40aca0157e6f8cf0",
       "date": 1401598599424
+    },
+    {
+      "type": "remove",
+      "id": "63b0c13132e1eff0",
+      "date": 1677586418004
     }
   ],
   "plugin": "bars"

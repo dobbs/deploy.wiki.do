@@ -1,0 +1,5 @@
+.code pre code.hljs {
+  background: #eee;
+  white-space: pre-wrap;
+  padding: 6px;
+}

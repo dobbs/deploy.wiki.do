@@ -4,42 +4,55 @@
     {
       "type": "paragraph",
       "id": "60eaa979515de454",
-      "text": "We have many ways to run a wiki farm locally. This example runs wiki on our MacOS computer using node.js and federated wiki software. We configure a LaunchAgent to run our wiki on port 80 and to keep it running."
+      "text": "I have tried many ways to run a wiki farm locally (on MacOS). I now prefer running federated wiki directly in node.js with a LaunchAgent to use port 80 and to keep it running."
+    },
+    {
+      "type": "reference",
+      "id": "4e8e342b350efb22",
+      "text": "This page is a 🌿 Budding [[How To]].",
+      "site": "meta.wiki.do",
+      "slug": "meta",
+      "title": "Meta"
     },
     {
       "type": "paragraph",
-      "id": "820601a827825ef4",
-      "text": "We host a small deno program in an asset folder which is also shown here for inspection and transparency. It generates a MacOS LaunchAgent configuration file."
+      "id": "e377f3b98af93b16",
+      "text": "(Re)install wiki to a known good state:"
     },
     {
-      "type": "frame",
-      "id": "aa09bc1038b044ce",
-      "text": "http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 800"
+      "type": "code",
+      "id": "1ca1a2188fdc5e8d",
+      "text": "# stop the running wiki\nlaunchctl unload \\\n  ${HOME}/Library/LaunchAgents/localhost.wiki.plist\n# remove\nnpm remove -g wiki\n\n# install\nnpm install -g wiki\n# start the wiki\nlaunchctl load \\\n  ${HOME}/Library/LaunchAgents/localhost.wiki.plist"
     },
     {
       "type": "paragraph",
       "id": "29d7a02d53e418c3",
-      "text": "I use that program from the command line to compare with my current configuration."
+      "text": "I use a small deno program from the command line to compare with my current LaunchAgent configuration. This step protects me in case I make changes locally and forget to update this page with those changes."
     },
     {
       "type": "code",
       "id": "44b3c69f57a364ff",
-      "text": "#!/usr/bin/env bash\nURL=http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\ndiff -u \\\n  <(deno run --reload --allow-env $URL) \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
-    },
-    {
-      "type": "paragraph",
-      "id": "b79a85e005652c08",
-      "text": "This step protects me from my future self in case I make changes locally and forget to update this page with those changes."
+      "text": "# check for changes in the LaunchAgent\nURL=http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\ndiff -u \\\n  <(deno run --reload --allow-env $URL) \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
     },
     {
       "type": "paragraph",
       "id": "fd6d5b99b0b3baa7",
-      "text": "I also use that program from the command line to install this launch agent to run wiki locally."
+      "text": "I use the same program to install the LaunchAgent."
     },
     {
       "type": "code",
       "id": "2aeeb85c7b350110",
-      "text": "#!/usr/bin/env bash\n# install the LaunchAgent\nURL=http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\ndeno run --reload --allow-env $URL \\\n  > $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# disable the previous configuration\nlaunchctl unload \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# enable the new configuration\nlaunchctl load \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
+      "text": "# install the LaunchAgent\nURL=http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\ndeno run --reload --allow-env $URL \\\n  > $HOME/Library/LaunchAgents/localhost.wiki.plist"
+    },
+    {
+      "type": "paragraph",
+      "id": "820601a827825ef4",
+      "text": "The program is hosted here in an asset folder and also displayed in a frame below for inspection and transparency."
+    },
+    {
+      "type": "frame",
+      "id": "aa09bc1038b044ce",
+      "text": "https://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 800"
     }
   ],
   "journal": [
@@ -173,6 +186,303 @@
         "text": "#!/usr/bin/env bash\n# install the LaunchAgent\nURL=http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\ndeno run --reload --allow-env $URL \\\n  > $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# disable the previous configuration\nlaunchctl unload \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# enable the new configuration\nlaunchctl load \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
       },
       "date": 1686420777170
+    },
+    {
+      "type": "edit",
+      "id": "2aeeb85c7b350110",
+      "item": {
+        "type": "code",
+        "id": "2aeeb85c7b350110",
+        "text": "#!/usr/bin/env bash\n# disable the previous configuration\nlaunchctl unload \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# install the LaunchAgent\nURL=http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\ndeno run --reload --allow-env $URL \\\n  > $HOME/Library/LaunchAgents/localhost.wiki.plist\n\n# enable the new configuration\nlaunchctl load \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1748701100045
+    },
+    {
+      "id": "4e8e342b350efb22",
+      "type": "add",
+      "item": {
+        "type": "reference",
+        "id": "4e8e342b350efb22",
+        "text": "This page is a [[How To]].",
+        "site": "meta.wiki.do",
+        "slug": "meta",
+        "title": "Meta"
+      },
+      "after": "60eaa979515de454",
+      "attribution": {
+        "page": "How to Annotate Wiki Pages",
+        "site": "meta.wiki.do"
+      },
+      "date": 1748701317463
+    },
+    {
+      "type": "edit",
+      "id": "60eaa979515de454",
+      "item": {
+        "type": "paragraph",
+        "id": "60eaa979515de454",
+        "text": "I have tried many ways to run a wiki farm locally. This is the one I now prefer. It runs on a MacOS computer using node.js and federated wiki software. I configure a LaunchAgent to run the wiki on port 80 and to keep it running."
+      },
+      "date": 1748701568969
+    },
+    {
+      "type": "edit",
+      "id": "4e8e342b350efb22",
+      "item": {
+        "type": "reference",
+        "id": "4e8e342b350efb22",
+        "text": "This page is a 🌿 Budding [[How To]].",
+        "site": "meta.wiki.do",
+        "slug": "meta",
+        "title": "Meta"
+      },
+      "date": 1748701584592
+    },
+    {
+      "type": "edit",
+      "id": "820601a827825ef4",
+      "item": {
+        "type": "paragraph",
+        "id": "820601a827825ef4",
+        "text": "I host a small deno program in an asset folder which is also shown here for inspection and transparency. It generates a MacOS LaunchAgent configuration file."
+      },
+      "date": 1748710736629
+    },
+    {
+      "type": "add",
+      "id": "e377f3b98af93b16",
+      "item": {
+        "type": "paragraph",
+        "id": "e377f3b98af93b16",
+        "text": "Sometimes I reinstall wiki to reset my local code to a known good state."
+      },
+      "after": "4e8e342b350efb22",
+      "date": 1748710833210
+    },
+    {
+      "type": "add",
+      "id": "1ca1a2188fdc5e8d",
+      "item": {
+        "type": "factory",
+        "id": "1ca1a2188fdc5e8d",
+        "text": "..."
+      },
+      "after": "e377f3b98af93b16",
+      "date": 1748710834175
+    },
+    {
+      "type": "edit",
+      "id": "1ca1a2188fdc5e8d",
+      "item": {
+        "type": "code",
+        "id": "1ca1a2188fdc5e8d",
+        "text": "# stop the running wiki\nlaunchctl unload \\\n  ${HOME}/Library/LaunchAgents/localhost.wiki.plist\n# remove and reinstall\nnpm remove -g wiki\nnpm install -g wiki\n# start the wiki\nlaunchctl load \\\n  ${HOME}/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1748711009127
+    },
+    {
+      "type": "edit",
+      "id": "e377f3b98af93b16",
+      "item": {
+        "type": "paragraph",
+        "id": "e377f3b98af93b16",
+        "text": "(Re)install wiki to reset to a known good state:"
+      },
+      "date": 1748727239457
+    },
+    {
+      "type": "edit",
+      "id": "1ca1a2188fdc5e8d",
+      "item": {
+        "type": "code",
+        "id": "1ca1a2188fdc5e8d",
+        "text": "# stop the running wiki\nlaunchctl unload \\\n  ${HOME}/Library/LaunchAgents/localhost.wiki.plist\n# remove\nnpm remove -g wiki\n\n# install\nnpm install -g wiki\n# start the wiki\nlaunchctl load \\\n  ${HOME}/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1748727267696
+    },
+    {
+      "type": "edit",
+      "id": "60eaa979515de454",
+      "item": {
+        "type": "paragraph",
+        "id": "60eaa979515de454",
+        "text": "I have tried many ways to run a wiki farm locally (on MacOS). I now prefer running federated wiki directly in node.js with a LaunchAgent to use port 80 and to keep it running."
+      },
+      "date": 1748727413216
+    },
+    {
+      "type": "edit",
+      "id": "e377f3b98af93b16",
+      "item": {
+        "type": "paragraph",
+        "id": "e377f3b98af93b16",
+        "text": "(Re)install wiki to a known good state:"
+      },
+      "date": 1748727486000
+    },
+    {
+      "id": "820601a827825ef4",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "4e8e342b350efb22",
+        "e377f3b98af93b16",
+        "1ca1a2188fdc5e8d",
+        "aa09bc1038b044ce",
+        "29d7a02d53e418c3",
+        "44b3c69f57a364ff",
+        "b79a85e005652c08",
+        "fd6d5b99b0b3baa7",
+        "2aeeb85c7b350110",
+        "820601a827825ef4"
+      ],
+      "date": 1748727569005
+    },
+    {
+      "id": "aa09bc1038b044ce",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "4e8e342b350efb22",
+        "e377f3b98af93b16",
+        "1ca1a2188fdc5e8d",
+        "29d7a02d53e418c3",
+        "44b3c69f57a364ff",
+        "b79a85e005652c08",
+        "fd6d5b99b0b3baa7",
+        "2aeeb85c7b350110",
+        "820601a827825ef4",
+        "aa09bc1038b044ce"
+      ],
+      "date": 1748727577575
+    },
+    {
+      "type": "edit",
+      "id": "29d7a02d53e418c3",
+      "item": {
+        "type": "paragraph",
+        "id": "29d7a02d53e418c3",
+        "text": "I use a small deno program from the command line to compare with my current LaunchAgent configuration."
+      },
+      "date": 1748727634670
+    },
+    {
+      "id": "b79a85e005652c08",
+      "type": "move",
+      "order": [
+        "60eaa979515de454",
+        "4e8e342b350efb22",
+        "e377f3b98af93b16",
+        "1ca1a2188fdc5e8d",
+        "29d7a02d53e418c3",
+        "b79a85e005652c08",
+        "44b3c69f57a364ff",
+        "fd6d5b99b0b3baa7",
+        "2aeeb85c7b350110",
+        "820601a827825ef4",
+        "aa09bc1038b044ce"
+      ],
+      "date": 1748727675515
+    },
+    {
+      "type": "remove",
+      "id": "b79a85e005652c08",
+      "date": 1748727678695
+    },
+    {
+      "type": "edit",
+      "id": "29d7a02d53e418c3",
+      "item": {
+        "type": "paragraph",
+        "id": "29d7a02d53e418c3",
+        "text": "I use a small deno program from the command line to compare with my current LaunchAgent configuration. This step protects me in case I make changes locally and forget to update this page with those changes."
+      },
+      "date": 1748727704473
+    },
+    {
+      "type": "edit",
+      "id": "44b3c69f57a364ff",
+      "item": {
+        "type": "code",
+        "id": "44b3c69f57a364ff",
+        "text": "URL=http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\ndiff -u \\\n  <(deno run --reload --allow-env $URL) \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1748727778817
+    },
+    {
+      "type": "edit",
+      "id": "2aeeb85c7b350110",
+      "item": {
+        "type": "code",
+        "id": "2aeeb85c7b350110",
+        "text": "# install the LaunchAgent\nURL=http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\ndeno run --reload --allow-env $URL \\\n  > $HOME/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1748727802455
+    },
+    {
+      "type": "edit",
+      "id": "44b3c69f57a364ff",
+      "item": {
+        "type": "code",
+        "id": "44b3c69f57a364ff",
+        "text": "# check for changes in the LaunchAgent\nURL=http://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\ndiff -u \\\n  <(deno run --reload --allow-env $URL) \\\n  $HOME/Library/LaunchAgents/localhost.wiki.plist"
+      },
+      "date": 1748727826294
+    },
+    {
+      "type": "edit",
+      "id": "fd6d5b99b0b3baa7",
+      "item": {
+        "type": "paragraph",
+        "id": "fd6d5b99b0b3baa7",
+        "text": "I use the same program to install the LaunchAgent."
+      },
+      "date": 1748727857368
+    },
+    {
+      "type": "edit",
+      "id": "820601a827825ef4",
+      "item": {
+        "type": "paragraph",
+        "id": "820601a827825ef4",
+        "text": "The program is hosted here in an asset folder and also displayed in a frame below for inspection and transparency."
+      },
+      "date": 1748727917009
+    },
+    {
+      "type": "edit",
+      "id": "aa09bc1038b044ce",
+      "item": {
+        "type": "frame",
+        "id": "aa09bc1038b044ce",
+        "text": "https://deploy.wiki.do/assets/pages/launchagent-wiki/launchagent-plist.js\nHEIGHT 800"
+      },
+      "date": 1748728502284
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dd27ab481c9a1557"
+      },
+      "id": "dd27ab481c9a1557",
+      "type": "add",
+      "after": "aa09bc1038b044ce",
+      "date": 1748881901985
+    },
+    {
+      "type": "edit",
+      "id": "dd27ab481c9a1557",
+      "item": {
+        "type": "paragraph",
+        "id": "dd27ab481c9a1557",
+        "text": "I have also installed node version manager (nvm). I don't often experiment with different versions of node, but take some comfort in having that tool available in case I need to troubleshoot another version. See [[Wiki on Localhost]]."
+      },
+      "date": 1748882079093
+    },
+    {
+      "type": "remove",
+      "id": "dd27ab481c9a1557",
+      "date": 1748884954827
     }
   ]
 }

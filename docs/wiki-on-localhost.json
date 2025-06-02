@@ -7,14 +7,32 @@
       "text": "We have options for running wiki locally."
     },
     {
-      "type": "paragraph",
-      "id": "b69be05cbb9e6c5c",
-      "text": "[http://wiki.localhost:3000 wiki.localhost:3000]"
+      "type": "reference",
+      "id": "4e8e342b350efb22",
+      "text": "This page is a [[How To]].",
+      "site": "meta.wiki.do",
+      "slug": "meta",
+      "title": "Meta"
     },
     {
       "type": "code",
-      "id": "781cbdb4ccb7190c",
-      "text": "# a few steps for local development\n# not strictly necessary, but convenient to isolate installation to a specific version of node\nnvm install --lts\nnvm alias wikidev 14\nnvm use wikidev\n\n# this step is for anyone\ngit clone git@github.com:fedwiki/wiki.git\ncd wiki\nnpm install -g ."
+      "id": "4d8195ed6c3bc365",
+      "text": "# for authors interested in writing in a local wiki\nnpm install -g wiki"
+    },
+    {
+      "type": "paragraph",
+      "id": "8370012d1a6fc165",
+      "text": "To run wiki as a service, see [[LaunchAgent Wiki]]."
+    },
+    {
+      "type": "code",
+      "id": "9fcadf5d50f3b734",
+      "text": "# for developers interested in hacking wiki\ngit clone git@github.com:fedwiki/wiki.git\ncd wiki\nnpm install -g ."
+    },
+    {
+      "type": "paragraph",
+      "id": "b69be05cbb9e6c5c",
+      "text": "[http://wiki.localhost:3000 wiki.localhost:3000]"
     },
     {
       "type": "code",
@@ -27,9 +45,34 @@
       "text": "See also [[Local Kubernetes Wiki]]"
     },
     {
+      "type": "pagefold",
+      "id": "740eab17941a734b",
+      "text": "."
+    },
+    {
       "type": "paragraph",
-      "id": "8370012d1a6fc165",
-      "text": "See also [[LaunchAgent Wiki]]"
+      "id": "45a78db8396004ec",
+      "text": "Over time I installed node in two ways: nvm and homebrew. I haven't developed a strong preference and also haven't encountered problems for having both. I do have some vague sense of comfort in having nvm around in case I need to troubleshoot code using different versions of node."
+    },
+    {
+      "type": "paragraph",
+      "id": "b59d634420a1ad2c",
+      "text": "See NVM installation instructions [https://github.com/nvm-sh/nvm?tab=readme-ov-file#node-version-manager--- nvm-sh/nvm]."
+    },
+    {
+      "type": "code",
+      "id": "781cbdb4ccb7190c",
+      "text": "# a few steps for local development\n# not strictly necessary, but convenient to isolate installation to a specific version of node\nnvm install --lts\nnvm alias wikidev lts\nnvm use wikidev"
+    },
+    {
+      "type": "paragraph",
+      "id": "217fbf4570749f7f",
+      "text": "See homebrew installation instructions [https://brew.sh/ site]."
+    },
+    {
+      "type": "code",
+      "id": "1db521da5bd2be32",
+      "text": "brew install node"
     }
   ],
   "journal": [
@@ -200,6 +243,350 @@
         "text": "See also [[LaunchAgent Wiki]]"
       },
       "date": 1686274622353
+    },
+    {
+      "id": "4e8e342b350efb22",
+      "type": "add",
+      "item": {
+        "type": "reference",
+        "id": "4e8e342b350efb22",
+        "text": "This page is a [[How To]].",
+        "site": "meta.wiki.do",
+        "slug": "meta",
+        "title": "Meta"
+      },
+      "after": "4f8e785f85d961a7",
+      "attribution": {
+        "page": "How to Annotate Wiki Pages",
+        "site": "meta.wiki.do"
+      },
+      "date": 1748883924853
+    },
+    {
+      "id": "25b5b41af4312f23",
+      "type": "move",
+      "order": [
+        "4f8e785f85d961a7",
+        "4e8e342b350efb22",
+        "b69be05cbb9e6c5c",
+        "781cbdb4ccb7190c",
+        "3507914727ebfc00",
+        "8370012d1a6fc165",
+        "25b5b41af4312f23"
+      ],
+      "date": 1748883971579
+    },
+    {
+      "id": "b69be05cbb9e6c5c",
+      "type": "move",
+      "order": [
+        "4f8e785f85d961a7",
+        "4e8e342b350efb22",
+        "781cbdb4ccb7190c",
+        "b69be05cbb9e6c5c",
+        "3507914727ebfc00",
+        "8370012d1a6fc165",
+        "25b5b41af4312f23"
+      ],
+      "date": 1748883990956
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d7b416ef3fd81f31"
+      },
+      "id": "d7b416ef3fd81f31",
+      "type": "add",
+      "after": "25b5b41af4312f23",
+      "date": 1748884033486
+    },
+    {
+      "type": "remove",
+      "id": "d7b416ef3fd81f31",
+      "date": 1748884050439
+    },
+    {
+      "type": "add",
+      "id": "9fcadf5d50f3b734",
+      "item": {
+        "type": "factory",
+        "id": "9fcadf5d50f3b734",
+        "text": "..."
+      },
+      "after": "b69be05cbb9e6c5c",
+      "date": 1748884079807
+    },
+    {
+      "type": "edit",
+      "id": "9fcadf5d50f3b734",
+      "item": {
+        "type": "code",
+        "id": "9fcadf5d50f3b734",
+        "text": "# this step is for anyone\ngit clone git@github.com:fedwiki/wiki.git\ncd wiki\nnpm install -g ."
+      },
+      "date": 1748884089976
+    },
+    {
+      "id": "9fcadf5d50f3b734",
+      "type": "move",
+      "order": [
+        "4f8e785f85d961a7",
+        "4e8e342b350efb22",
+        "781cbdb4ccb7190c",
+        "9fcadf5d50f3b734",
+        "b69be05cbb9e6c5c",
+        "3507914727ebfc00",
+        "8370012d1a6fc165",
+        "25b5b41af4312f23"
+      ],
+      "date": 1748884092328
+    },
+    {
+      "type": "edit",
+      "id": "781cbdb4ccb7190c",
+      "item": {
+        "type": "code",
+        "id": "781cbdb4ccb7190c",
+        "text": "# a few steps for local development\n# not strictly necessary, but convenient to isolate installation to a specific version of node\nnvm install --lts\nnvm alias wikidev 14\nnvm use wikidev"
+      },
+      "date": 1748884097146
+    },
+    {
+      "type": "edit",
+      "id": "781cbdb4ccb7190c",
+      "item": {
+        "type": "code",
+        "id": "781cbdb4ccb7190c",
+        "text": "# a few steps for local development\n# not strictly necessary, but convenient to isolate installation to a specific version of node\nnvm install --lts\nnvm alias wikidev lts\nnvm use wikidev"
+      },
+      "date": 1748884200345
+    },
+    {
+      "id": "781cbdb4ccb7190c",
+      "type": "move",
+      "order": [
+        "4f8e785f85d961a7",
+        "4e8e342b350efb22",
+        "9fcadf5d50f3b734",
+        "b69be05cbb9e6c5c",
+        "3507914727ebfc00",
+        "781cbdb4ccb7190c",
+        "8370012d1a6fc165",
+        "25b5b41af4312f23"
+      ],
+      "date": 1748884214544
+    },
+    {
+      "type": "edit",
+      "id": "9fcadf5d50f3b734",
+      "item": {
+        "type": "code",
+        "id": "9fcadf5d50f3b734",
+        "text": "# this step is for developers interested in hacking wiki\ngit clone git@github.com:fedwiki/wiki.git\ncd wiki\nnpm install -g ."
+      },
+      "date": 1748884253477
+    },
+    {
+      "type": "edit",
+      "id": "9fcadf5d50f3b734",
+      "item": {
+        "type": "code",
+        "id": "9fcadf5d50f3b734",
+        "text": "# for developers interested in hacking wiki\ngit clone git@github.com:fedwiki/wiki.git\ncd wiki\nnpm install -g ."
+      },
+      "date": 1748884261579
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4d8195ed6c3bc365"
+      },
+      "id": "4d8195ed6c3bc365",
+      "type": "add",
+      "after": "25b5b41af4312f23",
+      "date": 1748884280585
+    },
+    {
+      "type": "edit",
+      "id": "4d8195ed6c3bc365",
+      "item": {
+        "type": "code",
+        "id": "4d8195ed6c3bc365",
+        "text": "# for authors interested in writing in a local wiki\nnpm install -g wiki"
+      },
+      "date": 1748884311805
+    },
+    {
+      "id": "4d8195ed6c3bc365",
+      "type": "move",
+      "order": [
+        "4f8e785f85d961a7",
+        "4e8e342b350efb22",
+        "4d8195ed6c3bc365",
+        "9fcadf5d50f3b734",
+        "b69be05cbb9e6c5c",
+        "3507914727ebfc00",
+        "781cbdb4ccb7190c",
+        "8370012d1a6fc165",
+        "25b5b41af4312f23"
+      ],
+      "date": 1748884317888
+    },
+    {
+      "id": "8370012d1a6fc165",
+      "type": "move",
+      "order": [
+        "4f8e785f85d961a7",
+        "4e8e342b350efb22",
+        "4d8195ed6c3bc365",
+        "8370012d1a6fc165",
+        "9fcadf5d50f3b734",
+        "b69be05cbb9e6c5c",
+        "3507914727ebfc00",
+        "781cbdb4ccb7190c",
+        "25b5b41af4312f23"
+      ],
+      "date": 1748884334129
+    },
+    {
+      "type": "edit",
+      "id": "8370012d1a6fc165",
+      "item": {
+        "type": "paragraph",
+        "id": "8370012d1a6fc165",
+        "text": "To keep the wiki running as a service, see [[LaunchAgent Wiki]]."
+      },
+      "date": 1748884383262
+    },
+    {
+      "type": "edit",
+      "id": "8370012d1a6fc165",
+      "item": {
+        "type": "paragraph",
+        "id": "8370012d1a6fc165",
+        "text": "To run wiki as a service, see [[LaunchAgent Wiki]]."
+      },
+      "date": 1748884397559
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "740eab17941a734b"
+      },
+      "id": "740eab17941a734b",
+      "type": "add",
+      "after": "25b5b41af4312f23",
+      "date": 1748884428229
+    },
+    {
+      "type": "edit",
+      "id": "740eab17941a734b",
+      "item": {
+        "type": "paragraph",
+        "id": "740eab17941a734b",
+        "text": "..."
+      },
+      "date": 1748884432726
+    },
+    {
+      "type": "add",
+      "id": "45a78db8396004ec",
+      "item": {
+        "type": "paragraph",
+        "id": "45a78db8396004ec",
+        "text": "Over time I installed node in two ways: nvm and homebrew."
+      },
+      "after": "740eab17941a734b",
+      "date": 1748884516112
+    },
+    {
+      "id": "781cbdb4ccb7190c",
+      "type": "move",
+      "order": [
+        "4f8e785f85d961a7",
+        "4e8e342b350efb22",
+        "4d8195ed6c3bc365",
+        "8370012d1a6fc165",
+        "9fcadf5d50f3b734",
+        "b69be05cbb9e6c5c",
+        "3507914727ebfc00",
+        "25b5b41af4312f23",
+        "740eab17941a734b",
+        "45a78db8396004ec",
+        "781cbdb4ccb7190c"
+      ],
+      "date": 1748884699114
+    },
+    {
+      "type": "add",
+      "id": "b59d634420a1ad2c",
+      "item": {
+        "type": "paragraph",
+        "id": "b59d634420a1ad2c",
+        "text": "See NVM installation instructions [https://github.com/nvm-sh/nvm?tab=readme-ov-file#node-version-manager--- nvm-sh/nvm]."
+      },
+      "after": "45a78db8396004ec",
+      "date": 1748884742925
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "217fbf4570749f7f"
+      },
+      "id": "217fbf4570749f7f",
+      "type": "add",
+      "after": "781cbdb4ccb7190c",
+      "date": 1748884766409
+    },
+    {
+      "type": "edit",
+      "id": "217fbf4570749f7f",
+      "item": {
+        "type": "paragraph",
+        "id": "217fbf4570749f7f",
+        "text": "See homebrew installation instructions [https://brew.sh/ site]."
+      },
+      "date": 1748884781921
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1db521da5bd2be32"
+      },
+      "id": "1db521da5bd2be32",
+      "type": "add",
+      "after": "217fbf4570749f7f",
+      "date": 1748884789327
+    },
+    {
+      "type": "edit",
+      "id": "1db521da5bd2be32",
+      "item": {
+        "type": "code",
+        "id": "1db521da5bd2be32",
+        "text": "brew install node"
+      },
+      "date": 1748884795408
+    },
+    {
+      "type": "edit",
+      "id": "740eab17941a734b",
+      "item": {
+        "type": "pagefold",
+        "id": "740eab17941a734b",
+        "text": "."
+      },
+      "date": 1748884819866
+    },
+    {
+      "type": "edit",
+      "id": "45a78db8396004ec",
+      "item": {
+        "type": "paragraph",
+        "id": "45a78db8396004ec",
+        "text": "Over time I installed node in two ways: nvm and homebrew. I haven't developed a strong preference and also haven't encountered problems for having both. I do have some vague sense of comfort in having nvm around in case I need to troubleshoot code using different versions of node."
+      },
+      "date": 1748884910678
     }
   ]
 }

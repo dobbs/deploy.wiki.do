@@ -1,113 +1,13 @@
 [
   {
-    "name": "Activity",
-    "title": "Activity Plugin",
-    "pages": [
-      "Recent Changes"
-    ]
-  },
-  {
-    "name": "Assets",
-    "title": "Assets Plugin",
-    "category": "other"
-  },
-  {
-    "name": "Audio",
-    "title": "Audio",
+    "name": "Video",
+    "title": "YouTube or Vimeo",
     "category": "format"
   },
   {
-    "name": "Calculator",
-    "title": "Running Sums for Expenses",
+    "name": "Transport",
+    "title": "Transport Plugin",
     "category": "data"
-  },
-  {
-    "name": "Calendar",
-    "title": "Calendar Plugin",
-    "category": "data"
-  },
-  {
-    "name": "Changes",
-    "title": "View Changes in Browser Local Storage",
-    "pages": [
-      "Local Changes"
-    ]
-  },
-  {
-    "name": "Code",
-    "title": "Pretty-printed code",
-    "category": "format"
-  },
-  {
-    "name": "Frame",
-    "title": "Frame Plugin",
-    "category": "other"
-  },
-  {
-    "name": "Graphviz",
-    "title": "Dot Formatted Diagram",
-    "category": "format",
-    "pages": [
-      "Lineup Diagram"
-    ]
-  },
-  {
-    "name": "Grep",
-    "title": "Grep Plugin",
-    "category": "data"
-  },
-  {
-    "name": "HTML",
-    "title": "Sanitized HTML",
-    "category": "format",
-    "pages": [
-      "Create New Page"
-    ]
-  },
-  {
-    "name": "Image",
-    "title": "Image Plugin",
-    "editor": true
-  },
-  {
-    "name": "Map",
-    "title": "Street Map",
-    "category": "data",
-    "pages": [
-      "Street Map"
-    ]
-  },
-  {
-    "name": "Markdown",
-    "title": "Markdown Plugin",
-    "category": "format"
-  },
-  {
-    "name": "MathJax",
-    "title": "TeX Formatted Equations",
-    "category": "format"
-  },
-  {
-    "name": "Method",
-    "title": "Computational Method",
-    "category": "data"
-  },
-  {
-    "name": "PageFold",
-    "title": "Named Separator for Structured Pages",
-    "category": "format"
-  },
-  {
-    "name": "Plugmatic",
-    "title": "Plugmatic Plugin",
-    "category": "other"
-  },
-  {
-    "name": "Recycler",
-    "title": "Recycler Plugin",
-    "pages": [
-      "Recycled Pages"
-    ]
   },
   {
     "name": "Roster",
@@ -123,13 +23,113 @@
     ]
   },
   {
-    "name": "Transport",
-    "title": "Transport Plugin",
+    "name": "Recycler",
+    "title": "Recycler Plugin",
+    "pages": [
+      "Recycled Pages"
+    ]
+  },
+  {
+    "name": "Plugmatic",
+    "title": "Plugmatic Plugin",
+    "category": "other"
+  },
+  {
+    "name": "PageFold",
+    "title": "Named Separator for Structured Pages",
+    "category": "format"
+  },
+  {
+    "name": "Method",
+    "title": "Computational Method",
     "category": "data"
   },
   {
-    "name": "Video",
-    "title": "YouTube or Vimeo",
+    "name": "Math",
+    "title": "TeX Formatted Equations",
     "category": "format"
+  },
+  {
+    "name": "Markdown",
+    "title": "Markdown Plugin",
+    "category": "format"
+  },
+  {
+    "name": "Map",
+    "title": "Street Map",
+    "category": "data",
+    "pages": [
+      "Street Map"
+    ]
+  },
+  {
+    "name": "Image",
+    "title": "Image Plugin",
+    "editor": true
+  },
+  {
+    "name": "HTML",
+    "title": "Sanitized HTML",
+    "category": "format",
+    "pages": [
+      "Create New Page"
+    ]
+  },
+  {
+    "name": "Grep",
+    "title": "Grep Plugin",
+    "category": "data"
+  },
+  {
+    "name": "Graphviz",
+    "title": "Dot Formatted Diagram",
+    "category": "format",
+    "pages": [
+      "Lineup Diagram"
+    ]
+  },
+  {
+    "name": "Frame",
+    "title": "Frame Plugin",
+    "category": "other"
+  },
+  {
+    "name": "Code",
+    "title": "Pretty-printed code",
+    "category": "format"
+  },
+  {
+    "name": "Changes",
+    "title": "View Changes in Browser Local Storage",
+    "pages": [
+      "Local Changes"
+    ]
+  },
+  {
+    "name": "Calendar",
+    "title": "Calendar Plugin",
+    "category": "data"
+  },
+  {
+    "name": "Calculator",
+    "title": "Running Sums for Expenses",
+    "category": "data"
+  },
+  {
+    "name": "Audio",
+    "title": "Audio",
+    "category": "format"
+  },
+  {
+    "name": "Assets",
+    "title": "Assets Plugin",
+    "category": "other"
+  },
+  {
+    "name": "Activity",
+    "title": "Activity Plugin",
+    "pages": [
+      "Recent Changes"
+    ]
   }
 ]

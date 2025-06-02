@@ -1,0 +1,655 @@
+{
+  "title": "Publishing Workflow",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "53dc9eeedfb7ff3b",
+      "text": "When I am satisfied with changes to this wiki, I publish using GitHub."
+    },
+    {
+      "type": "reference",
+      "id": "4e8e342b350efb22",
+      "text": "This page is a 🌱 Seedling [[How To]].",
+      "site": "meta.wiki.do",
+      "slug": "meta",
+      "title": "Meta"
+    },
+    {
+      "type": "paragraph",
+      "id": "cf9daf86766c9330",
+      "text": "Generate the static site."
+    },
+    {
+      "type": "code",
+      "id": "81fa018117bc7306",
+      "text": "cd ~/workspace/dobbs/deploy.wiki.do\ncp docs/CNAME .\nrm -rf docs/*\nnpx wiki-ssg build \\\n  --from ~/.wiki/deploy.localhost \\\n  --dest ./docs\nmv CNAME docs # put the CNAME file back\nnpx http-server ./docs\n# visit http://localhost:8080"
+    },
+    {
+      "type": "paragraph",
+      "id": "1ae1420478386116",
+      "text": "Spot check uses of .localhost. Do not just find-and-replace all of them. We talk a lot about .localhost in the content of these pages. (This uses silver searcher—ag—to do the searching)."
+    },
+    {
+      "type": "code",
+      "id": "a3bb28eba1d46ed0",
+      "text": "ag \\\\.localhost docs"
+    },
+    {
+      "type": "paragraph",
+      "id": "c8a6667504e005dc",
+      "text": "Replace deploy.localhost in sitemap.xml."
+    },
+    {
+      "type": "code",
+      "id": "5d9605fab88ba24e",
+      "text": "perl -pi.bak -e 's{http://deploy.localhost}{https://deploy.wiki.do}g' docs/sitemap.xml\nmv docs/sitemap.xml.bak ."
+    },
+    {
+      "type": "paragraph",
+      "id": "7b7e02b9ae277128",
+      "text": "Stage, commit, and publish the changes."
+    },
+    {
+      "type": "code",
+      "id": "745638383d4707c0",
+      "text": "git add docs\ngit commit -m \"publish updated content\"\ngit push"
+    },
+    {
+      "type": "paragraph",
+      "id": "c6058d2130b34fbb",
+      "text": "Double-check the results after github has finished processing the updates. [https://deploy.wiki.do deploy.wiki.do]"
+    },
+    {
+      "type": "pagefold",
+      "id": "3e2c565c329377a1",
+      "text": "where am I stuck on this page?"
+    },
+    {
+      "type": "paragraph",
+      "id": "a81371c7527024a3",
+      "text": "Hard to let myself document the publishing workflow because I am distracted by some known bugs in wiki-ssg I haven't decided how to fix. See [[Improve Publishing Workflow]]."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Publishing Workflow",
+        "story": []
+      },
+      "date": 1748885597764
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "53dc9eeedfb7ff3b"
+      },
+      "id": "53dc9eeedfb7ff3b",
+      "type": "add",
+      "date": 1748885600419
+    },
+    {
+      "type": "edit",
+      "id": "53dc9eeedfb7ff3b",
+      "item": {
+        "type": "paragraph",
+        "id": "53dc9eeedfb7ff3b",
+        "text": "When I am satisfied with changes to this wiki, I publish the changes using GitHub."
+      },
+      "date": 1748885662367
+    },
+    {
+      "id": "4e8e342b350efb22",
+      "type": "add",
+      "item": {
+        "type": "reference",
+        "id": "4e8e342b350efb22",
+        "text": "This page is a [[How To]].",
+        "site": "meta.wiki.do",
+        "slug": "meta",
+        "title": "Meta"
+      },
+      "after": "53dc9eeedfb7ff3b",
+      "attribution": {
+        "page": "How to Annotate Wiki Pages",
+        "site": "meta.wiki.do"
+      },
+      "date": 1748885688190
+    },
+    {
+      "type": "edit",
+      "id": "4e8e342b350efb22",
+      "item": {
+        "type": "reference",
+        "id": "4e8e342b350efb22",
+        "text": "This page is a 🌱 Seedling [[How To]].",
+        "site": "meta.wiki.do",
+        "slug": "meta",
+        "title": "Meta"
+      },
+      "date": 1748885712429
+    },
+    {
+      "type": "edit",
+      "id": "53dc9eeedfb7ff3b",
+      "item": {
+        "type": "paragraph",
+        "id": "53dc9eeedfb7ff3b",
+        "text": "When I am satisfied with changes to this wiki, I publish using GitHub."
+      },
+      "date": 1748885833335
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3e2c565c329377a1"
+      },
+      "id": "3e2c565c329377a1",
+      "type": "add",
+      "after": "4e8e342b350efb22",
+      "date": 1748887475341
+    },
+    {
+      "type": "edit",
+      "id": "3e2c565c329377a1",
+      "item": {
+        "type": "pagefold",
+        "id": "3e2c565c329377a1",
+        "text": "where am I stuck on this page?"
+      },
+      "date": 1748887487027
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8aaf9d03a49d5721"
+      },
+      "id": "8aaf9d03a49d5721",
+      "type": "add",
+      "after": "3e2c565c329377a1",
+      "date": 1748887488910
+    },
+    {
+      "type": "edit",
+      "id": "8aaf9d03a49d5721",
+      "item": {
+        "type": "paragraph",
+        "id": "8aaf9d03a49d5721",
+        "text": "Two tangles. wiki-ssg publishes sitemap.xml with localhost domain names. It does not know the local and public domain names and does not replace the content."
+      },
+      "date": 1748887594591
+    },
+    {
+      "type": "add",
+      "id": "3116dd7be51f2ad8",
+      "item": {
+        "type": "paragraph",
+        "id": "3116dd7be51f2ad8",
+        "text": "I have some ways to find and replace those name. Probably only saved in my shell history as simple perl one-liners or short scripts."
+      },
+      "after": "8aaf9d03a49d5721",
+      "date": 1748887663908
+    },
+    {
+      "type": "add",
+      "id": "38675d91fa0e339c",
+      "item": {
+        "type": "paragraph",
+        "id": "38675d91fa0e339c",
+        "text": "There are edge cases. What if, in somewhat hasty editing, I create references on pages in deploy.localhost to dev.localhost or config.localhost. The publication workflow needs some linting or auditing tools to notice these."
+      },
+      "after": "3116dd7be51f2ad8",
+      "date": 1748887782869
+    },
+    {
+      "type": "add",
+      "id": "3ef4327a1f2f242e",
+      "item": {
+        "type": "paragraph",
+        "id": "3ef4327a1f2f242e",
+        "text": "I don't have a clear mental model of how I upgrade the wiki client code with wiki-ssg."
+      },
+      "after": "38675d91fa0e339c",
+      "date": 1748887811908
+    },
+    {
+      "type": "edit",
+      "id": "38675d91fa0e339c",
+      "item": {
+        "type": "paragraph",
+        "id": "38675d91fa0e339c",
+        "text": "There are edge cases. What if, in somewhat hasty editing, I create references on pages in deploy.localhost to dev.localhost or config.localhost. The publication workflow needs some linting or auditing tools to notice other localhost names that won't work in public. This imposes some cognitive load on my editorial brain to think about the constellation of local wikis and which ones are published and how are they cross-linked."
+      },
+      "date": 1748887904900
+    },
+    {
+      "type": "add",
+      "id": "14c5df9955092142",
+      "item": {
+        "type": "paragraph",
+        "id": "14c5df9955092142",
+        "text": "All of the above, but for forked pages and frame scripts and images."
+      },
+      "after": "38675d91fa0e339c",
+      "date": 1748887934633
+    },
+    {
+      "type": "add",
+      "id": "a81371c7527024a3",
+      "item": {
+        "type": "paragraph",
+        "id": "a81371c7527024a3",
+        "text": "Hard to let myself document the publishing workflow because I am distracted by some known bugs I haven't decided how to fix."
+      },
+      "after": "3e2c565c329377a1",
+      "date": 1748887998146
+    },
+    {
+      "type": "edit",
+      "id": "a81371c7527024a3",
+      "item": {
+        "type": "paragraph",
+        "id": "a81371c7527024a3",
+        "text": "Hard to let myself document the publishing workflow because I am distracted by some known bugs in wiki-ssg I haven't decided how to fix."
+      },
+      "date": 1748888006944
+    },
+    {
+      "type": "add",
+      "id": "44c1429bfec9e9a6",
+      "item": {
+        "type": "paragraph",
+        "id": "44c1429bfec9e9a6",
+        "text": "[[Improve Publishing Workflow]]"
+      },
+      "after": "a81371c7527024a3",
+      "date": 1748888765800
+    },
+    {
+      "id": "8aaf9d03a49d5721",
+      "type": "remove",
+      "removedTo": {
+        "page": "Improve Publishing Workflow"
+      },
+      "date": 1748894585546
+    },
+    {
+      "id": "3116dd7be51f2ad8",
+      "type": "remove",
+      "removedTo": {
+        "page": "Improve Publishing Workflow"
+      },
+      "date": 1748894588183
+    },
+    {
+      "id": "38675d91fa0e339c",
+      "type": "remove",
+      "removedTo": {
+        "page": "Improve Publishing Workflow"
+      },
+      "date": 1748894592268
+    },
+    {
+      "id": "14c5df9955092142",
+      "type": "remove",
+      "removedTo": {
+        "page": "Improve Publishing Workflow"
+      },
+      "date": 1748894594943
+    },
+    {
+      "id": "3ef4327a1f2f242e",
+      "type": "remove",
+      "removedTo": {
+        "page": "Improve Publishing Workflow"
+      },
+      "date": 1748894600549
+    },
+    {
+      "type": "remove",
+      "id": "44c1429bfec9e9a6",
+      "date": 1748895535554
+    },
+    {
+      "type": "edit",
+      "id": "a81371c7527024a3",
+      "item": {
+        "type": "paragraph",
+        "id": "a81371c7527024a3",
+        "text": "Hard to let myself document the publishing workflow because I am distracted by some known bugs in wiki-ssg I haven't decided how to fix. See [[Improve Publishing Workflow]]."
+      },
+      "date": 1748895538644
+    },
+    {
+      "type": "add",
+      "id": "cf9daf86766c9330",
+      "item": {
+        "type": "paragraph",
+        "id": "cf9daf86766c9330",
+        "text": "..."
+      },
+      "after": "53dc9eeedfb7ff3b",
+      "date": 1748895970005
+    },
+    {
+      "id": "cf9daf86766c9330",
+      "type": "move",
+      "order": [
+        "53dc9eeedfb7ff3b",
+        "4e8e342b350efb22",
+        "cf9daf86766c9330",
+        "3e2c565c329377a1",
+        "a81371c7527024a3"
+      ],
+      "date": 1748895972155
+    },
+    {
+      "type": "add",
+      "id": "81fa018117bc7306",
+      "item": {
+        "type": "factory",
+        "id": "81fa018117bc7306",
+        "text": "..."
+      },
+      "after": "cf9daf86766c9330",
+      "date": 1748895995296
+    },
+    {
+      "type": "edit",
+      "id": "81fa018117bc7306",
+      "item": {
+        "type": "code",
+        "id": "81fa018117bc7306",
+        "text": "cd ~/workspace/dobbs/deploy.wiki.do\ncp docs/CNAME .\nrm -rf docs/*\nnpx wiki-ssg ..."
+      },
+      "date": 1748896071996
+    },
+    {
+      "type": "edit",
+      "id": "81fa018117bc7306",
+      "item": {
+        "type": "code",
+        "id": "81fa018117bc7306",
+        "text": "cd ~/workspace/dobbs/deploy.wiki.do\ncp docs/CNAME .\nrm -rf docs/*\nnpx wiki-ssg \\\n  --from ~/.wiki/deploy.localhost \\\n  --dest ./docs\nnpx http-server ./docs\n# visit http://localhost:8080"
+      },
+      "date": 1748896165765
+    },
+    {
+      "type": "edit",
+      "id": "81fa018117bc7306",
+      "item": {
+        "type": "code",
+        "id": "81fa018117bc7306",
+        "text": "cd ~/workspace/dobbs/deploy.wiki.do\ncp docs/CNAME .\nrm -rf docs/*\nnpx wiki-ssg build \\\n  --from ~/.wiki/deploy.localhost \\\n  --dest ./docs\nnpx http-server ./docs\n# visit http://localhost:8080"
+      },
+      "date": 1748896245398
+    },
+    {
+      "type": "add",
+      "id": "1ae1420478386116",
+      "item": {
+        "type": "paragraph",
+        "id": "1ae1420478386116",
+        "text": "..."
+      },
+      "after": "cf9daf86766c9330",
+      "date": 1748896435925
+    },
+    {
+      "id": "81fa018117bc7306",
+      "type": "move",
+      "order": [
+        "53dc9eeedfb7ff3b",
+        "4e8e342b350efb22",
+        "cf9daf86766c9330",
+        "81fa018117bc7306",
+        "1ae1420478386116",
+        "3e2c565c329377a1",
+        "a81371c7527024a3"
+      ],
+      "date": 1748896438965
+    },
+    {
+      "type": "edit",
+      "id": "cf9daf86766c9330",
+      "item": {
+        "type": "paragraph",
+        "id": "cf9daf86766c9330",
+        "text": "Generate the static site."
+      },
+      "date": 1748896449890
+    },
+    {
+      "type": "add",
+      "id": "a3bb28eba1d46ed0",
+      "item": {
+        "type": "factory",
+        "id": "a3bb28eba1d46ed0",
+        "text": "..."
+      },
+      "after": "1ae1420478386116",
+      "date": 1748896705883
+    },
+    {
+      "type": "edit",
+      "id": "a3bb28eba1d46ed0",
+      "item": {
+        "type": "code",
+        "id": "a3bb28eba1d46ed0",
+        "text": "ag \\\\.localhost"
+      },
+      "date": 1748896722561
+    },
+    {
+      "type": "edit",
+      "id": "1ae1420478386116",
+      "item": {
+        "type": "paragraph",
+        "id": "1ae1420478386116",
+        "text": "Spot check uses of .localhost. Do not just find-and-replace all of them. We talk a lot about .localhost in the content of these pages."
+      },
+      "date": 1748896807949
+    },
+    {
+      "type": "edit",
+      "id": "1ae1420478386116",
+      "item": {
+        "type": "paragraph",
+        "id": "1ae1420478386116",
+        "text": "Spot check uses of .localhost. Do not just find-and-replace all of them. We talk a lot about .localhost in the content of these pages. (This uses silver searcher—ag—to do the searching)."
+      },
+      "date": 1748896835851
+    },
+    {
+      "type": "add",
+      "id": "c8a6667504e005dc",
+      "item": {
+        "type": "paragraph",
+        "id": "c8a6667504e005dc",
+        "text": "..."
+      },
+      "after": "1ae1420478386116",
+      "date": 1748896841478
+    },
+    {
+      "id": "a3bb28eba1d46ed0",
+      "type": "move",
+      "order": [
+        "53dc9eeedfb7ff3b",
+        "4e8e342b350efb22",
+        "cf9daf86766c9330",
+        "81fa018117bc7306",
+        "1ae1420478386116",
+        "a3bb28eba1d46ed0",
+        "c8a6667504e005dc",
+        "3e2c565c329377a1",
+        "a81371c7527024a3"
+      ],
+      "date": 1748896844040
+    },
+    {
+      "type": "add",
+      "id": "5d9605fab88ba24e",
+      "item": {
+        "type": "paragraph",
+        "id": "5d9605fab88ba24e",
+        "text": "..."
+      },
+      "after": "c8a6667504e005dc",
+      "date": 1748896849069
+    },
+    {
+      "type": "add",
+      "id": "7b7e02b9ae277128",
+      "item": {
+        "type": "paragraph",
+        "id": "7b7e02b9ae277128",
+        "text": "..."
+      },
+      "after": "5d9605fab88ba24e",
+      "date": 1748896849932
+    },
+    {
+      "type": "edit",
+      "id": "5d9605fab88ba24e",
+      "item": {
+        "type": "code",
+        "id": "5d9605fab88ba24e",
+        "text": "perl -pi .bak -e 's{http://deploy.localhost}{https://deploy.wiki.do}g' docs/sitemap.xml"
+      },
+      "date": 1748896928745
+    },
+    {
+      "type": "edit",
+      "id": "c8a6667504e005dc",
+      "item": {
+        "type": "paragraph",
+        "id": "c8a6667504e005dc",
+        "text": "Replace deploy.localhost in sitemap.xml"
+      },
+      "date": 1748896949146
+    },
+    {
+      "type": "add",
+      "id": "745638383d4707c0",
+      "item": {
+        "type": "paragraph",
+        "id": "745638383d4707c0",
+        "text": "..."
+      },
+      "after": "7b7e02b9ae277128",
+      "date": 1748896982638
+    },
+    {
+      "type": "add",
+      "id": "c6058d2130b34fbb",
+      "item": {
+        "type": "paragraph",
+        "id": "c6058d2130b34fbb",
+        "text": "..."
+      },
+      "after": "745638383d4707c0",
+      "date": 1748896983448
+    },
+    {
+      "type": "edit",
+      "id": "745638383d4707c0",
+      "item": {
+        "type": "paragraph",
+        "id": "745638383d4707c0",
+        "text": "mv CNAME docs #put the CNAME file back"
+      },
+      "date": 1748897271351
+    },
+    {
+      "type": "edit",
+      "id": "745638383d4707c0",
+      "item": {
+        "type": "code",
+        "id": "745638383d4707c0",
+        "text": "mv CNAME docs # put the CNAME file back\ngit add docs\ngit commit -m \"publish updated content\"\ngit push"
+      },
+      "date": 1748897323614
+    },
+    {
+      "type": "edit",
+      "id": "7b7e02b9ae277128",
+      "item": {
+        "type": "paragraph",
+        "id": "7b7e02b9ae277128",
+        "text": "Stage, commit, and publish the changes."
+      },
+      "date": 1748897355401
+    },
+    {
+      "type": "edit",
+      "id": "c8a6667504e005dc",
+      "item": {
+        "type": "paragraph",
+        "id": "c8a6667504e005dc",
+        "text": "Replace deploy.localhost in sitemap.xml."
+      },
+      "date": 1748897358135
+    },
+    {
+      "type": "edit",
+      "id": "c6058d2130b34fbb",
+      "item": {
+        "type": "paragraph",
+        "id": "c6058d2130b34fbb",
+        "text": "Double-check the results after github has finished processing the updates. [https://deploy.wiki.do deploy.wiki.do]"
+      },
+      "date": 1748897419606
+    },
+    {
+      "type": "edit",
+      "id": "5d9605fab88ba24e",
+      "item": {
+        "type": "code",
+        "id": "5d9605fab88ba24e",
+        "text": "perl -pi .bak -e 's{http://deploy.localhost}{https://deploy.wiki.do}g' docs/sitemap.xml\nmv docs/sitemap.xml.bak ."
+      },
+      "date": 1748897598581
+    },
+    {
+      "type": "edit",
+      "id": "745638383d4707c0",
+      "item": {
+        "type": "code",
+        "id": "745638383d4707c0",
+        "text": "git add docs\ngit commit -m \"publish updated content\"\ngit push"
+      },
+      "date": 1748897665647
+    },
+    {
+      "type": "edit",
+      "id": "81fa018117bc7306",
+      "item": {
+        "type": "code",
+        "id": "81fa018117bc7306",
+        "text": "cd ~/workspace/dobbs/deploy.wiki.do\ncp docs/CNAME .\nrm -rf docs/*\nnpx wiki-ssg build \\\n  --from ~/.wiki/deploy.localhost \\\n  --dest ./docs\nmv CNAME docs # put the CNAME file back\nnpx http-server ./docs\n# visit http://localhost:8080"
+      },
+      "date": 1748897679057
+    },
+    {
+      "type": "edit",
+      "id": "5d9605fab88ba24e",
+      "item": {
+        "type": "code",
+        "id": "5d9605fab88ba24e",
+        "text": "perl -pi.bak -e 's{http://deploy.localhost}{https://deploy.wiki.do}g' docs/sitemap.xml\nmv docs/sitemap.xml.bak ."
+      },
+      "date": 1748897723066
+    },
+    {
+      "type": "edit",
+      "id": "a3bb28eba1d46ed0",
+      "item": {
+        "type": "code",
+        "id": "a3bb28eba1d46ed0",
+        "text": "ag \\\\.localhost docs"
+      },
+      "date": 1748897739592
+    }
+  ]
+}

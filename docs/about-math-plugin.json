@@ -1,0 +1,140 @@
+{
+  "title": "About Math Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "1e727b8b7c6c7757",
+      "text": "The Math plugin renders LaTeX mathematical notation embedded within an otherwise normal paragraph."
+    },
+    {
+      "type": "math",
+      "id": "1aaf598e3e00805e",
+      "text": "Probability of getting \\(k\\) heads when flipping \\(n\\) coins\n\\[ P(E) = {n \\choose k} p^k (1-p)^{ n-k } \\]"
+    },
+    {
+      "type": "paragraph",
+      "id": "57794acdcad95e61",
+      "text": "This plugin replaces the older MathJax plugin, using KaTeX as the rendering engine. Read about the KaTeX display engine at [https://katex.org katex.org]."
+    },
+    {
+      "type": "paragraph",
+      "id": "43a035fb0d45aa87",
+      "text": "See [https://github.com/fedwiki/wiki-plugin-math GitHub] for plugin source."
+    },
+    {
+      "type": "markdown",
+      "id": "152812b1d03cc204",
+      "text": "Enclose LaTeX within **backslashed parens** `\\(     \\)` when you want to embed an expression fragment within running text.\nEnclose LaTeX within **backslashed square brackets** `\\[     \\]` when you want to write complete expressions on lines by themselves."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About Math Plugin",
+        "story": []
+      },
+      "date": 1678103904248
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1e727b8b7c6c7757"
+      },
+      "id": "1e727b8b7c6c7757",
+      "type": "add",
+      "date": 1678103919287
+    },
+    {
+      "type": "edit",
+      "id": "1e727b8b7c6c7757",
+      "item": {
+        "type": "paragraph",
+        "id": "1e727b8b7c6c7757",
+        "text": "The Math plugin renders LaTeX mathematical notation embedded within an otherwise normal paragraph."
+      },
+      "date": 1678103932361
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1aaf598e3e00805e"
+      },
+      "id": "1aaf598e3e00805e",
+      "type": "add",
+      "after": "1e727b8b7c6c7757",
+      "date": 1678103933839
+    },
+    {
+      "type": "edit",
+      "id": "1aaf598e3e00805e",
+      "item": {
+        "type": "math",
+        "id": "1aaf598e3e00805e",
+        "text": "Probability of getting \\(k\\) heads when flipping \\(n\\) coins\n\\[ P(E) = {n \\choose k} p^k (1-p)^{ n-k } \\]"
+      },
+      "date": 1678103946987
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "57794acdcad95e61"
+      },
+      "id": "57794acdcad95e61",
+      "type": "add",
+      "after": "1aaf598e3e00805e",
+      "date": 1678103948647
+    },
+    {
+      "type": "edit",
+      "id": "57794acdcad95e61",
+      "item": {
+        "type": "paragraph",
+        "id": "57794acdcad95e61",
+        "text": "This plugin replaces the older MathJax plugin, using KaTeX as the rendering engine. Read about the KaTeX display engine at [https://katex.org katex.org]."
+      },
+      "date": 1678103961802
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "43a035fb0d45aa87"
+      },
+      "id": "43a035fb0d45aa87",
+      "type": "add",
+      "after": "57794acdcad95e61",
+      "date": 1678103963191
+    },
+    {
+      "type": "edit",
+      "id": "43a035fb0d45aa87",
+      "item": {
+        "type": "paragraph",
+        "id": "43a035fb0d45aa87",
+        "text": "See [https://github.com/fedwiki/wiki-plugin-math GitHub] for plugin source."
+      },
+      "date": 1678103976011
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "152812b1d03cc204"
+      },
+      "id": "152812b1d03cc204",
+      "type": "add",
+      "after": "43a035fb0d45aa87",
+      "date": 1678103979798
+    },
+    {
+      "type": "edit",
+      "id": "152812b1d03cc204",
+      "item": {
+        "type": "markdown",
+        "id": "152812b1d03cc204",
+        "text": "Enclose LaTeX within **backslashed parens** `\\(     \\)` when you want to embed an expression fragment within running text.\nEnclose LaTeX within **backslashed square brackets** `\\[     \\]` when you want to write complete expressions on lines by themselves."
+      },
+      "date": 1678103988195
+    }
+  ],
+  "plugin": "math"
+}

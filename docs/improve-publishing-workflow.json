@@ -1,0 +1,352 @@
+{
+  "title": "Improve Publishing Workflow",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "4729e5362a3d3897",
+      "text": "There are some known bugs in wiki-ssg that I haven't decided how to fix. Making notes as a project to set the problems aside so I can publish and document the workflow."
+    },
+    {
+      "type": "reference",
+      "id": "4e8e342b350efb22",
+      "text": "This page is a [[Project]].",
+      "site": "meta.wiki.do",
+      "slug": "meta",
+      "title": "Meta"
+    },
+    {
+      "type": "paragraph",
+      "id": "8aaf9d03a49d5721",
+      "text": "Two tangles. wiki-ssg publishes sitemap.xml with localhost domain names. It does not know the local and public domain names and does not replace the content."
+    },
+    {
+      "type": "paragraph",
+      "id": "3116dd7be51f2ad8",
+      "text": "I have some ways to find and replace those names. Probably only saved in my shell history as simple perl one-liners or short scripts."
+    },
+    {
+      "type": "markdown",
+      "id": "8b66a04ff2be5186",
+      "text": "- [x] Search shell history and copy some of those scripts into wiki code items."
+    },
+    {
+      "type": "paragraph",
+      "id": "1640186641b3fd4d",
+      "text": "There are edge cases. What if, in somewhat hasty editing, I create references on pages in deploy.localhost to dev.localhost or config.localhost. The publication workflow needs some linting or auditing tools to notice other localhost names that won't work in public. This imposes some cognitive load on my editorial brain to think about the constellation of local wikis and which ones are published and how are they cross-linked."
+    },
+    {
+      "type": "paragraph",
+      "id": "14c5df9955092142",
+      "text": "All of the above, but for forked pages and frame scripts and images."
+    },
+    {
+      "type": "paragraph",
+      "id": "3ef4327a1f2f242e",
+      "text": "I don't have a clear mental model of how I upgrade the wiki client code with wiki-ssg."
+    },
+    {
+      "type": "pagefold",
+      "id": "b6b94b1888722416",
+      "text": "."
+    },
+    {
+      "type": "paragraph",
+      "id": "e01f96ad05de8292",
+      "text": "I think this code replace things in references in both the story and actions in the journal."
+    },
+    {
+      "type": "code",
+      "id": "50189ff3710be85d",
+      "text": "cd ~/.wiki/meta.localhost;\nfind . -type f | while read IT; do\n  perl -pi.bak -e \\\n's{\"site\": \"meta.localhost\"}{\"site\": \"meta.wiki.do\"}'  \\\n  $IT;\ndone"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Improve Publishing Workflow",
+        "story": []
+      },
+      "date": 1748888773712
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4729e5362a3d3897"
+      },
+      "id": "4729e5362a3d3897",
+      "type": "add",
+      "date": 1748888779815
+    },
+    {
+      "type": "edit",
+      "id": "4729e5362a3d3897",
+      "item": {
+        "type": "paragraph",
+        "id": "4729e5362a3d3897",
+        "text": "There are some known bugs in wiki-ssg that I haven't decided how to fix. Making notes as a project to set the problems aside so I can publish and document the workflow."
+      },
+      "date": 1748888993218
+    },
+    {
+      "id": "4e8e342b350efb22",
+      "type": "add",
+      "item": {
+        "type": "reference",
+        "id": "4e8e342b350efb22",
+        "text": "This page is a [[Project]].",
+        "site": "meta.wiki.do",
+        "slug": "meta",
+        "title": "Meta"
+      },
+      "after": "4729e5362a3d3897",
+      "attribution": {
+        "page": "How to Annotate Wiki Pages",
+        "site": "meta.wiki.do"
+      },
+      "date": 1748889004280
+    },
+    {
+      "id": "8aaf9d03a49d5721",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "8aaf9d03a49d5721",
+        "text": "Two tangles. wiki-ssg publishes sitemap.xml with localhost domain names. It does not know the local and public domain names and does not replace the content."
+      },
+      "after": "4e8e342b350efb22",
+      "attribution": {
+        "page": "Publishing Workflow"
+      },
+      "date": 1748894585548
+    },
+    {
+      "id": "3116dd7be51f2ad8",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "3116dd7be51f2ad8",
+        "text": "I have some ways to find and replace those name. Probably only saved in my shell history as simple perl one-liners or short scripts."
+      },
+      "after": "8aaf9d03a49d5721",
+      "attribution": {
+        "page": "Publishing Workflow"
+      },
+      "date": 1748894588184
+    },
+    {
+      "id": "38675d91fa0e339c",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "38675d91fa0e339c",
+        "text": "There are edge cases. What if, in somewhat hasty editing, I create references on pages in deploy.localhost to dev.localhost or config.localhost. The publication workflow needs some linting or auditing tools to notice other localhost names that won't work in public. This imposes some cognitive load on my editorial brain to think about the constellation of local wikis and which ones are published and how are they cross-linked."
+      },
+      "after": "3116dd7be51f2ad8",
+      "attribution": {
+        "page": "Publishing Workflow"
+      },
+      "date": 1748894592269
+    },
+    {
+      "id": "14c5df9955092142",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "14c5df9955092142",
+        "text": "All of the above, but for forked pages and frame scripts and images."
+      },
+      "after": "38675d91fa0e339c",
+      "attribution": {
+        "page": "Publishing Workflow"
+      },
+      "date": 1748894594944
+    },
+    {
+      "id": "3ef4327a1f2f242e",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "3ef4327a1f2f242e",
+        "text": "I don't have a clear mental model of how I upgrade the wiki client code with wiki-ssg."
+      },
+      "after": "14c5df9955092142",
+      "attribution": {
+        "page": "Publishing Workflow"
+      },
+      "date": 1748894600550
+    },
+    {
+      "type": "edit",
+      "id": "3116dd7be51f2ad8",
+      "item": {
+        "type": "paragraph",
+        "id": "3116dd7be51f2ad8",
+        "text": "I have some ways to find and replace those names. Probably only saved in my shell history as simple perl one-liners or short scripts."
+      },
+      "date": 1748894711943
+    },
+    {
+      "type": "add",
+      "id": "8b66a04ff2be5186",
+      "item": {
+        "type": "factory",
+        "id": "8b66a04ff2be5186",
+        "text": "..."
+      },
+      "after": "3116dd7be51f2ad8",
+      "date": 1748894719592
+    },
+    {
+      "type": "edit",
+      "id": "8b66a04ff2be5186",
+      "item": {
+        "type": "markdown",
+        "id": "8b66a04ff2be5186",
+        "text": "- [ ] Search shell history and copy some of those scripts into wiki code items."
+      },
+      "date": 1748894747584
+    },
+    {
+      "type": "add",
+      "id": "50189ff3710be85d",
+      "item": {
+        "type": "factory",
+        "id": "50189ff3710be85d",
+        "text": "..."
+      },
+      "after": "8b66a04ff2be5186",
+      "date": 1748894966770
+    },
+    {
+      "type": "edit",
+      "id": "50189ff3710be85d",
+      "item": {
+        "type": "code",
+        "id": "50189ff3710be85d",
+        "text": "cd ~/.wiki/meta.localhost;\nfind . -type f | while read IT; do\n  perl -pi.bak -e \\\n's{\"site\": \"meta.localhost\"}{\"site\": \"meta.wiki.do\"}'  \\\n  $IT;\ndone"
+      },
+      "date": 1748895059979
+    },
+    {
+      "type": "add",
+      "id": "87b80630f6bfa86a",
+      "item": {
+        "type": "factory",
+        "id": "87b80630f6bfa86a",
+        "text": "..."
+      },
+      "after": "50189ff3710be85d",
+      "date": 1748895066374
+    },
+    {
+      "type": "edit",
+      "id": "87b80630f6bfa86a",
+      "item": {
+        "type": "code",
+        "id": "87b80630f6bfa86a",
+        "text": "cd ~/.wiki/burnout.localhost;\nfind . -type f | while read IT; do\n  perl -pi.bak -e \\\n's{\"site\": \"meta.localhost\"}{\"site\": \"meta.wiki.do\"}'\\\n  $IT;\ndone"
+      },
+      "date": 1748895106153
+    },
+    {
+      "type": "edit",
+      "id": "38675d91fa0e339c",
+      "item": {
+        "type": "paragraph",
+        "id": "38675d91fa0e339c",
+        "text": "..."
+      },
+      "date": 1748895142102
+    },
+    {
+      "type": "add",
+      "id": "1640186641b3fd4d",
+      "item": {
+        "type": "paragraph",
+        "id": "1640186641b3fd4d",
+        "text": "There are edge cases. What if, in somewhat hasty editing, I create references on pages in deploy.localhost to dev.localhost or config.localhost. The publication workflow needs some linting or auditing tools to notice other localhost names that won't work in public. This imposes some cognitive load on my editorial brain to think about the constellation of local wikis and which ones are published and how are they cross-linked."
+      },
+      "after": "38675d91fa0e339c",
+      "date": 1748895143316
+    },
+    {
+      "type": "edit",
+      "id": "38675d91fa0e339c",
+      "item": {
+        "type": "code",
+        "id": "38675d91fa0e339c",
+        "text": "cd ~/.wiki/burnout.localhost;\nfind . -type f | while read IT; do\n  perl -pi.bak -e 's{\"site\": \"burnout.localhost\"}{\"site\": \"burnout.wiki.do\"}' \\\n  $IT;\ndone"
+      },
+      "date": 1748895174720
+    },
+    {
+      "type": "remove",
+      "id": "87b80630f6bfa86a",
+      "date": 1748895272128
+    },
+    {
+      "type": "remove",
+      "id": "38675d91fa0e339c",
+      "date": 1748895274237
+    },
+    {
+      "type": "edit",
+      "id": "8b66a04ff2be5186",
+      "item": {
+        "type": "markdown",
+        "id": "8b66a04ff2be5186",
+        "text": "- [x] Search shell history and copy some of those scripts into wiki code items."
+      },
+      "date": 1748895386388
+    },
+    {
+      "id": "50189ff3710be85d",
+      "type": "move",
+      "order": [
+        "4729e5362a3d3897",
+        "4e8e342b350efb22",
+        "8aaf9d03a49d5721",
+        "3116dd7be51f2ad8",
+        "8b66a04ff2be5186",
+        "1640186641b3fd4d",
+        "14c5df9955092142",
+        "3ef4327a1f2f242e",
+        "50189ff3710be85d"
+      ],
+      "date": 1748895397489
+    },
+    {
+      "type": "add",
+      "id": "b6b94b1888722416",
+      "item": {
+        "type": "paragraph",
+        "id": "b6b94b1888722416",
+        "text": "..."
+      },
+      "after": "3ef4327a1f2f242e",
+      "date": 1748895401965
+    },
+    {
+      "type": "add",
+      "id": "e01f96ad05de8292",
+      "item": {
+        "type": "paragraph",
+        "id": "e01f96ad05de8292",
+        "text": "I think this code replace things in references in both the story and actions in the journal."
+      },
+      "after": "b6b94b1888722416",
+      "date": 1748895449366
+    },
+    {
+      "type": "edit",
+      "id": "b6b94b1888722416",
+      "item": {
+        "type": "pagefold",
+        "id": "b6b94b1888722416",
+        "text": "."
+      },
+      "date": 1748895454873
+    }
+  ]
+}

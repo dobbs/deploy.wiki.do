@@ -5,6 +5,24 @@
       "type": "paragraph",
       "id": "cb301af4eb69bb86",
       "text": "Wikido (Wiki道) is the practice of wiki. It is an intentional play on aikido (合気道), the practice of aiki. Consider cross-language wordplay: English \"do\" and Japanese \"do\" (道) and Chinese Dao (道). This activity invites participation."
+    },
+    {
+      "type": "reference",
+      "id": "25a1a720454e7e58",
+      "text": "Federated wiki invites the curation of many small gardens in a wiki farm.",
+      "site": "meta.wiki.do",
+      "slug": "digital-gardening",
+      "title": "Digital Gardening"
+    },
+    {
+      "type": "paragraph",
+      "id": "10cb0d5b675b1e2c",
+      "text": "This wiki collects notes about managing the proliferation of many wikis and some related systems administration and other operational concerns."
+    },
+    {
+      "type": "paragraph",
+      "id": "43df7a99e1e482d2",
+      "text": "[[Publishing Workflow]]"
     }
   ],
   "journal": [
@@ -25,6 +43,79 @@
         "text": "Wikido (Wiki道) is the practice of wiki. It is an intentional play on aikido (合気道), the practice of aiki. Consider cross-language wordplay: English \"do\" and Japanese \"do\" (道) and Chinese Dao (道). This activity invites participation."
       },
       "date": 1587701905508
+    },
+    {
+      "type": "add",
+      "id": "25a1a720454e7e58",
+      "item": {
+        "type": "paragraph",
+        "id": "25a1a720454e7e58",
+        "text": "Federated wiki invites the curation of small wiki gardens in a wiki farm. This wiki collects notes about managing the proliferation of many wikis and some related systems administration and other operational concerns."
+      },
+      "after": "cb301af4eb69bb86",
+      "date": 1748882603604
+    },
+    {
+      "type": "fork",
+      "date": 1748882652511
+    },
+    {
+      "type": "edit",
+      "id": "25a1a720454e7e58",
+      "item": {
+        "type": "paragraph",
+        "id": "25a1a720454e7e58",
+        "text": "Federated wiki invites the curation of many small gardens in a wiki farm."
+      },
+      "date": 1748882684992
+    },
+    {
+      "type": "add",
+      "id": "10cb0d5b675b1e2c",
+      "item": {
+        "type": "paragraph",
+        "id": "10cb0d5b675b1e2c",
+        "text": "This wiki collects notes about managing the proliferation of many wikis and some related systems administration and other operational concerns."
+      },
+      "after": "25a1a720454e7e58",
+      "date": 1748882688089
+    },
+    {
+      "type": "edit",
+      "id": "25a1a720454e7e58",
+      "item": {
+        "type": "reference",
+        "id": "25a1a720454e7e58",
+        "text": "In 2015, Mike Caulfield described the practice of digital gardening in a keynote and companion essay for Digital Learning Research Network. He presented gardening as an alternative to the relentless stream of social media. \"Federated wiki... radically changed how I think about online communication and collaboration. ... I’m talking about a different way to think your online activity. And ... I’m talking about a different way of collaborating as well. ... Imagine that instead of blogging and tweeting your experience you wiki’d it. And over time the wiki b",
+        "site": "meta.wiki.do",
+        "slug": "digital-gardening",
+        "title": "Digital Gardening"
+      },
+      "date": 1748882768153
+    },
+    {
+      "type": "edit",
+      "id": "25a1a720454e7e58",
+      "item": {
+        "type": "reference",
+        "id": "25a1a720454e7e58",
+        "text": "Federated wiki invites the curation of many small gardens in a wiki farm.",
+        "site": "meta.wiki.do",
+        "slug": "digital-gardening",
+        "title": "Digital Gardening"
+      },
+      "date": 1748882770958
+    },
+    {
+      "type": "add",
+      "id": "43df7a99e1e482d2",
+      "item": {
+        "type": "paragraph",
+        "id": "43df7a99e1e482d2",
+        "text": "[[Publishing Workflow]]"
+      },
+      "after": "10cb0d5b675b1e2c",
+      "date": 1748885568434
     }
   ]
 }

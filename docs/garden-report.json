@@ -3,7 +3,6 @@
   "journal": [
     {
       "type": "fork",
-      "site": "www.personaltelco.net:1111",
       "refresh": {
         "frequency": "hourly",
         "minute": 2
@@ -11,8 +10,7 @@
       "slug": "garden-report"
     },
     {
-      "type": "fork",
-      "site": "localhost:1111"
+      "type": "fork"
     },
     {
       "item": {
@@ -29,7 +27,6 @@
     },
     {
       "type": "fork",
-      "site": "wikiduino.fed.wiki.org",
       "date": 1401600607005
     }
   ],

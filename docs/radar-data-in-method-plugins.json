@@ -84,7 +84,7 @@
     {
       "type": "html",
       "id": "0b2632f7a4bbc93a",
-      "text": "<i>Data from [http://www.apparelcoalition.org/storage/Nike_MSI_2012_0724b.pdf Nike MSI] material sustainability index.</i>"
+      "text": "<i>Data from [https://web.archive.org/web/20121119010943/http://apparelcoalition.org/storage/Nike_MSI_2012_0724b.pdf Nike MSI] material sustainability index.</i>"
     }
   ],
   "journal": [
@@ -520,6 +520,16 @@
         "text": "<i>Data from [http://www.apparelcoalition.org/storage/Nike_MSI_2012_0724b.pdf Nike MSI] material sustainability index.</i>"
       },
       "date": 1418371241701
+    },
+    {
+      "type": "edit",
+      "id": "0b2632f7a4bbc93a",
+      "item": {
+        "type": "html",
+        "id": "0b2632f7a4bbc93a",
+        "text": "<i>Data from [https://web.archive.org/web/20121119010943/http://apparelcoalition.org/storage/Nike_MSI_2012_0724b.pdf Nike MSI] material sustainability index.</i>"
+      },
+      "date": 1676788045561
     }
   ],
   "plugin": "radar"

@@ -4,7 +4,20 @@
     {
       "type": "paragraph",
       "id": "c0611ebf9dd60dc7",
-      "text": "After trying many things I now have a static site generator meeting federation expectations from the docs branch of a repo. [https://github.com/dobbs/deploy.wiki.do github]"
+      "text": "I have now spent about ten years living and learning with wiki. After trying many ways of running wikis and writing in them, I have started to settle into some patterns worth sharing."
+    },
+    {
+      "type": "paragraph",
+      "id": "49aa09d145e1b912",
+      "text": "The content for this wiki lives in three places. I edit the content on my laptop in a local wiki farm. I use the wiki static site generator ([https://github.com/fedwiki/wiki-ssg fedwiki/wiki-ssg]) to convert the localhost wiki into a static website that lives in another folder on my laptop. I use GitHub Pages to publish that folder to the Internet. [https://github.com/dobbs/deploy.wiki.do github]"
+    },
+    {
+      "type": "reference",
+      "id": "d5c1457fe395cd16",
+      "text": "Wiki is a medium in which I construct my own knowledge and understanding. I learn as I go. I build on what I have learned before. I build on what I have learned from others. As I construct and grow, my collaborators, with deeper insight into my interests, draw my attention to other sources. We construct shared knowledge while building our individual thinking.",
+      "site": "wiki.dbbs.co",
+      "slug": "learning-with-wiki",
+      "title": "Learning With Wiki"
     },
     {
       "type": "roster",
@@ -136,6 +149,94 @@
         "text": "ROSTER wiki.dbbs.co/eric-dobbs"
       },
       "date": 1640802000657
+    },
+    {
+      "type": "edit",
+      "id": "c0611ebf9dd60dc7",
+      "item": {
+        "type": "paragraph",
+        "id": "c0611ebf9dd60dc7",
+        "text": "After trying many things I now have a static site generator meeting federation expectations from the docs folder of a repo. [https://github.com/dobbs/deploy.wiki.do github]"
+      },
+      "date": 1748882848434
+    },
+    {
+      "type": "add",
+      "id": "d5c1457fe395cd16",
+      "item": {
+        "type": "factory",
+        "id": "d5c1457fe395cd16",
+        "text": "..."
+      },
+      "after": "c0611ebf9dd60dc7",
+      "date": 1748883334708
+    },
+    {
+      "type": "edit",
+      "id": "d5c1457fe395cd16",
+      "item": {
+        "type": "reference",
+        "id": "d5c1457fe395cd16",
+        "text": "An experience report from several years of living and learning with wiki. Wiki is a medium in which I construct my own knowledge and understanding. I learn as I go. I build on what I have learned before. I build on what I have learned from others. As I construct and grow, my collaborators, with deeper insight into my interests, draw my attention to other sources. We construct shared knowledge while building our individual thinking.",
+        "site": "wiki.dbbs.co",
+        "slug": "learning-with-wiki",
+        "title": "Learning With Wiki"
+      },
+      "date": 1748883337117
+    },
+    {
+      "type": "edit",
+      "id": "d5c1457fe395cd16",
+      "item": {
+        "type": "reference",
+        "id": "d5c1457fe395cd16",
+        "text": "Wiki is a medium in which I construct my own knowledge and understanding. I learn as I go. I build on what I have learned before. I build on what I have learned from others. As I construct and grow, my collaborators, with deeper insight into my interests, draw my attention to other sources. We construct shared knowledge while building our individual thinking.",
+        "site": "wiki.dbbs.co",
+        "slug": "learning-with-wiki",
+        "title": "Learning With Wiki"
+      },
+      "date": 1748883400131
+    },
+    {
+      "type": "edit",
+      "id": "c0611ebf9dd60dc7",
+      "item": {
+        "type": "paragraph",
+        "id": "c0611ebf9dd60dc7",
+        "text": "I have now spent about ten years living and learning with wiki. After trying many ways of running wikis and writing in them, I have started to settle into some patterns worth sharing."
+      },
+      "date": 1748883452610
+    },
+    {
+      "type": "add",
+      "id": "49aa09d145e1b912",
+      "item": {
+        "type": "paragraph",
+        "id": "49aa09d145e1b912",
+        "text": "This wiki lives in two places. I edit the content on my laptop in a local wiki farm and use the a wiki wiki static site generator ([https://github.com/fedwiki/wiki-ssg fedwiki/wiki-ssg]) to publish using GitHub Pages. [https://github.com/dobbs/deploy.wiki.do github]"
+      },
+      "after": "c0611ebf9dd60dc7",
+      "date": 1748883738427
+    },
+    {
+      "type": "edit",
+      "id": "49aa09d145e1b912",
+      "item": {
+        "type": "paragraph",
+        "id": "49aa09d145e1b912",
+        "text": "This wiki lives in two places. I edit the content on my laptop in a local wiki farm and use the wiki static site generator ([https://github.com/fedwiki/wiki-ssg fedwiki/wiki-ssg]) to publish using GitHub Pages. [https://github.com/dobbs/deploy.wiki.do github]"
+      },
+      "date": 1748883756494
+    },
+    {
+      "type": "edit",
+      "id": "49aa09d145e1b912",
+      "item": {
+        "type": "paragraph",
+        "id": "49aa09d145e1b912",
+        "text": "The content for this wiki lives in three places. I edit the content on my laptop in a local wiki farm. I use the wiki static site generator ([https://github.com/fedwiki/wiki-ssg fedwiki/wiki-ssg]) to convert the localhost wiki into a static website that lives in another folder on my laptop. I use GitHub Pages to publish that folder to the Internet. [https://github.com/dobbs/deploy.wiki.do github]"
+      },
+      "date": 1748885507472
     }
   ]
 }
